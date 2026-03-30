@@ -1,0 +1,35 @@
+{
+  "name": "ceba-v2",
+  "version": "1.0.0",
+  "description": "CEBA website replica using GC Design System",
+  "main": "index.js",
+  "scripts": {
+    "start": "serve .",
+    "dev": "serve .",
+    "build": "echo 'Build process for GCDS components is already handled by the package'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sahilgagvani/ceba-v2.git"
+  },
+  "keywords": [
+    "gcds",
+    "government-canada",
+    "design-system",
+    "ceba"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sahilgagvani/ceba-v2/issues"
+  },
+  "homepage": "https://github.com/sahilgagvani/ceba-v2#readme",
+  "dependencies": {
+    "@gcds-core/components": "^1.0.0",
+    "@gcds-core/css-shortcuts": "^1.1.0"
+  },
+  "devDependencies": {
+    "serve": "^14.2.6"
+  }
+}
