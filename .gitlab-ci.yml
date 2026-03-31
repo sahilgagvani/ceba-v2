@@ -1,0 +1,47 @@
+# This pipeline will be triggered by pushing a protected tag named like release-1.0.0
+
+variables:
+  PIPELINE_NAME: Publish app deployment images for version $CI_COMMIT_TAG
+
+workflow:
+    name: $PIPELINE_NAME
+    rules:
+      # recieve trigger to prepare promotion trigger
+      # VERSION is sent in trigger from publish pipeline
+      # Prioritize this workflow over build
+      - if: $VERSION =~ /^release-(\d+\.\d+\.\d+)/ && $CI_PIPELINE_SOURCE =~ /^(pipeline|trigger)$/
+        variables:
+          PIPELINE_NAME: Promote $VERSION To Production
+      # Release examples: release-3.4, release 1.12.42
+      - if: $CI_COMMIT_TAG =~ /^release-(\d+\.\d+\.\d+)/
+
+stages: [build, publish, promote]
+
+include:
+  # Build your container image and push to project GitLab registry
+  - component: $CI_SERVER_FQDN/aetherworks/oci/build@0.12.0
+    rules:
+      - if: $CI_PIPELINE_SOURCE !~ /^(pipeline|trigger)$/
+
+  # Publish the image to cloud-ops
+  - component: $CI_SERVER_FQDN/aetherworks/oci/publish@0.11.0
+    rules:
+      - if: $CI_PIPELINE_SOURCE !~ /^(pipeline|trigger)$/
+
+  # Promotion job trigger, Pipeline created after staging publish succeeds
+  # should not be included in build pipeline
+  - component: $CI_SERVER_FQDN/aetherworks/glue/confirm-trigger@0.1.1
+    inputs:
+      extra_vars: $PUBLISH_EXTRA_VARS
+      version: $VERSION
+      job_suffix: promote-production
+    rules:
+      - if: $VERSION =~ /^release-(\d+\.\d+\.\d+)/ && $CI_PIPELINE_SOURCE =~ /^(pipeline|trigger)$/
+
+# Work around to ensure gitlab see a valid pipeline configuration
+# due to all includes being conditional
+noop:
+  stage: .pre
+  script: echo "This will never run"
+  rules:
+    - when: never
