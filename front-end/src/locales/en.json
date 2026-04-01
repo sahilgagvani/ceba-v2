@@ -10,13 +10,13 @@
 		"intro03": {
 			"1": "find answers to frequently asked questions on our",
 			"2": "FAQ",
-			"link": "https://ceba-cuec.ca/en/faq.html"
+			"link": "/en/faq.html"
 		},
 		"intro04": {
 			"1": "get",
 			"2": "general information",
 			"3": "on our website",
-			"link": "https://ceba-cuec.ca/en/overview.html"
+			"link": "/en/overview.html"
 		},
 		"intro05": "We understand that timely access to client support is important. Thank you for your patience.",
 		"intro06": "If you have difficulty with the following form, you can use any of our other service channels to contact us. Please read the Personal Information Collection Statement before completing this form.",
@@ -75,14 +75,14 @@
 		"error-banner": "Error:",
 		"CEBA": "Canada Emergency Business Account (CEBA)",
 		"breadcrumb-label1": "CEBA Program Overview",
-		"breadcrumb-link1": "https://ceba-cuec.ca/en/overview.html",
+		"breadcrumb-link1": "/en/overview.html",
 		"breadcrumb-label2": "Contact Information",
 		"breadcrumb-link2": "https://ceba-cuec.ca/en/contact.html",
 		"breadcrumb-label3": "Contact Form",
 		"nav-label1": "Program Overview",
-		"nav-link1": "https://ceba-cuec.ca/en/overview.html",
+		"nav-link1": "/en/overview.html",
 		"nav-label2": "FAQ",
-		"nav-link2": "https://ceba-cuec.ca/en/faq.html",
+		"nav-link2": "/en/faq.html",
 		"nav-label3": "Contact Information",
         "nav-link3": "https://ceba-cuec.ca/en/contact.html",
         "footer-allContacts-label": "All contacts",

@@ -6,6 +6,37 @@ import { useTranslation } from "react-i18next";
 import ErrorBanner from "./components/ErrorBanner";
 import MailFailBanner from "./components/MailFailBanner";
 
+const getCurrentPath = () => {
+  if (typeof window === "undefined") return "/";
+  return (window.location?.pathname || "/").toLowerCase();
+};
+
+const getPageType = (path) => {
+  if (
+    path === "/faq.html" ||
+    path.endsWith("/faq.html") ||
+    path === "/faq" ||
+    path.endsWith("/faq")
+  ) {
+    return "faq";
+  }
+
+  if (
+    path === "/overview.html" ||
+    path.endsWith("/overview.html") ||
+    path === "/overview" ||
+    path.endsWith("/overview") ||
+    path === "/survol.html" ||
+    path.endsWith("/survol.html") ||
+    path === "/survol" ||
+    path.endsWith("/survol")
+  ) {
+    return "overview";
+  }
+
+  return "contact";
+};
+
 
 
 
@@ -105,6 +136,11 @@ const formatTelephoneNumber = (value) => {
 
 
   const { t, i18n } = useTranslation();
+  const currentPath = getCurrentPath();
+  const pageType = getPageType(currentPath);
+  const isFaqPage = pageType === "faq";
+  const isOverviewPage = pageType === "overview";
+  const isBlankShellPage = isFaqPage || isOverviewPage;
 
   // Load application configuration from backend at runtime
   useEffect(() => {
@@ -133,7 +169,11 @@ const formatTelephoneNumber = (value) => {
 
 useEffect(() => {
 
-  document.title = "CEBA Contact Form";
+  document.title = isFaqPage
+    ? `CEBA ${t("form.nav-label2")}`
+    : isOverviewPage
+      ? `CEBA ${t("form.nav-label1")}`
+      : `CEBA ${t("form.breadcrumb-label3")}`;
   const header = document.querySelector("gcds-header");
   if (!header) return;
 
@@ -362,21 +402,21 @@ useEffect(() => {
           >
             <a
               href={t("form.nav-link1")}
-              className="nav-link"
+              className={`nav-link ${isOverviewPage ? "active" : ""}`}
               onClick={() => setIsNavOpen(false)}
             >
               {t("form.nav-label1")}
             </a>
             <a
               href={t("form.nav-link2")}
-              className="nav-link"
+              className={`nav-link ${isFaqPage ? "active" : ""}`}
               onClick={() => setIsNavOpen(false)}
             >
               {t("form.nav-label2")}
             </a>
             <a
               href={t("form.nav-link3")}
-              className="nav-link active"
+              className={`nav-link ${isBlankShellPage ? "" : "active"}`}
               onClick={() => setIsNavOpen(false)}
             >
               {t("form.nav-label3")}
@@ -387,6 +427,8 @@ useEffect(() => {
       <gcds-container id="main-content" main-container size="xl"
       centered
       tag="main">
+        {!isBlankShellPage && (
+        <>
         <div className="breadcrumbs-wrap">
           <nav aria-label="Breadcrumb" className="gc-breadcrumbs">
             <ol>
@@ -738,7 +780,7 @@ useEffect(() => {
               id="question-business-number"
               name="question-business-number"
               type="text"
-              maxlength="9"
+              maxLength="9"
               inputMode="numeric"
               className={`gc-text-field ${businessNumberError ? "gc-text-field--error" : ""}`}
               value={businessNumber}
@@ -762,7 +804,7 @@ useEffect(() => {
               id="question-ceba-id"
               name="question-ceba-id"
               type="text"
-              maxlength="12"
+              maxLength="12"
               inputMode="numeric"
               className={`gc-text-field ${cebaIDError ? "gc-text-field--error" : ""}`}
               value={cebaID}
@@ -785,7 +827,7 @@ useEffect(() => {
           id="question-message"
           name="question-message"
           type="text"
-          maxlength="1500"
+          maxLength="1500"
           className={`gc-text-box ${messageError ? "gc-text-field--error" : ""}`}
           value={message}
           ref={messageRef}
@@ -905,6 +947,8 @@ useEffect(() => {
       <br></br>
       <div>{t("form.date-modified")}</div>
       <br></br>
+      </>
+      )}
     </gcds-container>
     </div>
     <gcds-footer
