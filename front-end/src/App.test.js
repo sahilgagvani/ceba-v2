@@ -31,32 +31,48 @@ describe('App page rendering', () => {
   test('renders a blank faq page shell at /en/faq.html', () => {
     window.history.pushState({}, '', '/en/faq.html');
 
-    render(<App />);
+    const { container } = render(<App />);
+    const breadcrumbLinks = container.querySelectorAll('.gc-breadcrumbs a');
 
     expect(screen.queryByText(/contact form/i)).not.toBeInTheDocument();
-    expect(screen.getByRole('link', { name: /faq/i })).toHaveAttribute(
-      'href',
-      '/en/faq.html'
-    );
+    expect(screen.getByText(/frequently asked questions/i)).toBeInTheDocument();
+    expect(breadcrumbLinks).toHaveLength(2);
+    expect(breadcrumbLinks[0]).toHaveTextContent(/ceba program overview/i);
+    expect(breadcrumbLinks[0]).toHaveAttribute('href', '/en/overview.html');
+    expect(breadcrumbLinks[1]).toHaveTextContent(/^faq$/i);
+    expect(breadcrumbLinks[1]).toHaveAttribute('href', '/en/faq.html');
   });
 
   test('renders a blank overview page shell at /en/overview.html', () => {
     window.history.pushState({}, '', '/en/overview.html');
 
-    render(<App />);
+    const { container } = render(<App />);
+    const breadcrumbLinks = container.querySelectorAll('.gc-breadcrumbs a');
 
     expect(screen.queryByText(/contact form/i)).not.toBeInTheDocument();
     expect(
-      screen.getByRole('link', { name: /program overview/i })
-    ).toHaveAttribute('href', '/en/overview.html');
+      screen.getByText(/canada emergency business account \(ceba\)/i)
+    ).toBeInTheDocument();
+    expect(breadcrumbLinks).toHaveLength(1);
+    expect(breadcrumbLinks[0]).toHaveTextContent(/ceba program overview/i);
+    expect(breadcrumbLinks[0]).toHaveAttribute('href', '/en/overview.html');
   });
 
   test('renders a blank contact information shell at /en/contact.html', () => {
     window.history.pushState({}, '', '/en/contact.html');
 
     const { container } = render(<App />);
+    const breadcrumbLinks = container.querySelectorAll('.gc-breadcrumbs a');
 
     expect(screen.queryByText(/contact form/i)).not.toBeInTheDocument();
+    expect(breadcrumbLinks).toHaveLength(2);
+    expect(breadcrumbLinks[0]).toHaveTextContent(/ceba program overview/i);
+    expect(breadcrumbLinks[0]).toHaveAttribute('href', '/en/overview.html');
+    expect(breadcrumbLinks[1]).toHaveTextContent(/contact information/i);
+    expect(breadcrumbLinks[1]).toHaveAttribute('href', '/en/contact.html');
+    expect(container.querySelector('gcds-heading')).toHaveTextContent(
+      /contact information/i
+    );
     expect(
       container.querySelector('.custom-top-nav .nav-link.active')
     ).toHaveTextContent(/contact information/i);

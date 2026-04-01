@@ -50,6 +50,44 @@ const getPageType = (path) => {
   return "contact-form";
 };
 
+const getBlankPageHeadingKey = (pageType) => {
+  if (pageType === "overview") return "form.overview-title";
+  if (pageType === "faq") return "form.faq-title";
+  if (pageType === "contact-info") return "form.contact-info-title";
+  return null;
+};
+
+const getBlankPageBreadcrumbItems = (pageType, t) => {
+  const overviewItem = {
+    href: t("form.breadcrumb-link1"),
+    label: t("form.breadcrumb-label1"),
+  };
+
+  if (pageType === "overview") return [overviewItem];
+
+  if (pageType === "faq") {
+    return [
+      overviewItem,
+      {
+        href: t("form.nav-link2"),
+        label: t("form.nav-label2"),
+      },
+    ];
+  }
+
+  if (pageType === "contact-info") {
+    return [
+      overviewItem,
+      {
+        href: t("form.nav-link3"),
+        label: t("form.nav-label3"),
+      },
+    ];
+  }
+
+  return [];
+};
+
 
 
 
@@ -156,6 +194,8 @@ const formatTelephoneNumber = (value) => {
   const isContactInfoPage = pageType === "contact-info";
   const isContactNavActive = pageType === "contact-form" || isContactInfoPage;
   const isBlankShellPage = isFaqPage || isOverviewPage || isContactInfoPage;
+  const blankPageHeadingKey = getBlankPageHeadingKey(pageType);
+  const blankPageBreadcrumbItems = getBlankPageBreadcrumbItems(pageType, t);
 
   // Load application configuration from backend at runtime
   useEffect(() => {
@@ -444,6 +484,24 @@ useEffect(() => {
       <gcds-container id="main-content" main-container size="xl"
       centered
       tag="main">
+        {isBlankShellPage && blankPageHeadingKey && (
+        <>
+        <div className="breadcrumbs-wrap">
+          <nav aria-label="Breadcrumb" className="gc-breadcrumbs">
+            <ol>
+              {blankPageBreadcrumbItems.map((item) => (
+                <li key={`${item.href}-${item.label}`}>
+                  <a href={item.href}>{item.label}</a>
+                </li>
+              ))}
+            </ol>
+          </nav>
+        </div>
+        <br></br>
+        <br></br>
+        <gcds-heading tag="h1" level="1">{t(blankPageHeadingKey)}</gcds-heading>
+        </>
+        )}
         {!isBlankShellPage && (
         <>
         <div className="breadcrumbs-wrap">
