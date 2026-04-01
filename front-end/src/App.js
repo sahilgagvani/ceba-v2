@@ -34,7 +34,20 @@ const getPageType = (path) => {
     return "overview";
   }
 
-  return "contact";
+  if (
+    path === "/contact.html" ||
+    path.endsWith("/contact.html") ||
+    path === "/contact" ||
+    path.endsWith("/contact") ||
+    path === "/coordonnees.html" ||
+    path.endsWith("/coordonnees.html") ||
+    path === "/coordonnees" ||
+    path.endsWith("/coordonnees")
+  ) {
+    return "contact-info";
+  }
+
+  return "contact-form";
 };
 
 
@@ -140,7 +153,9 @@ const formatTelephoneNumber = (value) => {
   const pageType = getPageType(currentPath);
   const isFaqPage = pageType === "faq";
   const isOverviewPage = pageType === "overview";
-  const isBlankShellPage = isFaqPage || isOverviewPage;
+  const isContactInfoPage = pageType === "contact-info";
+  const isContactNavActive = pageType === "contact-form" || isContactInfoPage;
+  const isBlankShellPage = isFaqPage || isOverviewPage || isContactInfoPage;
 
   // Load application configuration from backend at runtime
   useEffect(() => {
@@ -173,6 +188,8 @@ useEffect(() => {
     ? `CEBA ${t("form.nav-label2")}`
     : isOverviewPage
       ? `CEBA ${t("form.nav-label1")}`
+      : isContactInfoPage
+        ? `CEBA ${t("form.nav-label3")}`
       : `CEBA ${t("form.breadcrumb-label3")}`;
   const header = document.querySelector("gcds-header");
   if (!header) return;
@@ -416,7 +433,7 @@ useEffect(() => {
             </a>
             <a
               href={t("form.nav-link3")}
-              className={`nav-link ${isBlankShellPage ? "" : "active"}`}
+              className={`nav-link ${isContactNavActive ? "active" : ""}`}
               onClick={() => setIsNavOpen(false)}
             >
               {t("form.nav-label3")}
