@@ -136,6 +136,94 @@
 			}
 		},
 		"contact-info-title": "Contact Information",
+		"contactInfo": {
+			"introParagraphs": [
+				"There are three Contact Centres that support CEBA Loan Holders. The appropriate Contact Centre will vary depending on if your loan has been assigned to the CEBA Program.",
+				"If your CEBA Loan is no longer accessible through your financial institution, then your CEBA Loan may be classified as ‘Assigned’. If your CEBA Loan is still accessible through your financial institution, then your CEBA Loan is classified as ‘Unassigned’.",
+				{
+					"beforeLink": "For any questions regarding CEBA Loans, please consult the",
+					"linkLabel": "Frequently Asked Questions",
+					"linkHref": "/en/faq.html",
+					"afterLink": " page. Should you need further assistance please use the guidance below. Accessibility accommodations are available if needed."
+				}
+			],
+			"cards": [
+				{
+					"title": "CEBA Call Centre",
+					"sections": [
+						{
+							"heading": "Assigned Loans:",
+							"items": [
+								"CEBA Portal",
+								"Loan details and balance(s)",
+								"Changes to your contact details",
+								"Loan assignment notice",
+								"Statements of account",
+								"Making payments and payment methods",
+								"How payments are applied",
+								"How to inform the CEBA Program of insolvency or death of a sole proprietor"
+							]
+						},
+						{
+							"heading": "Unassigned Loans:",
+							"items": [
+								"CEBA application history",
+								"Program information and timelines"
+							]
+						}
+					],
+					"paragraphs": [
+						{
+							"beforeLink": "Please contact the CEBA Call Centre at 1-888-324-4201 or via the",
+							"linkLabel": "online form",
+							"linkHref": "https://contact.ceba-cuec.ca/en",
+							"afterLink": ". An agent will return your calls within 3 business days between 8am and 6pm Eastern Standard Time, excluding statutory holidays."
+						}
+					]
+				},
+				{
+					"title": "CRA CEBA Contact Centre",
+					"sections": [
+						{
+							"heading": "Assigned Loans:",
+							"items": [
+								"Create or modify payment arrangements",
+								"Letters or communications received from the CRA",
+								"Add, update, or remove authorized third parties"
+							]
+						}
+					],
+					"paragraphs": [
+						"You can reach the CRA CEBA Contact Centre at 1-800-361-2808."
+					]
+				},
+				{
+					"title": "Financial Institution",
+					"sections": [
+						{
+							"heading": "Assigned Loans:",
+							"items": [
+								"Your financial institution is no longer involved with the servicing of the CEBA Loan. All questions, with the exception of reason for assignment, status of payments made during or after assignment and demand letter related questions, should be directed to either the CEBA Call Centre or CRA CEBA Collections."
+							]
+						},
+						{
+							"heading": "Unassigned Loans:",
+							"items": [
+								"Loan details & balance(s)",
+								"Making payments and payment methods",
+								"How payments are applied",
+								"Changes to your contact details",
+								"Other changes to your business"
+							]
+						}
+					],
+					"paragraphs": [
+						"Please refer to the Financial Institution that provided your CEBA Loan."
+					]
+				}
+			],
+			"dateModified": "Date modified: 2026-01-21"
+		},
 		"breadcrumb-label1": "CEBA Program Overview",
 		"breadcrumb-link1": "/en/overview.html",
 		"breadcrumb-label2": "Contact Information",

@@ -137,6 +137,94 @@
       }
     },
     "contact-info-title": "Coordonnées",
+    "contactInfo": {
+      "introParagraphs": [
+        "Il y a trois centres de contact qui soutiennent les détenteurs de prêts du CUEC. Le centre de contact approprié variera selon que votre prêt a été cédé au programme du CUEC.",
+        "Si votre prêt du CUEC n’est plus accessible par l’entremise de votre institution financière, votre prêt du CUEC peut être classé comme « cédé ». Si votre prêt du CUEC est toujours accessible par l’entremise de votre institution financière, votre prêt du CUEC est classé comme « non cédé ».",
+        {
+          "beforeLink": "Pour toute question concernant les prêts du CUEC, veuillez consulter la page",
+          "linkLabel": "Foires aux questions",
+          "linkHref": "/fr/faq.html",
+          "afterLink": ". Si vous avez besoin d’aide supplémentaire, veuillez suivre les conseils ci-dessous. Des aménagements d’accessibilité sont disponibles si nécessaire."
+        }
+      ],
+      "cards": [
+        {
+          "title": "Centre d’appels du CUEC",
+          "sections": [
+            {
+              "heading": "Prêts cédés :",
+              "items": [
+                "Portail du CUEC",
+                "Détails du prêt et solde(s)",
+                "Modifications à vos coordonnées",
+                "Avis de cession de prêt",
+                "États de compte",
+                "Effectuer des paiements et des méthodes de paiement",
+                "Comment les paiements sont appliqués",
+                "Comment informer le programme du CUEC de l’insolvabilité ou du décès d’un propriétaire unique"
+              ]
+            },
+            {
+              "heading": "Prêts non cédés :",
+              "items": [
+                "Historique de la demande du CUEC",
+                "Renseignements sur le programme et échéanciers"
+              ]
+            }
+          ],
+          "paragraphs": [
+            {
+              "beforeLink": "Veuillez communiquer avec le Centre d’appels du CUEC au 1-888-324-4201 ou par l’entremise du",
+              "linkLabel": "formulaire en ligne",
+              "linkHref": "https://contact.ceba-cuec.ca/fr",
+              "afterLink": ". Un agent vous répondra dans les 3 jours ouvrables entre 8 h et 18 h, heure normale de l’est, hors jours fériés."
+            }
+          ]
+        },
+        {
+          "title": "Centre d'appels du CUEC de l’ARC",
+          "sections": [
+            {
+              "heading": "Prêts cédés :",
+              "items": [
+                "Créer ou modifier des ententes de paiement",
+                "Lettres ou communications reçues de l’ARC",
+                "Ajouter, mettre à jour ou supprimer des tiers autorisés"
+              ]
+            }
+          ],
+          "paragraphs": [
+            "Vous pouvez téléphoner au Centre d’appels du CUEC de l’ARC au 1 800 361-2808."
+          ]
+        },
+        {
+          "title": "Institution financière",
+          "sections": [
+            {
+              "heading": "Prêts cédés :",
+              "items": [
+                "Votre institution financière n'est plus impliquée dans le service du prêt CUEC. Toutes les questions, à l'exception de la raison de la cession, du statut des paiements effectués pendant ou après la cession, et des questions liées à la lettre de demande, doivent être adressées au Centre d'appels CUEC ou au service de recouvrement du CUEC de l’ARC."
+              ]
+            },
+            {
+              "heading": "Prêts non cédés :",
+              "items": [
+                "Détails du prêt et solde(s)",
+                "Effectuer des paiements et des méthodes de paiement",
+                "Comment les paiements sont appliqués",
+                "Modifications apportées à vos coordonnées",
+                "Autres changements apportés à votre entreprise"
+              ]
+            }
+          ],
+          "paragraphs": [
+            "Veuillez consulter l'institution financière qui a fourni votre prêt du CUEC."
+          ]
+        }
+      ],
+      "dateModified": "Date de modification : 2026-01-21"
+    },
     "breadcrumb-label1": "Survol du programme du CUEC",
     "breadcrumb-link1": "/fr/survol.html",
     "breadcrumb-label2": "Coordonnées",
