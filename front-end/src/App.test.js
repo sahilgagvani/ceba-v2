@@ -1,10 +1,15 @@
-import { render, screen } from '@testing-library/react';
-import './i18n';
+import { act, render, screen } from '@testing-library/react';
+import i18n from './i18n';
 import App from './App';
 
+jest.mock('react-google-recaptcha', () => () => null);
+
 describe('App page rendering', () => {
-  afterEach(() => {
+  afterEach(async () => {
     window.history.pushState({}, '', '/');
+    await act(async () => {
+      await i18n.changeLanguage('en');
+    });
   });
 
   test('renders the contact form on the default page', () => {
@@ -28,19 +33,73 @@ describe('App page rendering', () => {
     );
   });
 
-  test('renders a blank faq page shell at /en/faq.html', () => {
+  test('renders faq content at /en/faq.html', () => {
     window.history.pushState({}, '', '/en/faq.html');
 
     const { container } = render(<App />);
     const breadcrumbLinks = container.querySelectorAll('.gc-breadcrumbs a');
+    const faqHeadings = container.querySelectorAll('.faq-page gcds-heading');
+    const faqSectionHeadings = container.querySelectorAll('.faq-section-title gcds-heading');
 
     expect(screen.queryByText(/contact form/i)).not.toBeInTheDocument();
-    expect(screen.getByText(/frequently asked questions/i)).toBeInTheDocument();
+    expect(faqHeadings[0]).toHaveTextContent(/^Frequently Asked Questions$/i);
+    expect(
+      screen.getByText(/My Loan Has Been Assigned to the CEBA Program/i)
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText(/My Loan Is With My Financial Institution/i)
+    ).toBeInTheDocument();
+    expect(screen.getByText(/^FAQ Archive$/i)).toBeInTheDocument();
+    expect(screen.getByText(/Loan Assignment/i)).toBeInTheDocument();
+    expect(screen.getAllByText(/Loan Repayment/i)).toHaveLength(2);
+    expect(screen.getByText(/Statements of Account/i)).toBeInTheDocument();
+    expect(faqSectionHeadings).toHaveLength(3);
+    faqSectionHeadings.forEach((heading) => {
+      expect(heading).toHaveAttribute('character-limit', 'false');
+    });
     expect(breadcrumbLinks).toHaveLength(2);
     expect(breadcrumbLinks[0]).toHaveTextContent(/ceba program overview/i);
     expect(breadcrumbLinks[0]).toHaveAttribute('href', '/en/overview.html');
     expect(breadcrumbLinks[1]).toHaveTextContent(/^faq$/i);
     expect(breadcrumbLinks[1]).toHaveAttribute('href', '/en/faq.html');
+    expect(
+      container.querySelector('.custom-top-nav .nav-link.active')
+    ).toHaveTextContent(/^faq$/i);
+  });
+
+  test('renders faq content at /fr/faq.html', async () => {
+    window.history.pushState({}, '', '/fr/faq.html');
+    await i18n.changeLanguage('fr');
+
+    const { container } = render(<App />);
+    const breadcrumbLinks = container.querySelectorAll('.gc-breadcrumbs a');
+    const faqHeadings = container.querySelectorAll('.faq-page gcds-heading');
+    const faqSectionHeadings = container.querySelectorAll('.faq-section-title gcds-heading');
+
+    expect(screen.queryByText(/formulaire de contact/i)).not.toBeInTheDocument();
+    expect(faqHeadings[0]).toHaveTextContent(/^Foires aux questions$/i);
+    expect(
+      screen.getByText(/Mon prêt a été cédé au programme du CUEC/i)
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText(/Mon prêt est auprès de mon institution financière/i)
+    ).toBeInTheDocument();
+    expect(screen.getByText(/^Foires aux questions - Archive$/i)).toBeInTheDocument();
+    expect(screen.getByText(/Cession de prêt/i)).toBeInTheDocument();
+    expect(screen.getAllByText(/Remboursement du prêt/i)).toHaveLength(2);
+    expect(screen.getByText(/Admissibilité \(fermé\)/i)).toBeInTheDocument();
+    expect(faqSectionHeadings).toHaveLength(3);
+    faqSectionHeadings.forEach((heading) => {
+      expect(heading).toHaveAttribute('character-limit', 'false');
+    });
+    expect(breadcrumbLinks).toHaveLength(2);
+    expect(breadcrumbLinks[0]).toHaveTextContent(/survol du programme du cuec/i);
+    expect(breadcrumbLinks[0]).toHaveAttribute('href', '/fr/survol.html');
+    expect(breadcrumbLinks[1]).toHaveTextContent(/foires aux questions/i);
+    expect(breadcrumbLinks[1]).toHaveAttribute('href', '/fr/faq.html');
+    expect(
+      container.querySelector('.custom-top-nav .nav-link.active')
+    ).toHaveTextContent(/foires aux questions/i);
   });
 
   test('renders a blank overview page shell at /en/overview.html', () => {

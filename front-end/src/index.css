@@ -401,6 +401,55 @@ gcds-header {
   color: #284162;
 }
 
+.faq-page {
+  max-width: 71.25rem;
+  margin: 0 auto;
+  padding: 2.75rem 1rem 0;
+}
+
+.faq-page-title {
+  margin-bottom: 3.5rem;
+}
+
+.faq-section {
+  margin-bottom: 3.5rem;
+}
+
+.faq-section-title {
+  margin-bottom: 1rem;
+}
+
+.faq-section-body {
+  color: #4a4a4a;
+  margin: 0 0 2rem;
+  max-width: 56rem;
+  line-height: 1.6;
+}
+
+.faq-link-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem 2.5rem;
+  align-items: start;
+}
+
+.faq-link {
+  color: #284162;
+  text-decoration: underline;
+  line-height: 1.45;
+}
+
+.faq-link:hover,
+.faq-link:focus {
+  color: #1f334e;
+}
+
+@media (min-width: 769px) {
+  .faq-section-title {
+    --gcds-heading-h2-desktop: var(--gcds-font-h3);
+  }
+}
+
 
 /* Sticky footer layout */
 html, body, #root {
@@ -421,6 +470,23 @@ html, body, #root {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  .faq-page {
+    padding: 2rem 1rem 0;
+  }
+
+  .faq-page-title {
+    margin-bottom: 2.5rem;
+  }
+
+  .faq-section {
+    margin-bottom: 2.75rem;
+  }
+
+  .faq-link-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
   .gc-breadcrumbs ol {
     display: flex;
     flex-direction: column;
@@ -519,6 +585,12 @@ html, body, #root {
     --gcds-footer-grid-gap: 0.35rem;
     --gcds-footer-sub-signature-max-height: 1.4rem;
     --gcds-footer-sub-signature-width: 4.5rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1080px) {
+  .faq-link-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 

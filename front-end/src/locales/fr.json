@@ -77,6 +77,65 @@
     "CEBA": "Compte d'urgence pour les entreprises canadiennes (CUEC)",
     "overview-title": "Compte d’urgence pour les entreprises canadiennes (CUEC)",
     "faq-title": "Foires aux questions",
+    "faq": {
+      "pageTitle": "Foires aux questions",
+      "sections": {
+        "assigned": {
+          "title": "Mon prêt a été cédé au programme du CUEC",
+          "body": "Si votre prêt du CUEC est en recouvrement et n'est plus accessible par l'entremise de votre institution financière, votre prêt du CUEC peut être classé comme « cédé ». La FAQ sur les prêts cédés au programme du CUEC se trouve dans cette section.",
+          "links": [
+            {
+              "label": "Cession de prêt",
+              "href": "#"
+            },
+            {
+              "label": "Remboursement du prêt",
+              "href": "#"
+            },
+            {
+              "label": "Modalités de paiement",
+              "href": "#"
+            },
+            {
+              "label": "Changements apportés à mon entreprise",
+              "href": "#"
+            },
+            {
+              "label": "Compte sur le portail du CUEC",
+              "href": "#"
+            },
+            {
+              "label": "Relevés de compte",
+              "href": "#"
+            }
+          ]
+        },
+        "unassigned": {
+          "title": "Mon prêt est auprès de mon institution financière",
+          "body": "Si votre prêt du CUEC est toujours accessible par l'entremise de votre institution financière, votre prêt du CUEC est classé comme « non cédé ». La FAQ sur les prêts non cédés au programme du CUEC se trouvent dans cette section.",
+          "links": [
+            {
+              "label": "Remboursement du prêt",
+              "href": "#"
+            }
+          ]
+        },
+        "archive": {
+          "title": "Foires aux questions - Archive",
+          "body": "Cette section contient des FAQ relatives aux étapes antérieures du programme du CUEC.",
+          "links": [
+            {
+              "label": "Refinancement et remise de prêt",
+              "href": "#"
+            },
+            {
+              "label": "Admissibilité (fermé)",
+              "href": "#"
+            }
+          ]
+        }
+      }
+    },
     "contact-info-title": "Coordonnées",
     "breadcrumb-label1": "Survol du programme du CUEC",
     "breadcrumb-link1": "/fr/survol.html",

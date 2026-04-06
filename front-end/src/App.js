@@ -52,7 +52,6 @@ const getPageType = (path) => {
 
 const getBlankPageHeadingKey = (pageType) => {
   if (pageType === "overview") return "form.overview-title";
-  if (pageType === "faq") return "form.faq-title";
   if (pageType === "contact-info") return "form.contact-info-title";
   return null;
 };
@@ -193,9 +192,21 @@ const formatTelephoneNumber = (value) => {
   const isOverviewPage = pageType === "overview";
   const isContactInfoPage = pageType === "contact-info";
   const isContactNavActive = pageType === "contact-form" || isContactInfoPage;
-  const isBlankShellPage = isFaqPage || isOverviewPage || isContactInfoPage;
+  const isBlankShellPage = isOverviewPage || isContactInfoPage;
   const blankPageHeadingKey = getBlankPageHeadingKey(pageType);
   const blankPageBreadcrumbItems = getBlankPageBreadcrumbItems(pageType, t);
+  const faqPageTitle = t("form.faq.pageTitle");
+  const faqSections = ["assigned", "unassigned", "archive"].map((key) => {
+    const section = t(`form.faq.sections.${key}`, { returnObjects: true });
+    const isSectionObject = section && typeof section === "object" && !Array.isArray(section);
+
+    return {
+      id: key,
+      title: isSectionObject ? section.title : "",
+      body: isSectionObject ? section.body : "",
+      links: isSectionObject && Array.isArray(section.links) ? section.links : [],
+    };
+  });
 
   // Load application configuration from backend at runtime
   useEffect(() => {
@@ -484,6 +495,49 @@ useEffect(() => {
       <gcds-container id="main-content" main-container size="xl"
       centered
       tag="main">
+        {isFaqPage && (
+        <>
+        <div className="breadcrumbs-wrap">
+          <nav aria-label="Breadcrumb" className="gc-breadcrumbs">
+            <ol>
+              {blankPageBreadcrumbItems.map((item) => (
+                <li key={`${item.href}-${item.label}`}>
+                  <a href={item.href}>{item.label}</a>
+                </li>
+              ))}
+            </ol>
+          </nav>
+        </div>
+        <div className="faq-page">
+          <div className="faq-page-title">
+            <gcds-heading tag="h1" level="1">
+              {faqPageTitle}
+            </gcds-heading>
+          </div>
+          {faqSections.map((section) => (
+            <section key={section.id} className="faq-section">
+              <div className="faq-section-title">
+                <gcds-heading tag="h2" level="2" character-limit="false">
+                  {section.title}
+                </gcds-heading>
+              </div>
+              <p className="faq-section-body">{section.body}</p>
+              <div className="faq-link-grid">
+                {section.links.map((link) => (
+                  <a
+                    key={`${section.id}-${link.label}`}
+                    href={link.href}
+                    className="faq-link"
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            </section>
+          ))}
+        </div>
+        </>
+        )}
         {isBlankShellPage && blankPageHeadingKey && (
         <>
         <div className="breadcrumbs-wrap">
@@ -502,7 +556,7 @@ useEffect(() => {
         <gcds-heading tag="h1" level="1">{t(blankPageHeadingKey)}</gcds-heading>
         </>
         )}
-        {!isBlankShellPage && (
+        {!isBlankShellPage && !isFaqPage && (
         <>
         <div className="breadcrumbs-wrap">
           <nav aria-label="Breadcrumb" className="gc-breadcrumbs">

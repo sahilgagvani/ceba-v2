@@ -75,7 +75,66 @@
 		"error-banner": "Error:",
 		"CEBA": "Canada Emergency Business Account (CEBA)",
 		"overview-title": "Canada Emergency Business Account (CEBA)",
-		"faq-title": "Frequently Asked questions",
+		"faq-title": "Frequently Asked Questions",
+		"faq": {
+			"pageTitle": "Frequently Asked Questions",
+			"sections": {
+				"assigned": {
+					"title": "My Loan Has Been Assigned to the CEBA Program",
+					"body": "If your CEBA Loan has entered collections and is no longer accessible through your financial institution, then your CEBA Loan may be classified as ‘Assigned’. FAQs for assigned CEBA Loans can be found in this section.",
+					"links": [
+						{
+							"label": "Loan Assignment",
+							"href": "#"
+						},
+						{
+							"label": "Loan Repayment",
+							"href": "#"
+						},
+						{
+							"label": "Payment Arrangements",
+							"href": "#"
+						},
+						{
+							"label": "Changes to My Business",
+							"href": "#"
+						},
+						{
+							"label": "CEBA Portal Account",
+							"href": "#"
+						},
+						{
+							"label": "Statements of Account",
+							"href": "#"
+						}
+					]
+				},
+				"unassigned": {
+					"title": "My Loan Is With My Financial Institution",
+					"body": "If your CEBA Loan is still accessible through your financial institution, then your CEBA Loan is classified as ‘Unassigned’. FAQs for unassigned CEBA Loans can be found in this section.",
+					"links": [
+						{
+							"label": "Loan Repayment",
+							"href": "#"
+						}
+					]
+				},
+				"archive": {
+					"title": "FAQ Archive",
+					"body": "This section contains FAQs related to earlier stages of the CEBA Program.",
+					"links": [
+						{
+							"label": "Refinancing and Forgiveness",
+							"href": "#"
+						},
+						{
+							"label": "Eligibility (Closed)",
+							"href": "#"
+						}
+					]
+				}
+			}
+		},
 		"contact-info-title": "Contact Information",
 		"breadcrumb-label1": "CEBA Program Overview",
 		"breadcrumb-link1": "/en/overview.html",
