@@ -192,7 +192,7 @@ const formatTelephoneNumber = (value) => {
   const isOverviewPage = pageType === "overview";
   const isContactInfoPage = pageType === "contact-info";
   const isContactNavActive = pageType === "contact-form" || isContactInfoPage;
-  const isBlankShellPage = isOverviewPage || isContactInfoPage;
+  const isBlankShellPage = isOverviewPage;
   const blankPageHeadingKey = getBlankPageHeadingKey(pageType);
   const blankPageBreadcrumbItems = getBlankPageBreadcrumbItems(pageType, t);
   const faqPageTitle = t("form.faq.pageTitle");
@@ -207,6 +207,39 @@ const formatTelephoneNumber = (value) => {
       links: isSectionObject && Array.isArray(section.links) ? section.links : [],
     };
   });
+  const contactInfo = t("form.contactInfo", { returnObjects: true });
+  const isContactInfoObject =
+    contactInfo && typeof contactInfo === "object" && !Array.isArray(contactInfo);
+  const contactInfoIntroParagraphs =
+    isContactInfoObject && Array.isArray(contactInfo.introParagraphs)
+      ? contactInfo.introParagraphs
+      : [];
+  const contactInfoCards =
+    isContactInfoObject && Array.isArray(contactInfo.cards) ? contactInfo.cards : [];
+  const contactInfoDateModified =
+    isContactInfoObject && typeof contactInfo.dateModified === "string"
+      ? contactInfo.dateModified
+      : "";
+
+  const renderContactInfoText = (content) => {
+    if (typeof content === "string") return content;
+    if (!content || typeof content !== "object") return null;
+
+    const hasLink = content.linkHref && content.linkLabel;
+
+    return (
+      <>
+        {content.beforeLink}
+        {hasLink && (
+          <>
+            {" "}
+            <a href={content.linkHref}>{content.linkLabel}</a>
+          </>
+        )}
+        {content.afterLink}
+      </>
+    );
+  };
 
   // Load application configuration from backend at runtime
   useEffect(() => {
@@ -556,7 +589,85 @@ useEffect(() => {
         <gcds-heading tag="h1" level="1">{t(blankPageHeadingKey)}</gcds-heading>
         </>
         )}
-        {!isBlankShellPage && !isFaqPage && (
+        {isContactInfoPage && (
+        <>
+        <div className="breadcrumbs-wrap">
+          <nav aria-label="Breadcrumb" className="gc-breadcrumbs">
+            <ol>
+              {blankPageBreadcrumbItems.map((item) => (
+                <li key={`${item.href}-${item.label}`}>
+                  <a href={item.href}>{item.label}</a>
+                </li>
+              ))}
+            </ol>
+          </nav>
+        </div>
+        <div className="contact-info-page">
+          <gcds-heading tag="h1" level="1">{t("form.contact-info-title")}</gcds-heading>
+          <div className="contact-info-intro">
+            {contactInfoIntroParagraphs.map((paragraph, index) => (
+              <p key={`contact-info-intro-${index}`}>
+                {renderContactInfoText(paragraph)}
+              </p>
+            ))}
+          </div>
+          <div className="contact-info-card-grid">
+            {contactInfoCards.map((card) => {
+              const sections = Array.isArray(card.sections) ? card.sections : [];
+              const cardParagraphs = Array.isArray(card.paragraphs) ? card.paragraphs : [];
+
+              return (
+                <section key={card.title} className="contact-info-card">
+                  <h2 className="contact-info-card-title">{card.title}</h2>
+                  <div className="contact-info-card-body">
+                    {sections.map((section, index) => {
+                      const items = Array.isArray(section.items) ? section.items : [];
+                      const sectionParagraphs = Array.isArray(section.paragraphs)
+                        ? section.paragraphs
+                        : [];
+
+                      return (
+                        <div
+                          key={`${card.title}-${section.heading || index}`}
+                          className="contact-info-card-section"
+                        >
+                          {section.heading && (
+                            <p className="contact-info-card-section-heading">
+                              <strong>{section.heading}</strong>
+                            </p>
+                          )}
+                          {items.length > 0 && (
+                            <ul>
+                              {items.map((item) => (
+                                <li key={item}>{item}</li>
+                              ))}
+                            </ul>
+                          )}
+                          {sectionParagraphs.map((paragraph, paragraphIndex) => (
+                            <p key={`${card.title}-${section.heading || index}-${paragraphIndex}`}>
+                              {renderContactInfoText(paragraph)}
+                            </p>
+                          ))}
+                        </div>
+                      );
+                    })}
+                    {cardParagraphs.map((paragraph, index) => (
+                      <p key={`${card.title}-paragraph-${index}`}>
+                        {renderContactInfoText(paragraph)}
+                      </p>
+                    ))}
+                  </div>
+                </section>
+              );
+            })}
+          </div>
+          {contactInfoDateModified && (
+            <div className="contact-info-date">{contactInfoDateModified}</div>
+          )}
+        </div>
+        </>
+        )}
+        {!isBlankShellPage && !isFaqPage && !isContactInfoPage && (
         <>
         <div className="breadcrumbs-wrap">
           <nav aria-label="Breadcrumb" className="gc-breadcrumbs">

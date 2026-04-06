@@ -117,7 +117,7 @@ describe('App page rendering', () => {
     expect(breadcrumbLinks[0]).toHaveAttribute('href', '/en/overview.html');
   });
 
-  test('renders a blank contact information shell at /en/contact.html', () => {
+  test('renders contact information body content at /en/contact.html', () => {
     window.history.pushState({}, '', '/en/contact.html');
 
     const { container } = render(<App />);
@@ -132,8 +132,51 @@ describe('App page rendering', () => {
     expect(container.querySelector('gcds-heading')).toHaveTextContent(
       /contact information/i
     );
+    expect(screen.getByText(/there are three contact centres/i)).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /ceba call centre/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /cra ceba contact centre/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /financial institution/i })).toBeInTheDocument();
+    expect(screen.getByText(/ceba portal/i)).toBeInTheDocument();
+    expect(screen.getByText(/create or modify payment arrangements/i)).toBeInTheDocument();
+    expect(screen.getByText(/loan details & balance\(s\)/i)).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /online form/i })).toHaveAttribute(
+      'href',
+      'https://contact.ceba-cuec.ca/en'
+    );
+    expect(screen.getByText(/date modified: 2026-01-21/i)).toBeInTheDocument();
     expect(
       container.querySelector('.custom-top-nav .nav-link.active')
     ).toHaveTextContent(/contact information/i);
+  });
+
+  test('renders contact information body content at /fr/coordonnees.html', async () => {
+    window.history.pushState({}, '', '/fr/coordonnees.html');
+    await act(async () => {
+      await i18n.changeLanguage('fr');
+    });
+
+    const { container } = render(<App />);
+
+    expect(screen.queryByText(/formulaire de contact/i)).not.toBeInTheDocument();
+    expect(container.querySelector('gcds-heading')).toHaveTextContent(/coordonnées/i);
+    expect(screen.getByText(/il y a trois centres de contact/i)).toBeInTheDocument();
+    expect(screen.getByText(/Le centre de contact approprié variera/i)).toBeInTheDocument();
+    expect(screen.getByText(/veuillez suivre les conseils ci-dessous/i)).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Centre d’appels du CUEC' })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: "Centre d'appels du CUEC de l’ARC" })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /institution financière/i })).toBeInTheDocument();
+    expect(screen.getAllByText(/Détails du prêt et solde\(s\)/i)).toHaveLength(2);
+    expect(screen.getByText(/États de compte/i)).toBeInTheDocument();
+    expect(
+      screen.getByText(/Vous pouvez téléphoner au Centre d’appels du CUEC de l’ARC au 1 800 361-2808\./i)
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText(/Veuillez consulter l'institution financière qui a fourni votre prêt du CUEC\./i)
+    ).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /formulaire en ligne/i })).toHaveAttribute(
+      'href',
+      'https://contact.ceba-cuec.ca/fr'
+    );
+    expect(screen.getByText(/2026-01-21/i)).toBeInTheDocument();
   });
 });
