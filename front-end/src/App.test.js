@@ -160,9 +160,19 @@ describe('App page rendering', () => {
     expect(screen.queryByText(/formulaire de contact/i)).not.toBeInTheDocument();
     expect(container.querySelector('gcds-heading')).toHaveTextContent(/coordonnées/i);
     expect(screen.getByText(/il y a trois centres de contact/i)).toBeInTheDocument();
+    expect(screen.getByText(/Le centre de contact approprié variera/i)).toBeInTheDocument();
+    expect(screen.getByText(/veuillez suivre les conseils ci-dessous/i)).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: 'Centre d’appels du CUEC' })).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: "Centre d'appels du CUEC de l’ARC" })).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: /institution financière/i })).toBeInTheDocument();
+    expect(screen.getAllByText(/Détails du prêt et solde\(s\)/i)).toHaveLength(2);
+    expect(screen.getByText(/États de compte/i)).toBeInTheDocument();
+    expect(
+      screen.getByText(/Vous pouvez téléphoner au Centre d’appels du CUEC de l’ARC au 1 800 361-2808\./i)
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText(/Veuillez consulter l'institution financière qui a fourni votre prêt du CUEC\./i)
+    ).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /formulaire en ligne/i })).toHaveAttribute(
       'href',
       'https://contact.ceba-cuec.ca/fr'
