@@ -10,13 +10,13 @@
     "intro03": {
 			"1": "trouver des réponses aux questions fréquemment posées sur notre",
 			"2": "FAQ",
-			"link": "https://ceba-cuec.ca/fr/faq.html"
+			"link": "/fr/faq.html"
 		},
 		"intro04": {
 			"1": "obtenir",
 			"2": "informations générales",
 			"3": "sur notre site web",
-			"link": "https://ceba-cuec.ca/fr/survol.html"
+			"link": "/fr/survol.html"
 		},
     "intro05": "Nous comprenons que l'accès rapide au support client est important. Merci de votre patience.",
     "intro06": "Si vous avez des difficultés avec le formulaire suivant, vous pouvez utiliser n'importe lequel de nos autres canaux de service pour nous contacter. Veuillez lire la Déclaration de collecte de renseignements personnels avant de remplir ce formulaire.",
@@ -75,17 +75,167 @@
     "error-isRequired": "Ce champ est obligatoire",
     "error-banner": "Erreur:",
     "CEBA": "Compte d'urgence pour les entreprises canadiennes (CUEC)",
+    "overview-title": "Compte d’urgence pour les entreprises canadiennes (CUEC)",
+    "faq-title": "Foires aux questions",
+    "faq": {
+      "pageTitle": "Foires aux questions",
+      "sections": {
+        "assigned": {
+          "title": "Mon prêt a été cédé au programme du CUEC",
+          "body": "Si votre prêt du CUEC est en recouvrement et n'est plus accessible par l'entremise de votre institution financière, votre prêt du CUEC peut être classé comme « cédé ». La FAQ sur les prêts cédés au programme du CUEC se trouve dans cette section.",
+          "links": [
+            {
+              "label": "Cession de prêt",
+              "href": "#"
+            },
+            {
+              "label": "Remboursement du prêt",
+              "href": "#"
+            },
+            {
+              "label": "Modalités de paiement",
+              "href": "#"
+            },
+            {
+              "label": "Changements apportés à mon entreprise",
+              "href": "#"
+            },
+            {
+              "label": "Compte sur le portail du CUEC",
+              "href": "#"
+            },
+            {
+              "label": "Relevés de compte",
+              "href": "#"
+            }
+          ]
+        },
+        "unassigned": {
+          "title": "Mon prêt est auprès de mon institution financière",
+          "body": "Si votre prêt du CUEC est toujours accessible par l'entremise de votre institution financière, votre prêt du CUEC est classé comme « non cédé ». La FAQ sur les prêts non cédés au programme du CUEC se trouvent dans cette section.",
+          "links": [
+            {
+              "label": "Remboursement du prêt",
+              "href": "#"
+            }
+          ]
+        },
+        "archive": {
+          "title": "Foires aux questions - Archive",
+          "body": "Cette section contient des FAQ relatives aux étapes antérieures du programme du CUEC.",
+          "links": [
+            {
+              "label": "Refinancement et remise de prêt",
+              "href": "#"
+            },
+            {
+              "label": "Admissibilité (fermé)",
+              "href": "#"
+            }
+          ]
+        }
+      }
+    },
+    "contact-info-title": "Coordonnées",
+    "contactInfo": {
+      "introParagraphs": [
+        "Il y a trois centres de contact qui soutiennent les détenteurs de prêts du CUEC. Le centre de contact approprié variera selon que votre prêt a été cédé au programme du CUEC.",
+        "Si votre prêt du CUEC n’est plus accessible par l’entremise de votre institution financière, votre prêt du CUEC peut être classé comme « cédé ». Si votre prêt du CUEC est toujours accessible par l’entremise de votre institution financière, votre prêt du CUEC est classé comme « non cédé ».",
+        {
+          "beforeLink": "Pour toute question concernant les prêts du CUEC, veuillez consulter la page",
+          "linkLabel": "Foires aux questions",
+          "linkHref": "/fr/faq.html",
+          "afterLink": ". Si vous avez besoin d’aide supplémentaire, veuillez suivre les conseils ci-dessous. Des aménagements d’accessibilité sont disponibles si nécessaire."
+        }
+      ],
+      "cards": [
+        {
+          "title": "Centre d’appels du CUEC",
+          "sections": [
+            {
+              "heading": "Prêts cédés :",
+              "items": [
+                "Portail du CUEC",
+                "Détails du prêt et solde(s)",
+                "Modifications à vos coordonnées",
+                "Avis de cession de prêt",
+                "États de compte",
+                "Effectuer des paiements et des méthodes de paiement",
+                "Comment les paiements sont appliqués",
+                "Comment informer le programme du CUEC de l’insolvabilité ou du décès d’un propriétaire unique"
+              ]
+            },
+            {
+              "heading": "Prêts non cédés :",
+              "items": [
+                "Historique de la demande du CUEC",
+                "Renseignements sur le programme et échéanciers"
+              ]
+            }
+          ],
+          "paragraphs": [
+            {
+              "beforeLink": "Veuillez communiquer avec le Centre d’appels du CUEC au 1-888-324-4201 ou par l’entremise du",
+              "linkLabel": "formulaire en ligne",
+              "linkHref": "https://contact.ceba-cuec.ca/fr",
+              "afterLink": ". Un agent vous répondra dans les 3 jours ouvrables entre 8 h et 18 h, heure normale de l’est, hors jours fériés."
+            }
+          ]
+        },
+        {
+          "title": "Centre d'appels du CUEC de l’ARC",
+          "sections": [
+            {
+              "heading": "Prêts cédés :",
+              "items": [
+                "Créer ou modifier des ententes de paiement",
+                "Lettres ou communications reçues de l’ARC",
+                "Ajouter, mettre à jour ou supprimer des tiers autorisés"
+              ]
+            }
+          ],
+          "paragraphs": [
+            "Vous pouvez téléphoner au Centre d’appels du CUEC de l’ARC au 1 800 361-2808."
+          ]
+        },
+        {
+          "title": "Institution financière",
+          "sections": [
+            {
+              "heading": "Prêts cédés :",
+              "items": [
+                "Votre institution financière n'est plus impliquée dans le service du prêt CUEC. Toutes les questions, à l'exception de la raison de la cession, du statut des paiements effectués pendant ou après la cession, et des questions liées à la lettre de demande, doivent être adressées au Centre d'appels CUEC ou au service de recouvrement du CUEC de l’ARC."
+              ]
+            },
+            {
+              "heading": "Prêts non cédés :",
+              "items": [
+                "Détails du prêt et solde(s)",
+                "Effectuer des paiements et des méthodes de paiement",
+                "Comment les paiements sont appliqués",
+                "Modifications apportées à vos coordonnées",
+                "Autres changements apportés à votre entreprise"
+              ]
+            }
+          ],
+          "paragraphs": [
+            "Veuillez consulter l'institution financière qui a fourni votre prêt du CUEC."
+          ]
+        }
+      ],
+      "dateModified": "Date de modification : 2026-01-21"
+    },
     "breadcrumb-label1": "Survol du programme du CUEC",
-    "breadcrumb-link1": "https://ceba-cuec.ca/fr/survol.html",
+    "breadcrumb-link1": "/fr/survol.html",
     "breadcrumb-label2": "Coordonnées",
     "breadcrumb-link2": "https://ceba-cuec.ca/fr/coordonnees.html",
     "breadcrumb-label3": "Formulaire de contact",
     "nav-label1": "Survol du Programme",
-    "nav-link1": "https://ceba-cuec.ca/fr/survol.html",
+    "nav-link1": "/fr/survol.html",
     "nav-label2": "Foires aux questions",
-    "nav-link2": "https://ceba-cuec.ca/fr/faq.html",
+    "nav-link2": "/fr/faq.html",
     "nav-label3": "Coordonnées",
-    "nav-link3": "https://ceba-cuec.ca/fr/coordonnees.html",
+    "nav-link3": "/fr/coordonnees.html",
     "footer-allContacts-label": "Toutes les coordonnées",
     "footer-allContacts-link": "https://www.canada.ca/fr/contact.html",
     "footer-terms-label": "Avis",

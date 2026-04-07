@@ -1,0 +1,11 @@
+chmod +x mvnw
+./mvnw clean package spring-boot:repackage -DskipTests
+java -jar target/Demos-1.0.jar
+.
+.
+.\mvnw.cmd clean package spring-boot:repackage -DskipTests
+java -jar target\Demos-1.0.jar
+.
+.
+f-e
+npm start

@@ -10,13 +10,13 @@
 		"intro03": {
 			"1": "find answers to frequently asked questions on our",
 			"2": "FAQ",
-			"link": "https://ceba-cuec.ca/en/faq.html"
+			"link": "/en/faq.html"
 		},
 		"intro04": {
 			"1": "get",
 			"2": "general information",
 			"3": "on our website",
-			"link": "https://ceba-cuec.ca/en/overview.html"
+			"link": "/en/overview.html"
 		},
 		"intro05": "We understand that timely access to client support is important. Thank you for your patience.",
 		"intro06": "If you have difficulty with the following form, you can use any of our other service channels to contact us. Please read the Personal Information Collection Statement before completing this form.",
@@ -74,17 +74,167 @@
 		"error-isRequired": "This field is required",
 		"error-banner": "Error:",
 		"CEBA": "Canada Emergency Business Account (CEBA)",
+		"overview-title": "Canada Emergency Business Account (CEBA)",
+		"faq-title": "Frequently Asked Questions",
+		"faq": {
+			"pageTitle": "Frequently Asked Questions",
+			"sections": {
+				"assigned": {
+					"title": "My Loan Has Been Assigned to the CEBA Program",
+					"body": "If your CEBA Loan has entered collections and is no longer accessible through your financial institution, then your CEBA Loan may be classified as ‘Assigned’. FAQs for assigned CEBA Loans can be found in this section.",
+					"links": [
+						{
+							"label": "Loan Assignment",
+							"href": "#"
+						},
+						{
+							"label": "Loan Repayment",
+							"href": "#"
+						},
+						{
+							"label": "Payment Arrangements",
+							"href": "#"
+						},
+						{
+							"label": "Changes to My Business",
+							"href": "#"
+						},
+						{
+							"label": "CEBA Portal Account",
+							"href": "#"
+						},
+						{
+							"label": "Statements of Account",
+							"href": "#"
+						}
+					]
+				},
+				"unassigned": {
+					"title": "My Loan Is With My Financial Institution",
+					"body": "If your CEBA Loan is still accessible through your financial institution, then your CEBA Loan is classified as ‘Unassigned’. FAQs for unassigned CEBA Loans can be found in this section.",
+					"links": [
+						{
+							"label": "Loan Repayment",
+							"href": "#"
+						}
+					]
+				},
+				"archive": {
+					"title": "FAQ Archive",
+					"body": "This section contains FAQs related to earlier stages of the CEBA Program.",
+					"links": [
+						{
+							"label": "Refinancing and Forgiveness",
+							"href": "#"
+						},
+						{
+							"label": "Eligibility (Closed)",
+							"href": "#"
+						}
+					]
+				}
+			}
+		},
+		"contact-info-title": "Contact Information",
+		"contactInfo": {
+			"introParagraphs": [
+				"There are three Contact Centres that support CEBA Loan Holders. The appropriate Contact Centre will vary depending on if your loan has been assigned to the CEBA Program.",
+				"If your CEBA Loan is no longer accessible through your financial institution, then your CEBA Loan may be classified as ‘Assigned’. If your CEBA Loan is still accessible through your financial institution, then your CEBA Loan is classified as ‘Unassigned’.",
+				{
+					"beforeLink": "For any questions regarding CEBA Loans, please consult the",
+					"linkLabel": "Frequently Asked Questions",
+					"linkHref": "/en/faq.html",
+					"afterLink": " page. Should you need further assistance please use the guidance below. Accessibility accommodations are available if needed."
+				}
+			],
+			"cards": [
+				{
+					"title": "CEBA Call Centre",
+					"sections": [
+						{
+							"heading": "Assigned Loans:",
+							"items": [
+								"CEBA Portal",
+								"Loan details and balance(s)",
+								"Changes to your contact details",
+								"Loan assignment notice",
+								"Statements of account",
+								"Making payments and payment methods",
+								"How payments are applied",
+								"How to inform the CEBA Program of insolvency or death of a sole proprietor"
+							]
+						},
+						{
+							"heading": "Unassigned Loans:",
+							"items": [
+								"CEBA application history",
+								"Program information and timelines"
+							]
+						}
+					],
+					"paragraphs": [
+						{
+							"beforeLink": "Please contact the CEBA Call Centre at 1-888-324-4201 or via the",
+							"linkLabel": "online form",
+							"linkHref": "https://contact.ceba-cuec.ca/en",
+							"afterLink": ". An agent will return your calls within 3 business days between 8am and 6pm Eastern Standard Time, excluding statutory holidays."
+						}
+					]
+				},
+				{
+					"title": "CRA CEBA Contact Centre",
+					"sections": [
+						{
+							"heading": "Assigned Loans:",
+							"items": [
+								"Create or modify payment arrangements",
+								"Letters or communications received from the CRA",
+								"Add, update, or remove authorized third parties"
+							]
+						}
+					],
+					"paragraphs": [
+						"You can reach the CRA CEBA Contact Centre at 1-800-361-2808."
+					]
+				},
+				{
+					"title": "Financial Institution",
+					"sections": [
+						{
+							"heading": "Assigned Loans:",
+							"items": [
+								"Your financial institution is no longer involved with the servicing of the CEBA Loan. All questions, with the exception of reason for assignment, status of payments made during or after assignment and demand letter related questions, should be directed to either the CEBA Call Centre or CRA CEBA Collections."
+							]
+						},
+						{
+							"heading": "Unassigned Loans:",
+							"items": [
+								"Loan details & balance(s)",
+								"Making payments and payment methods",
+								"How payments are applied",
+								"Changes to your contact details",
+								"Other changes to your business"
+							]
+						}
+					],
+					"paragraphs": [
+						"Please refer to the Financial Institution that provided your CEBA Loan."
+					]
+				}
+			],
+			"dateModified": "Date modified: 2026-01-21"
+		},
 		"breadcrumb-label1": "CEBA Program Overview",
-		"breadcrumb-link1": "https://ceba-cuec.ca/en/overview.html",
+		"breadcrumb-link1": "/en/overview.html",
 		"breadcrumb-label2": "Contact Information",
 		"breadcrumb-link2": "https://ceba-cuec.ca/en/contact.html",
 		"breadcrumb-label3": "Contact Form",
 		"nav-label1": "Program Overview",
-		"nav-link1": "https://ceba-cuec.ca/en/overview.html",
+		"nav-link1": "/en/overview.html",
 		"nav-label2": "FAQ",
-		"nav-link2": "https://ceba-cuec.ca/en/faq.html",
+		"nav-link2": "/en/faq.html",
 		"nav-label3": "Contact Information",
-        "nav-link3": "https://ceba-cuec.ca/en/contact.html",
+        "nav-link3": "/en/contact.html",
         "footer-allContacts-label": "All contacts",
         "footer-allContacts-link": "https://www.canada.ca/en/contact.html",
         "footer-terms-label": "Terms and conditions",

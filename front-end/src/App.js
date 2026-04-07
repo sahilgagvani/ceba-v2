@@ -6,6 +6,87 @@ import { useTranslation } from "react-i18next";
 import ErrorBanner from "./components/ErrorBanner";
 import MailFailBanner from "./components/MailFailBanner";
 
+const getCurrentPath = () => {
+  if (typeof window === "undefined") return "/";
+  return (window.location?.pathname || "/").toLowerCase();
+};
+
+const getPageType = (path) => {
+  if (
+    path === "/faq.html" ||
+    path.endsWith("/faq.html") ||
+    path === "/faq" ||
+    path.endsWith("/faq")
+  ) {
+    return "faq";
+  }
+
+  if (
+    path === "/overview.html" ||
+    path.endsWith("/overview.html") ||
+    path === "/overview" ||
+    path.endsWith("/overview") ||
+    path === "/survol.html" ||
+    path.endsWith("/survol.html") ||
+    path === "/survol" ||
+    path.endsWith("/survol")
+  ) {
+    return "overview";
+  }
+
+  if (
+    path === "/contact.html" ||
+    path.endsWith("/contact.html") ||
+    path === "/contact" ||
+    path.endsWith("/contact") ||
+    path === "/coordonnees.html" ||
+    path.endsWith("/coordonnees.html") ||
+    path === "/coordonnees" ||
+    path.endsWith("/coordonnees")
+  ) {
+    return "contact-info";
+  }
+
+  return "contact-form";
+};
+
+const getBlankPageHeadingKey = (pageType) => {
+  if (pageType === "overview") return "form.overview-title";
+  if (pageType === "contact-info") return "form.contact-info-title";
+  return null;
+};
+
+const getBlankPageBreadcrumbItems = (pageType, t) => {
+  const overviewItem = {
+    href: t("form.breadcrumb-link1"),
+    label: t("form.breadcrumb-label1"),
+  };
+
+  if (pageType === "overview") return [overviewItem];
+
+  if (pageType === "faq") {
+    return [
+      overviewItem,
+      {
+        href: t("form.nav-link2"),
+        label: t("form.nav-label2"),
+      },
+    ];
+  }
+
+  if (pageType === "contact-info") {
+    return [
+      overviewItem,
+      {
+        href: t("form.nav-link3"),
+        label: t("form.nav-label3"),
+      },
+    ];
+  }
+
+  return [];
+};
+
 
 
 
@@ -105,6 +186,60 @@ const formatTelephoneNumber = (value) => {
 
 
   const { t, i18n } = useTranslation();
+  const currentPath = getCurrentPath();
+  const pageType = getPageType(currentPath);
+  const isFaqPage = pageType === "faq";
+  const isOverviewPage = pageType === "overview";
+  const isContactInfoPage = pageType === "contact-info";
+  const isContactNavActive = pageType === "contact-form" || isContactInfoPage;
+  const isBlankShellPage = isOverviewPage;
+  const blankPageHeadingKey = getBlankPageHeadingKey(pageType);
+  const blankPageBreadcrumbItems = getBlankPageBreadcrumbItems(pageType, t);
+  const faqPageTitle = t("form.faq.pageTitle");
+  const faqSections = ["assigned", "unassigned", "archive"].map((key) => {
+    const section = t(`form.faq.sections.${key}`, { returnObjects: true });
+    const isSectionObject = section && typeof section === "object" && !Array.isArray(section);
+
+    return {
+      id: key,
+      title: isSectionObject ? section.title : "",
+      body: isSectionObject ? section.body : "",
+      links: isSectionObject && Array.isArray(section.links) ? section.links : [],
+    };
+  });
+  const contactInfo = t("form.contactInfo", { returnObjects: true });
+  const isContactInfoObject =
+    contactInfo && typeof contactInfo === "object" && !Array.isArray(contactInfo);
+  const contactInfoIntroParagraphs =
+    isContactInfoObject && Array.isArray(contactInfo.introParagraphs)
+      ? contactInfo.introParagraphs
+      : [];
+  const contactInfoCards =
+    isContactInfoObject && Array.isArray(contactInfo.cards) ? contactInfo.cards : [];
+  const contactInfoDateModified =
+    isContactInfoObject && typeof contactInfo.dateModified === "string"
+      ? contactInfo.dateModified
+      : "";
+
+  const renderContactInfoText = (content) => {
+    if (typeof content === "string") return content;
+    if (!content || typeof content !== "object") return null;
+
+    const hasLink = content.linkHref && content.linkLabel;
+
+    return (
+      <>
+        {content.beforeLink}
+        {hasLink && (
+          <>
+            {" "}
+            <a href={content.linkHref}>{content.linkLabel}</a>
+          </>
+        )}
+        {content.afterLink}
+      </>
+    );
+  };
 
   // Load application configuration from backend at runtime
   useEffect(() => {
@@ -133,7 +268,13 @@ const formatTelephoneNumber = (value) => {
 
 useEffect(() => {
 
-  document.title = "CEBA Contact Form";
+  document.title = isFaqPage
+    ? `CEBA ${t("form.nav-label2")}`
+    : isOverviewPage
+      ? `CEBA ${t("form.nav-label1")}`
+      : isContactInfoPage
+        ? `CEBA ${t("form.nav-label3")}`
+      : `CEBA ${t("form.breadcrumb-label3")}`;
   const header = document.querySelector("gcds-header");
   if (!header) return;
 
@@ -362,21 +503,21 @@ useEffect(() => {
           >
             <a
               href={t("form.nav-link1")}
-              className="nav-link"
+              className={`nav-link ${isOverviewPage ? "active" : ""}`}
               onClick={() => setIsNavOpen(false)}
             >
               {t("form.nav-label1")}
             </a>
             <a
               href={t("form.nav-link2")}
-              className="nav-link"
+              className={`nav-link ${isFaqPage ? "active" : ""}`}
               onClick={() => setIsNavOpen(false)}
             >
               {t("form.nav-label2")}
             </a>
             <a
               href={t("form.nav-link3")}
-              className="nav-link active"
+              className={`nav-link ${isContactNavActive ? "active" : ""}`}
               onClick={() => setIsNavOpen(false)}
             >
               {t("form.nav-label3")}
@@ -387,6 +528,147 @@ useEffect(() => {
       <gcds-container id="main-content" main-container size="xl"
       centered
       tag="main">
+        {isFaqPage && (
+        <>
+        <div className="breadcrumbs-wrap">
+          <nav aria-label="Breadcrumb" className="gc-breadcrumbs">
+            <ol>
+              {blankPageBreadcrumbItems.map((item) => (
+                <li key={`${item.href}-${item.label}`}>
+                  <a href={item.href}>{item.label}</a>
+                </li>
+              ))}
+            </ol>
+          </nav>
+        </div>
+        <div className="faq-page">
+          <div className="faq-page-title">
+            <gcds-heading tag="h1" level="1">
+              {faqPageTitle}
+            </gcds-heading>
+          </div>
+          {faqSections.map((section) => (
+            <section key={section.id} className="faq-section">
+              <div className="faq-section-title">
+                <gcds-heading tag="h2" level="2" character-limit="false">
+                  {section.title}
+                </gcds-heading>
+              </div>
+              <p className="faq-section-body">{section.body}</p>
+              <div className="faq-link-grid">
+                {section.links.map((link) => (
+                  <a
+                    key={`${section.id}-${link.label}`}
+                    href={link.href}
+                    className="faq-link"
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            </section>
+          ))}
+        </div>
+        </>
+        )}
+        {isBlankShellPage && blankPageHeadingKey && (
+        <>
+        <div className="breadcrumbs-wrap">
+          <nav aria-label="Breadcrumb" className="gc-breadcrumbs">
+            <ol>
+              {blankPageBreadcrumbItems.map((item) => (
+                <li key={`${item.href}-${item.label}`}>
+                  <a href={item.href}>{item.label}</a>
+                </li>
+              ))}
+            </ol>
+          </nav>
+        </div>
+        <br></br>
+        <br></br>
+        <gcds-heading tag="h1" level="1">{t(blankPageHeadingKey)}</gcds-heading>
+        </>
+        )}
+        {isContactInfoPage && (
+        <>
+        <div className="breadcrumbs-wrap">
+          <nav aria-label="Breadcrumb" className="gc-breadcrumbs">
+            <ol>
+              {blankPageBreadcrumbItems.map((item) => (
+                <li key={`${item.href}-${item.label}`}>
+                  <a href={item.href}>{item.label}</a>
+                </li>
+              ))}
+            </ol>
+          </nav>
+        </div>
+        <div className="contact-info-page">
+          <gcds-heading tag="h1" level="1">{t("form.contact-info-title")}</gcds-heading>
+          <div className="contact-info-intro">
+            {contactInfoIntroParagraphs.map((paragraph, index) => (
+              <p key={`contact-info-intro-${index}`}>
+                {renderContactInfoText(paragraph)}
+              </p>
+            ))}
+          </div>
+          <div className="contact-info-card-grid">
+            {contactInfoCards.map((card) => {
+              const sections = Array.isArray(card.sections) ? card.sections : [];
+              const cardParagraphs = Array.isArray(card.paragraphs) ? card.paragraphs : [];
+
+              return (
+                <section key={card.title} className="contact-info-card">
+                  <h2 className="contact-info-card-title">{card.title}</h2>
+                  <div className="contact-info-card-body">
+                    {sections.map((section, index) => {
+                      const items = Array.isArray(section.items) ? section.items : [];
+                      const sectionParagraphs = Array.isArray(section.paragraphs)
+                        ? section.paragraphs
+                        : [];
+
+                      return (
+                        <div
+                          key={`${card.title}-${section.heading || index}`}
+                          className="contact-info-card-section"
+                        >
+                          {section.heading && (
+                            <p className="contact-info-card-section-heading">
+                              <strong>{section.heading}</strong>
+                            </p>
+                          )}
+                          {items.length > 0 && (
+                            <ul>
+                              {items.map((item) => (
+                                <li key={item}>{item}</li>
+                              ))}
+                            </ul>
+                          )}
+                          {sectionParagraphs.map((paragraph, paragraphIndex) => (
+                            <p key={`${card.title}-${section.heading || index}-${paragraphIndex}`}>
+                              {renderContactInfoText(paragraph)}
+                            </p>
+                          ))}
+                        </div>
+                      );
+                    })}
+                    {cardParagraphs.map((paragraph, index) => (
+                      <p key={`${card.title}-paragraph-${index}`}>
+                        {renderContactInfoText(paragraph)}
+                      </p>
+                    ))}
+                  </div>
+                </section>
+              );
+            })}
+          </div>
+          {contactInfoDateModified && (
+            <div className="contact-info-date">{contactInfoDateModified}</div>
+          )}
+        </div>
+        </>
+        )}
+        {!isBlankShellPage && !isFaqPage && !isContactInfoPage && (
+        <>
         <div className="breadcrumbs-wrap">
           <nav aria-label="Breadcrumb" className="gc-breadcrumbs">
             <ol>
@@ -738,7 +1020,7 @@ useEffect(() => {
               id="question-business-number"
               name="question-business-number"
               type="text"
-              maxlength="9"
+              maxLength="9"
               inputMode="numeric"
               className={`gc-text-field ${businessNumberError ? "gc-text-field--error" : ""}`}
               value={businessNumber}
@@ -762,7 +1044,7 @@ useEffect(() => {
               id="question-ceba-id"
               name="question-ceba-id"
               type="text"
-              maxlength="12"
+              maxLength="12"
               inputMode="numeric"
               className={`gc-text-field ${cebaIDError ? "gc-text-field--error" : ""}`}
               value={cebaID}
@@ -785,7 +1067,7 @@ useEffect(() => {
           id="question-message"
           name="question-message"
           type="text"
-          maxlength="1500"
+          maxLength="1500"
           className={`gc-text-box ${messageError ? "gc-text-field--error" : ""}`}
           value={message}
           ref={messageRef}
@@ -905,6 +1187,8 @@ useEffect(() => {
       <br></br>
       <div>{t("form.date-modified")}</div>
       <br></br>
+      </>
+      )}
     </gcds-container>
     </div>
     <gcds-footer
