@@ -587,7 +587,8 @@ useEffect(() => {
         <br></br>
         <br></br>
         <gcds-notice type="warning" notice-title-tag="h2" notice-title={t("form.notice-title")}>
-          <gcds-text>{t("form.notice-message")}</gcds-text>
+          <gcds-text>{t("form.notice-message1")}</gcds-text>
+          <gcds-text>{t("form.notice-message2")}</gcds-text>
         </gcds-notice>
         <br></br>
         <gcds-heading tag="h1" level="1">{t(blankPageHeadingKey)}</gcds-heading>
