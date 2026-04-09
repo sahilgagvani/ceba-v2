@@ -245,7 +245,9 @@
     "mailSuccess": "Votre message a été envoyé avec succès. Un agent répondra à votre demande.",
     "mail-fail-1":"Votre message n'a pas pu être envoyé.",
     "mail-fail-2":"Veuillez réessayer plus tard.",
-    "error-confirm-mismatch":"Les saisies de confirmation ne correspondent pas."
-
+    "error-confirm-mismatch":"Les saisies de confirmation ne correspondent pas.",
+    "notice-title": "Mise-à-jour importante au sujet du remboursement pour les détenteurs de prêt",
+    "notice-message1": "Si vous n'êtes pas en mesure de rembourser votre prêt du CUEC à l'échéance, votre institution financière vous contactera pour vous demander un remboursement forfaitaire de la dette en cours. Si, à ce moment-là, vous ne remboursez pas l'intégralité de votre prêt du CUEC à votre institution financière, celle-ci sera probablement tenue d’assigner votre prêt au programme du CUEC du gouvernement pour qu'il soit recouvré.",
+    "notice-message2": "Sachez que si votre prêt du CUEC est cédé au programme du CUEC pour le recouvrement, l’Agence du Revenu du Canada (ARC) pourrait examiner votre situation au cas par cas et travaillera avec vous pour établir une entente de remboursement adaptée à votre capacité de remboursement. Les soldes impayés peuvent être déduits de vos remboursements d’impôt et prestations fédérales et appliqués à un solde de prêt du CUEC."
   }
 }

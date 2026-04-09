@@ -244,6 +244,9 @@
 		"mailSuccess": "Your message was sent successfully. An agent will respond to your request.",
 		"mail-fail-1":"Your message could not be sent.",
 		"mail-fail-2":"Please try again later.",
-		"error-confirm-mismatch":"Entries do not match."
+		"error-confirm-mismatch":"Entries do not match.",
+		"notice-title": "Important Information for Loan Holders on Repayment",
+		"notice-message1": "If you are unable to repay your CEBA Loan when due, your financial institution will contact you to request a lump sum repayment of the outstanding debt. If, at that point, you do not fully repay your CEBA Loan to your financial institution, your financial institution will likely be required to assign your loan to the government’s CEBA Program for collection efforts.",
+		"notice-message2": "Please be advised, if your CEBA Loan is assigned to the CEBA Program for collection, the Canada Revenue Agency (CRA) may review your circumstances on a case-by-case basis and work with you to establish a payment arrangement/repayment plan tailored to your ability to repay. Unpaid balances may be deducted from your tax refunds and federal benefits and applied to a CEBA loan balance."
 	}
 }
