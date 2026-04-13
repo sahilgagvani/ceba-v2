@@ -196,6 +196,9 @@ const formatTelephoneNumber = (value) => {
   const blankPageHeadingKey = getBlankPageHeadingKey(pageType);
   const blankPageBreadcrumbItems = getBlankPageBreadcrumbItems(pageType, t);
   const faqPageTitle = t("form.faq.pageTitle");
+  const faqPortalCtaLabel = t("form.faq.portalCtaLabel");
+  const faqPortalUrl = t("form.intro02.link");
+  const faqDateModified = t("form.faq.dateModified");
   const faqSections = ["assigned", "unassigned", "archive"].map((key) => {
     const section = t(`form.faq.sections.${key}`, { returnObjects: true });
     const isSectionObject = section && typeof section === "object" && !Array.isArray(section);
@@ -530,18 +533,23 @@ useEffect(() => {
       tag="main">
         {isFaqPage && (
         <>
-        <div className="breadcrumbs-wrap">
-          <nav aria-label="Breadcrumb" className="gc-breadcrumbs">
-            <ol>
-              {blankPageBreadcrumbItems.map((item) => (
-                <li key={`${item.href}-${item.label}`}>
-                  <a href={item.href}>{item.label}</a>
-                </li>
-              ))}
-            </ol>
-          </nav>
-        </div>
         <div className="faq-page">
+          <div className="faq-page-topbar">
+            <div className="faq-breadcrumbs">
+              <nav aria-label="Breadcrumb" className="gc-breadcrumbs">
+                <ol>
+                  {blankPageBreadcrumbItems.map((item) => (
+                    <li key={`${item.href}-${item.label}`}>
+                      <a href={item.href}>{item.label}</a>
+                    </li>
+                  ))}
+                </ol>
+              </nav>
+            </div>
+            <a href={faqPortalUrl} className="faq-sign-in-link">
+              {faqPortalCtaLabel}
+            </a>
+          </div>
           <div className="faq-page-title">
             <gcds-heading tag="h1" level="1">
               {faqPageTitle}
@@ -568,49 +576,59 @@ useEffect(() => {
               </div>
             </section>
           ))}
+          <div className="faq-date-modified">{faqDateModified}</div>
         </div>
         </>
         )}
         {isBlankShellPage && blankPageHeadingKey && (
         <>
-        <div className="breadcrumbs-wrap">
-          <nav aria-label="Breadcrumb" className="gc-breadcrumbs">
-            <ol>
-              {blankPageBreadcrumbItems.map((item) => (
-                <li key={`${item.href}-${item.label}`}>
-                  <a href={item.href}>{item.label}</a>
-                </li>
-              ))}
-            </ol>
-          </nav>
+        <div className="overview-page">
+          <div className="page-topbar">
+            <div className="page-breadcrumbs">
+              <nav aria-label="Breadcrumb" className="gc-breadcrumbs">
+                <ol>
+                  {blankPageBreadcrumbItems.map((item) => (
+                    <li key={`${item.href}-${item.label}`}>
+                      <a href={item.href}>{item.label}</a>
+                    </li>
+                  ))}
+                </ol>
+              </nav>
+            </div>
+            <a href={faqPortalUrl} className="page-sign-in-link">
+              {faqPortalCtaLabel}
+            </a>
+          </div>
+          <gcds-heading tag="h1" level="1" character-limit="false">{t(blankPageHeadingKey)}</gcds-heading>
+          <div className="overview-notice">
+            <gcds-notice type="warning" notice-title-tag="h2" notice-title={t("form.notice-title")}>
+              <gcds-text character-limit="false">{t("form.notice-message1")}</gcds-text>
+              <gcds-text character-limit="false">{t("form.notice-message2")}</gcds-text>
+            </gcds-notice>
+          </div>
         </div>
-        <br></br>
-        <br></br>
-        <gcds-heading tag="h1" level="1">{t(blankPageHeadingKey)}</gcds-heading>
-        <br></br>
-        <br></br>
-        <gcds-notice type="warning" notice-title-tag="h2" notice-title={t("form.notice-title")}>
-          <gcds-text>{t("form.notice-message1")}</gcds-text>
-          <gcds-text>{t("form.notice-message2")}</gcds-text>
-        </gcds-notice>
-        <br></br>
         </>
         )}
         {isContactInfoPage && (
         <>
-        <div className="breadcrumbs-wrap">
-          <nav aria-label="Breadcrumb" className="gc-breadcrumbs">
-            <ol>
-              {blankPageBreadcrumbItems.map((item) => (
-                <li key={`${item.href}-${item.label}`}>
-                  <a href={item.href}>{item.label}</a>
-                </li>
-              ))}
-            </ol>
-          </nav>
-        </div>
         <div className="contact-info-page">
-          <gcds-heading tag="h1" level="1">{t("form.contact-info-title")}</gcds-heading>
+          <div className="page-topbar">
+            <div className="page-breadcrumbs">
+              <nav aria-label="Breadcrumb" className="gc-breadcrumbs">
+                <ol>
+                  {blankPageBreadcrumbItems.map((item) => (
+                    <li key={`${item.href}-${item.label}`}>
+                      <a href={item.href}>{item.label}</a>
+                    </li>
+                  ))}
+                </ol>
+              </nav>
+            </div>
+            <a href={faqPortalUrl} className="page-sign-in-link">
+              {faqPortalCtaLabel}
+            </a>
+          </div>
+          <gcds-heading tag="h1" level="1" character-limit="false">{t("form.contact-info-title")}</gcds-heading>
           <div className="contact-info-intro">
             {contactInfoIntroParagraphs.map((paragraph, index) => (
               <p key={`contact-info-intro-${index}`}>
