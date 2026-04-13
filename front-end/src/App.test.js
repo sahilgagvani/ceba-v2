@@ -1,4 +1,4 @@
-import { act, render, screen } from '@testing-library/react';
+import { act, fireEvent, render, screen, waitFor } from '@testing-library/react';
 import i18n from './i18n';
 import App from './App';
 
@@ -114,17 +114,42 @@ describe('App page rendering', () => {
     ).toHaveTextContent(/foires aux questions/i);
   });
 
-  test('renders a blank overview page shell at /en/overview.html', () => {
+  test('renders overview content at /en/overview.html', () => {
     window.history.pushState({}, '', '/en/overview.html');
 
     const { container } = render(<App />);
     const breadcrumbLinks = container.querySelectorAll('.gc-breadcrumbs a');
     const overviewHeading = container.querySelector('.overview-page gcds-heading');
+    const overviewSectionHeadings = container.querySelectorAll('.overview-section-heading');
 
     expect(screen.queryByText(/contact form/i)).not.toBeInTheDocument();
+    expect(overviewHeading).toHaveTextContent(/^Canada Emergency Business Account \(CEBA\)$/i);
     expect(
-      screen.getByText(/canada emergency business account \(ceba\)/i)
+      screen.getByText(/important information for loan holders on repayment/i)
     ).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', {
+        name: /sign-in \(if your loan has been assigned to the ceba program\)/i,
+      })
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('link', {
+        name: /sign in or register for ceba portal account/i,
+      })
+    ).toHaveAttribute(
+      'href',
+      'https://account-compte.ceba-cuec.ca/borrower/account-compte/sign-in-identifier'
+    );
+    expect(overviewSectionHeadings[0]).toHaveTextContent(/^Program Overview$/i);
+    expect(screen.getByText(/^Notable Loan Terms$/i, { selector: 'h3' })).toBeInTheDocument();
+    expect(overviewSectionHeadings[1]).toHaveTextContent(/^Final Program Statistics:/i);
+    expect(screen.getByText('898,271')).toBeInTheDocument();
+    expect(screen.getByText('571,851')).toBeInTheDocument();
+    expect(screen.getByText('$49.2 Billion')).toBeInTheDocument();
+    expect(
+      screen.getByRole('link', { name: /click here for regional statistics/i })
+    ).toHaveAttribute('href', '/en/statistics.html');
+    expect(screen.getByText(/^Date modified: 2026-02-17$/i)).toBeInTheDocument();
     expect(breadcrumbLinks).toHaveLength(1);
     expect(breadcrumbLinks[0]).toHaveTextContent(/ceba program overview/i);
     expect(breadcrumbLinks[0]).toHaveAttribute('href', '/en/overview.html');
@@ -132,6 +157,127 @@ describe('App page rendering', () => {
     expect(screen.getByRole('link', { name: /^sign in$/i })).toHaveAttribute(
       'href',
       'https://account-compte.ceba-cuec.ca/borrower/account-compte/sign-in-identifier'
+    );
+  });
+
+  test('renders overview content at /fr/survol.html', async () => {
+    window.history.pushState({}, '', '/fr/survol.html');
+    await act(async () => {
+      await i18n.changeLanguage('fr');
+    });
+
+    const { container } = render(<App />);
+    const overviewHeading = container.querySelector('.overview-page gcds-heading');
+    const overviewSectionHeadings = container.querySelectorAll('.overview-section-heading');
+
+    expect(overviewHeading).toHaveTextContent(
+      /^Compte d’urgence pour les entreprises canadiennes \(CUEC\)$/i
+    );
+    expect(
+      screen.getByText(/mise-à-jour importante au sujet du remboursement/i)
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', {
+        name: /se connecter \(si votre prêt a été cédé au programme du cuec\)/i,
+      })
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('link', {
+        name: /se connecter ou s’inscrire à un compte du portail du cuec/i,
+      })
+    ).toHaveAttribute(
+      'href',
+      'https://account-compte.ceba-cuec.ca/borrower/account-compte/sign-in-identifier/fr'
+    );
+    expect(overviewSectionHeadings[0]).toHaveTextContent(/^Survol du Programme$/i);
+    expect(screen.getByText(/^Modalités de prêt notables$/i, { selector: 'h3' })).toBeInTheDocument();
+    expect(overviewSectionHeadings[1]).toHaveTextContent(/^Statistiques finales du programme :$/i);
+    expect(screen.getByText('898,271')).toBeInTheDocument();
+    expect(screen.getByText('571,851')).toBeInTheDocument();
+    expect(screen.getByText('49,2 milliards $')).toBeInTheDocument();
+    expect(
+      screen.getByRole('link', { name: /cliquez ici pour les statistiques régionales/i })
+    ).toHaveAttribute('href', '/fr/statistiques.html');
+    expect(screen.getByText(/^Date de modification : 2026-02-17$/i)).toBeInTheDocument();
+  });
+
+  test('renders regional statistics content at /en/statistics.html', () => {
+    window.history.pushState({}, '', '/en/statistics.html');
+
+    const { container } = render(<App />);
+    const breadcrumbLinks = container.querySelectorAll('.gc-breadcrumbs a');
+
+    expect(screen.getByRole('heading', { level: 1, name: /ceba regional statistics/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', {
+        level: 2,
+        name: /funds approved by province or territory/i,
+      })
+    ).toBeInTheDocument();
+    expect(screen.getByRole('img', { name: /map of canada showing the share of ceba funds/i })).toHaveAttribute(
+      'src',
+      '/img/statistics-map-en.svg'
+    );
+    expect(screen.getByText(/ceba summary data as of january 26, 2022/i)).toBeInTheDocument();
+    expect(screen.getByText(/existing ceba loan/i)).toBeInTheDocument();
+    expect(screen.getByText(/^Date modified: 2026-03-13$/i)).toBeInTheDocument();
+    expect(breadcrumbLinks).toHaveLength(2);
+    expect(breadcrumbLinks[0]).toHaveAttribute('href', '/en/overview.html');
+    expect(breadcrumbLinks[1]).toHaveAttribute('href', '/en/statistics.html');
+    expect(
+      container.querySelector('.custom-top-nav .nav-link.active')
+    ).toHaveTextContent(/^program overview$/i);
+  });
+
+  test('changes statistics language toggle path from english to french', async () => {
+    window.history.pushState({}, '', '/en/statistics.html');
+
+    render(<App />);
+
+    fireEvent.click(screen.getByRole('button', { name: 'Français' }));
+
+    await waitFor(() => {
+      expect(window.location.pathname).toBe('/fr/statistiques.html');
+    });
+
+    expect(
+      screen.getByRole('heading', { level: 1, name: /statistiques régionales sur le cuec/i })
+    ).toBeInTheDocument();
+  });
+
+  test('renders the overview warning as a notice replica', () => {
+    window.history.pushState({}, '', '/en/overview.html');
+
+    const { container } = render(<App />);
+    const warning = container.querySelector('.overview-warning');
+
+    expect(warning).toHaveAttribute(
+      'aria-label',
+      'Important Information for Loan Holders on Repayment'
+    );
+    expect(
+      screen.getByRole('heading', {
+        level: 2,
+        name: /important information for loan holders on repayment/i,
+      })
+    ).toBeInTheDocument();
+    expect(container.querySelector('.overview-warning-icon')).toBeInTheDocument();
+    expect(container.querySelectorAll('.overview-warning-body p')).toHaveLength(2);
+  });
+
+  test('changes overview language toggle path from english to french', async () => {
+    window.history.pushState({}, '', '/en/overview.html');
+
+    const { container } = render(<App />);
+
+    fireEvent.click(screen.getByRole('button', { name: 'Français' }));
+
+    await waitFor(() => {
+      expect(window.location.pathname).toBe('/fr/survol.html');
+    });
+
+    expect(container.querySelector('.overview-page gcds-heading')).toHaveTextContent(
+      /^Compte d’urgence pour les entreprises canadiennes \(CUEC\)$/i
     );
   });
 
