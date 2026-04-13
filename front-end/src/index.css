@@ -523,6 +523,10 @@ gcds-header {
   margin-top: 2.5rem;
 }
 
+.overview-notice gcds-notice {
+  --gcds-heading-character-limit-h2: none;
+}
+
 .page-breadcrumbs .gc-breadcrumbs li,
 .page-breadcrumbs .gc-breadcrumbs a {
   font-family: "Noto Sans", sans-serif;
