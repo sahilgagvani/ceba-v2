@@ -243,11 +243,92 @@
         ],
         "regionalLink": {
           "label": "Cliquez ici pour les statistiques régionales",
-          "href": "#"
+          "href": "/fr/statistiques.html"
         },
         "summary": "Données sommaires du CUEC en date du 26 janvier 2022"
       },
       "dateModified": "Date de modification : 2026-02-17"
+    },
+    "statistics": {
+      "title": "Statistiques régionales sur le CUEC",
+      "breadcrumbLabel": "Statistiques régionales sur le CUEC",
+      "breadcrumbHref": "/fr/statistiques.html",
+      "intro": "Fonds approuvés par province ou territoire (%) pour les prêts et majorations au titre du CUEC",
+      "image": {
+        "src": "https://ceba-cuec.ca/img/statistics-map-fr.jpg",
+        "alt": "Carte du Canada montrant la part des fonds du CUEC approuvés par province ou territoire."
+      },
+      "summary": "Données sommaires du CUEC en date du 26 janvier 2022",
+      "footnote": "L’expression « prêts au titre du CUEC » désigne les prêts de 40 000 $ et 60 000 $; l’expression « majorations au titre du CUEC » désigne les majorations de 20 000 $ accordées aux entreprises ayant déjà reçu un prêt au titre du CUEC",
+      "dataHeading": "Données des statistiques régionales",
+      "regions": [
+        {
+          "code": "YN",
+          "label": "Yukon",
+          "value": "0,10 %"
+        },
+        {
+          "code": "TNO",
+          "label": "Territoires du Nord-Ouest",
+          "value": "0,06 %"
+        },
+        {
+          "code": "NU",
+          "label": "Nunavut",
+          "value": "0,01 %"
+        },
+        {
+          "code": "CB",
+          "label": "Colombie-Britannique",
+          "value": "13,73 %"
+        },
+        {
+          "code": "ALB",
+          "label": "Alberta",
+          "value": "14,13 %"
+        },
+        {
+          "code": "SASK",
+          "label": "Saskatchewan",
+          "value": "3,31 %"
+        },
+        {
+          "code": "MAN",
+          "label": "Manitoba",
+          "value": "2,63 %"
+        },
+        {
+          "code": "ONT",
+          "label": "Ontario",
+          "value": "40,76 %"
+        },
+        {
+          "code": "QC",
+          "label": "Québec",
+          "value": "20,78 %"
+        },
+        {
+          "code": "TNL",
+          "label": "Terre-Neuve-et-Labrador",
+          "value": "0,97 %"
+        },
+        {
+          "code": "IPE",
+          "label": "Île-du-Prince-Édouard",
+          "value": "0,42 %"
+        },
+        {
+          "code": "NE",
+          "label": "Nouvelle-Écosse",
+          "value": "1,77 %"
+        },
+        {
+          "code": "NB",
+          "label": "Nouveau-Brunswick",
+          "value": "1,34 %"
+        }
+      ],
+      "dateModified": "Date de modification : 2026-03-13"
     },
     "contact-info-title": "Coordonnées",
     "contactInfo": {
