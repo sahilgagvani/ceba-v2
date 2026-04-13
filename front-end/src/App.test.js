@@ -53,6 +53,11 @@ describe('App page rendering', () => {
     expect(screen.getByText(/Loan Assignment/i)).toBeInTheDocument();
     expect(screen.getAllByText(/Loan Repayment/i)).toHaveLength(2);
     expect(screen.getByText(/Statements of Account/i)).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /^sign in$/i })).toHaveAttribute(
+      'href',
+      'https://account-compte.ceba-cuec.ca/borrower/account-compte/sign-in-identifier'
+    );
+    expect(screen.getByText(/^Date modified: 2026-01-21$/i)).toBeInTheDocument();
     expect(faqSectionHeadings).toHaveLength(3);
     faqSectionHeadings.forEach((heading) => {
       expect(heading).toHaveAttribute('character-limit', 'false');
@@ -88,6 +93,13 @@ describe('App page rendering', () => {
     expect(screen.getByText(/Cession de prêt/i)).toBeInTheDocument();
     expect(screen.getAllByText(/Remboursement du prêt/i)).toHaveLength(2);
     expect(screen.getByText(/Admissibilité \(fermé\)/i)).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /se connecter/i })).toHaveAttribute(
+      'href',
+      'https://account-compte.ceba-cuec.ca/borrower/account-compte/sign-in-identifier/fr'
+    );
+    expect(
+      screen.getByText(/^Date de modification : 2026-01-21$/i)
+    ).toBeInTheDocument();
     expect(faqSectionHeadings).toHaveLength(3);
     faqSectionHeadings.forEach((heading) => {
       expect(heading).toHaveAttribute('character-limit', 'false');
@@ -107,6 +119,7 @@ describe('App page rendering', () => {
 
     const { container } = render(<App />);
     const breadcrumbLinks = container.querySelectorAll('.gc-breadcrumbs a');
+    const overviewHeading = container.querySelector('.overview-page gcds-heading');
 
     expect(screen.queryByText(/contact form/i)).not.toBeInTheDocument();
     expect(
@@ -115,6 +128,11 @@ describe('App page rendering', () => {
     expect(breadcrumbLinks).toHaveLength(1);
     expect(breadcrumbLinks[0]).toHaveTextContent(/ceba program overview/i);
     expect(breadcrumbLinks[0]).toHaveAttribute('href', '/en/overview.html');
+    expect(overviewHeading).toHaveAttribute('character-limit', 'false');
+    expect(screen.getByRole('link', { name: /^sign in$/i })).toHaveAttribute(
+      'href',
+      'https://account-compte.ceba-cuec.ca/borrower/account-compte/sign-in-identifier'
+    );
   });
 
   test('renders contact information body content at /en/contact.html', () => {
@@ -122,6 +140,7 @@ describe('App page rendering', () => {
 
     const { container } = render(<App />);
     const breadcrumbLinks = container.querySelectorAll('.gc-breadcrumbs a');
+    const contactHeading = container.querySelector('.contact-info-page gcds-heading');
 
     expect(screen.queryByText(/contact form/i)).not.toBeInTheDocument();
     expect(breadcrumbLinks).toHaveLength(2);
@@ -132,6 +151,7 @@ describe('App page rendering', () => {
     expect(container.querySelector('gcds-heading')).toHaveTextContent(
       /contact information/i
     );
+    expect(contactHeading).toHaveAttribute('character-limit', 'false');
     expect(screen.getByText(/there are three contact centres/i)).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: /ceba call centre/i })).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: /cra ceba contact centre/i })).toBeInTheDocument();
@@ -142,6 +162,10 @@ describe('App page rendering', () => {
     expect(screen.getByRole('link', { name: /online form/i })).toHaveAttribute(
       'href',
       'https://contact.ceba-cuec.ca/en'
+    );
+    expect(screen.getByRole('link', { name: /^sign in$/i })).toHaveAttribute(
+      'href',
+      'https://account-compte.ceba-cuec.ca/borrower/account-compte/sign-in-identifier'
     );
     expect(screen.getByText(/date modified: 2026-01-21/i)).toBeInTheDocument();
     expect(
@@ -176,6 +200,10 @@ describe('App page rendering', () => {
     expect(screen.getByRole('link', { name: /formulaire en ligne/i })).toHaveAttribute(
       'href',
       'https://contact.ceba-cuec.ca/fr'
+    );
+    expect(screen.getByRole('link', { name: /se connecter/i })).toHaveAttribute(
+      'href',
+      'https://account-compte.ceba-cuec.ca/borrower/account-compte/sign-in-identifier/fr'
     );
     expect(screen.getByText(/2026-01-21/i)).toBeInTheDocument();
   });
