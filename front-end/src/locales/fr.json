@@ -138,6 +138,117 @@
         }
       }
     },
+    "overview": {
+      "warning": {
+        "title": "Mise-à-jour importante au sujet du remboursement pour les détenteurs de prêt",
+        "paragraphs": [
+          "Si vous n'êtes pas en mesure de rembourser votre prêt du CUEC à l'échéance, votre institution financière vous contactera pour vous demander un remboursement forfaitaire de la dette en cours. Si, à ce moment-là, vous ne remboursez pas l'intégralité de votre prêt du CUEC à votre institution financière, celle-ci sera probablement tenue de céder votre prêt au programme du CUEC du gouvernement pour qu'il soit recouvré.",
+          "Sachez que si votre prêt du CUEC est cédé au programme du CUEC pour le recouvrement, l’Agence du revenu du Canada (ARC) pourrait examiner votre situation au cas par cas et travailler avec vous pour établir une entente de remboursement adaptée à votre capacité de remboursement. Les soldes impayés peuvent être déduits de vos remboursements d’impôt et de vos prestations fédérales et être appliqués à un solde de prêt du CUEC."
+        ]
+      },
+      "portalCard": {
+        "title": "Se connecter (si votre prêt a été cédé au programme du CUEC)",
+        "description": "Si votre prêt a été cédé au programme du CUEC, vous pouvez vous connecter ou vous inscrire à un compte du portail du CUEC pour consulter vos soldes de prêt, transactions, coordonnées et relevés mensuels.",
+        "ctaLabel": "Se connecter ou s’inscrire à un compte du portail du CUEC",
+        "ctaHref": "https://account-compte.ceba-cuec.ca/borrower/account-compte/sign-in-identifier/fr",
+        "guideLabel": "Comment s’inscrire à un compte du portail du CUEC (PDF)",
+        "guideHref": "https://ceba-cuec.ca/img/CEBA-Registration-User-Guide-FR.pdf",
+        "faqText": "Pour obtenir des renseignements sur la cession de prêt, veuillez consulter la page FAQ."
+      },
+      "sections": [
+        {
+          "title": "Survol du Programme",
+          "blocks": [
+            {
+              "heading": "Contexte",
+              "paragraphs": [
+                "Le 27 mars 2020, le gouvernement du Canada a annoncé la création du programme du Compte d’urgence pour les entreprises canadiennes (CUEC).",
+                "Par l’entremise du programme du CUEC, les petites entreprises et organismes sans but lucratif admissibles ont reçu jusqu’à 60 000 $ en financement d’urgence, sous forme de prêts initialement sans intérêt et partiellement radiables, afin d’aider à couvrir diverses dépenses qui ne pouvaient pas être reportées pendant une période de fermeture, comme la paie, le loyer, l’assurance et les services publics.",
+                "Le programme du CUEC était ouvert aux demandes du 9 avril 2020 au 30 juin 2021 et a versé plus de 49 milliards de dollars à environ 898 000 entreprises en partenariat avec plus de 230 institutions financières participantes. Deux volets d’admissibilité permettaient de se qualifier au programme du CUEC :",
+                "De plus amples renseignements sur l’admissibilité au CUEC sont disponibles sur la page des foires aux questions (FAQ).",
+                "Les détenteurs de prêts du CUEC admissibles et en règle pouvaient bénéficier d’une radiation partielle du prêt si le principal non radiable de leur prêt du CUEC était remboursé au plus tard le 18 janvier 2024 ou, pour ceux qui ont présenté une demande de refinancement auprès de l’institution financière ayant accordé leur prêt du CUEC au plus tard le 18 janvier 2024, au plus tard le 28 mars 2024. Le montant radiable pouvait atteindre 20 000 $, calculé à raison de 25 % des premiers 40 000 $ empruntés plus 50 % des montants empruntés au-delà de 40 000 $ et jusqu’à 60 000 $.",
+                "Certains détenteurs de prêt qui n’étaient pas admissibles au prêt qu’ils ont reçu n’étaient pas admissibles à une radiation et devaient rembourser en totalité le montant impayé de leur ou leurs prêts du CUEC au plus tard le 31 décembre 2023."
+              ],
+              "bullets": [
+                {
+                  "label": "Volet des salaires :",
+                  "text": "pour les entreprises dont le revenu d’emploi versé au cours de l’année civile 2019 était supérieur à 20 000 $ CA et inférieur à 1 500 000 $ CA."
+                },
+                {
+                  "label": "Volet des dépenses non reportables :",
+                  "text": "pour les entreprises dont le revenu d’emploi total versé au cours de l’année civile 2019 était de 20 000 $ CA ou moins et qui avaient des dépenses non reportables admissibles supérieures à 40 000 $ CA et inférieures à 1 500 000 $ CA."
+                }
+              ]
+            },
+            {
+              "heading": "Modalités de prêt notables",
+              "paragraphs": [
+                "Pour les prêts du CUEC qui demeuraient impayés au 19 janvier 2024, et pour lesquels le détenteur du prêt est admissible et en règle, les modalités notables du prêt du CUEC comprennent maintenant ce qui suit :"
+              ],
+              "bullets": [
+                {
+                  "label": "Intérêt :",
+                  "text": "au taux de 5 % par année, avec une fréquence des paiements d’intérêt déterminée par votre institution financière."
+                },
+                {
+                  "label": "Date d’échéance du prêt à terme :",
+                  "text": "prêt non amortissable, dont le capital total devient exigible le 31 décembre 2026."
+                }
+              ]
+            },
+            {
+              "heading": "Recouvrement des prêts du CUEC en défaut",
+              "paragraphs": [
+                "Les détenteurs de prêt qui ne remboursent pas leur prêt à l’échéance seront d’abord contactés par leur institution financière pour demander un remboursement forfaitaire de la dette en cours. Si, à ce moment-là, ils ne remboursent pas intégralement leur prêt du CUEC à leur institution financière, celle-ci devra probablement céder leur prêt au programme du CUEC pour d’autres mesures de recouvrement. L’Agence du revenu du Canada (ARC) participe au recouvrement des prêts du CUEC en défaut qui sont cédés au programme du CUEC.",
+                [
+                  {
+                    "text": "Pour toute question concernant votre prêt du CUEC, consultez notre page "
+                  },
+                  {
+                    "text": "Foires aux questions (FAQ)",
+                    "href": "/fr/faq.html"
+                  },
+                  {
+                    "text": ". Si vous avez besoin d’aide supplémentaire, veuillez consulter la page Coordonnées, qui indique le canal de soutien approprié pour différents types de questions."
+                  }
+                ]
+              ],
+              "bullets": []
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "title": "Statistiques finales du programme :",
+        "cards": [
+          {
+            "icon": "businesses",
+            "label": "Nombre d’entreprises approuvées pour les prêts du CUEC1",
+            "value": "898,271"
+          },
+          {
+            "icon": "expansions",
+            "label": "Nombre d’entreprises approuvées pour les expansions du CUEC2",
+            "value": "571,851"
+          },
+          {
+            "icon": "funds",
+            "label": "Fonds totaux approuvés pour les prêts du CUEC1 et les expansions2",
+            "value": "49,2 milliards $"
+          }
+        ],
+        "footnotes": [
+          "1 « Prêts du CUEC » renvoie aux prêts de 40 000 $ et de 60 000 $.",
+          "2 « Expansions du CUEC » renvoie aux expansions de 20 000 $."
+        ],
+        "regionalLink": {
+          "label": "Cliquez ici pour les statistiques régionales",
+          "href": "#"
+        },
+        "summary": "Données sommaires du CUEC en date du 26 janvier 2022"
+      },
+      "dateModified": "Date de modification : 2026-02-17"
+    },
     "contact-info-title": "Coordonnées",
     "contactInfo": {
       "introParagraphs": [
