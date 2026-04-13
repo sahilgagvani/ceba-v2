@@ -125,9 +125,6 @@ describe('App page rendering', () => {
     expect(screen.queryByText(/contact form/i)).not.toBeInTheDocument();
     expect(overviewHeading).toHaveTextContent(/^Canada Emergency Business Account \(CEBA\)$/i);
     expect(
-      screen.getByText(/the ceba call centre will be closed on february 16, 2026/i)
-    ).toBeInTheDocument();
-    expect(
       screen.getByText(/important information for loan holders on repayment/i)
     ).toBeInTheDocument();
     expect(
@@ -149,6 +146,9 @@ describe('App page rendering', () => {
     expect(screen.getByText('898,271')).toBeInTheDocument();
     expect(screen.getByText('571,851')).toBeInTheDocument();
     expect(screen.getByText('$49.2 Billion')).toBeInTheDocument();
+    expect(
+      screen.getByRole('link', { name: /click here for regional statistics/i })
+    ).toHaveAttribute('href', '/en/statistics.html');
     expect(screen.getByText(/^Date modified: 2026-02-17$/i)).toBeInTheDocument();
     expect(breadcrumbLinks).toHaveLength(1);
     expect(breadcrumbLinks[0]).toHaveTextContent(/ceba program overview/i);
@@ -174,9 +174,6 @@ describe('App page rendering', () => {
       /^Compte d’urgence pour les entreprises canadiennes \(CUEC\)$/i
     );
     expect(
-      screen.getByText(/le centre d’appels du cuec sera fermé le 16 février 2026/i)
-    ).toBeInTheDocument();
-    expect(
       screen.getByText(/mise-à-jour importante au sujet du remboursement/i)
     ).toBeInTheDocument();
     expect(
@@ -198,7 +195,54 @@ describe('App page rendering', () => {
     expect(screen.getByText('898,271')).toBeInTheDocument();
     expect(screen.getByText('571,851')).toBeInTheDocument();
     expect(screen.getByText('49,2 milliards $')).toBeInTheDocument();
+    expect(
+      screen.getByRole('link', { name: /cliquez ici pour les statistiques régionales/i })
+    ).toHaveAttribute('href', '/fr/statistiques.html');
     expect(screen.getByText(/^Date de modification : 2026-02-17$/i)).toBeInTheDocument();
+  });
+
+  test('renders regional statistics content at /en/statistics.html', () => {
+    window.history.pushState({}, '', '/en/statistics.html');
+
+    const { container } = render(<App />);
+    const breadcrumbLinks = container.querySelectorAll('.gc-breadcrumbs a');
+
+    expect(screen.getByRole('heading', { level: 1, name: /ceba regional statistics/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', {
+        level: 2,
+        name: /funds approved by province or territory/i,
+      })
+    ).toBeInTheDocument();
+    expect(screen.getByRole('img', { name: /map of canada showing the share of ceba funds/i })).toHaveAttribute(
+      'src',
+      'https://ceba-cuec.ca/img/statistics-map-en.jpg'
+    );
+    expect(screen.getByText(/ceba summary data as of january 26, 2022/i)).toBeInTheDocument();
+    expect(screen.getByText(/existing ceba loan/i)).toBeInTheDocument();
+    expect(screen.getByText(/^Date modified: 2026-03-13$/i)).toBeInTheDocument();
+    expect(breadcrumbLinks).toHaveLength(2);
+    expect(breadcrumbLinks[0]).toHaveAttribute('href', '/en/overview.html');
+    expect(breadcrumbLinks[1]).toHaveAttribute('href', '/en/statistics.html');
+    expect(
+      container.querySelector('.custom-top-nav .nav-link.active')
+    ).toHaveTextContent(/^program overview$/i);
+  });
+
+  test('changes statistics language toggle path from english to french', async () => {
+    window.history.pushState({}, '', '/en/statistics.html');
+
+    render(<App />);
+
+    fireEvent.click(screen.getByRole('button', { name: 'Français' }));
+
+    await waitFor(() => {
+      expect(window.location.pathname).toBe('/fr/statistiques.html');
+    });
+
+    expect(
+      screen.getByRole('heading', { level: 1, name: /statistiques régionales sur le cuec/i })
+    ).toBeInTheDocument();
   });
 
   test('renders the overview warning as a notice replica', () => {
