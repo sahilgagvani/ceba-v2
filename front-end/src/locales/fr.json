@@ -255,7 +255,7 @@
       "breadcrumbHref": "/fr/statistiques.html",
       "intro": "Fonds approuvés par province ou territoire (%) pour les prêts et majorations au titre du CUEC",
       "image": {
-        "src": "https://ceba-cuec.ca/img/statistics-map-fr.jpg",
+        "src": "/img/statistics-map-fr.svg",
         "alt": "Carte du Canada montrant la part des fonds du CUEC approuvés par province ou territoire."
       },
       "summary": "Données sommaires du CUEC en date du 26 janvier 2022",

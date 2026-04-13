@@ -216,7 +216,7 @@ describe('App page rendering', () => {
     ).toBeInTheDocument();
     expect(screen.getByRole('img', { name: /map of canada showing the share of ceba funds/i })).toHaveAttribute(
       'src',
-      'https://ceba-cuec.ca/img/statistics-map-en.jpg'
+      '/img/statistics-map-en.svg'
     );
     expect(screen.getByText(/ceba summary data as of january 26, 2022/i)).toBeInTheDocument();
     expect(screen.getByText(/existing ceba loan/i)).toBeInTheDocument();

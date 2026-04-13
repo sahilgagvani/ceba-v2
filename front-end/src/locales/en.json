@@ -254,7 +254,7 @@
 			"breadcrumbHref": "/en/statistics.html",
 			"intro": "Funds Approved by Province or Territory (%) for CEBA Loans and Expansions",
 			"image": {
-				"src": "https://ceba-cuec.ca/img/statistics-map-en.jpg",
+				"src": "/img/statistics-map-en.svg",
 				"alt": "Map of Canada showing the share of CEBA funds approved by province or territory."
 			},
 			"summary": "CEBA summary data as of January 26, 2022",
