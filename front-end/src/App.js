@@ -22,6 +22,19 @@ const getPageType = (path) => {
   }
 
   if (
+    path === "/statistics.html" ||
+    path.endsWith("/statistics.html") ||
+    path === "/statistics" ||
+    path.endsWith("/statistics") ||
+    path === "/statistiques.html" ||
+    path.endsWith("/statistiques.html") ||
+    path === "/statistiques" ||
+    path.endsWith("/statistiques")
+  ) {
+    return "statistics";
+  }
+
+  if (
     path === "/overview.html" ||
     path.endsWith("/overview.html") ||
     path === "/overview" ||
@@ -74,6 +87,16 @@ const getBlankPageBreadcrumbItems = (pageType, t) => {
     ];
   }
 
+  if (pageType === "statistics") {
+    return [
+      overviewItem,
+      {
+        href: t("form.statistics.breadcrumbHref"),
+        label: t("form.statistics.breadcrumbLabel"),
+      },
+    ];
+  }
+
   if (pageType === "contact-info") {
     return [
       overviewItem,
@@ -87,8 +110,31 @@ const getBlankPageBreadcrumbItems = (pageType, t) => {
   return [];
 };
 
+const LOCALIZED_PATHS = {
+  overview: {
+    en: "/en/overview.html",
+    fr: "/fr/survol.html",
+  },
+  faq: {
+    en: "/en/faq.html",
+    fr: "/fr/faq.html",
+  },
+  statistics: {
+    en: "/en/statistics.html",
+    fr: "/fr/statistiques.html",
+  },
+  "contact-info": {
+    en: "/en/contact.html",
+    fr: "/fr/coordonnees.html",
+  },
+  "contact-form": {
+    en: "/en",
+    fr: "/fr",
+  },
+};
 
-
+const getLocalizedPath = (pageType, language) =>
+  LOCALIZED_PATHS[pageType]?.[language] || `/${language}`;
 
 function App() {
   const [recaptchaConfig, setRecaptchaConfig] = useState({
@@ -189,10 +235,11 @@ const formatTelephoneNumber = (value) => {
   const currentPath = getCurrentPath();
   const pageType = getPageType(currentPath);
   const isFaqPage = pageType === "faq";
+  const isStatisticsPage = pageType === "statistics";
   const isOverviewPage = pageType === "overview";
   const isContactInfoPage = pageType === "contact-info";
+  const isOverviewNavActive = isOverviewPage || isStatisticsPage;
   const isContactNavActive = pageType === "contact-form" || isContactInfoPage;
-  const isBlankShellPage = isOverviewPage;
   const blankPageHeadingKey = getBlankPageHeadingKey(pageType);
   const blankPageBreadcrumbItems = getBlankPageBreadcrumbItems(pageType, t);
   const faqPageTitle = t("form.faq.pageTitle");
@@ -223,6 +270,55 @@ const formatTelephoneNumber = (value) => {
     isContactInfoObject && typeof contactInfo.dateModified === "string"
       ? contactInfo.dateModified
       : "";
+  const overview = t("form.overview", { returnObjects: true });
+  const isOverviewObject = overview && typeof overview === "object" && !Array.isArray(overview);
+  const overviewServiceNotice =
+    isOverviewObject && typeof overview.serviceNotice === "string"
+      ? overview.serviceNotice
+      : "";
+  const overviewWarning =
+    isOverviewObject && overview.warning && typeof overview.warning === "object"
+      ? overview.warning
+      : {};
+  const overviewPortalCard =
+    isOverviewObject && overview.portalCard && typeof overview.portalCard === "object"
+      ? overview.portalCard
+      : {};
+  const overviewSections =
+    isOverviewObject && Array.isArray(overview.sections) ? overview.sections : [];
+  const overviewStats =
+    isOverviewObject && overview.stats && typeof overview.stats === "object"
+      ? overview.stats
+      : {};
+  const overviewDateModified =
+    isOverviewObject && typeof overview.dateModified === "string"
+      ? overview.dateModified
+      : "";
+  const statistics = t("form.statistics", { returnObjects: true });
+  const isStatisticsObject =
+    statistics && typeof statistics === "object" && !Array.isArray(statistics);
+  const statisticsTitle =
+    isStatisticsObject && typeof statistics.title === "string" ? statistics.title : "";
+  const statisticsIntro =
+    isStatisticsObject && typeof statistics.intro === "string" ? statistics.intro : "";
+  const statisticsSummary =
+    isStatisticsObject && typeof statistics.summary === "string" ? statistics.summary : "";
+  const statisticsFootnote =
+    isStatisticsObject && typeof statistics.footnote === "string" ? statistics.footnote : "";
+  const statisticsDateModified =
+    isStatisticsObject && typeof statistics.dateModified === "string"
+      ? statistics.dateModified
+      : "";
+  const statisticsImage =
+    isStatisticsObject && statistics.image && typeof statistics.image === "object"
+      ? statistics.image
+      : {};
+  const statisticsRegions =
+    isStatisticsObject && Array.isArray(statistics.regions) ? statistics.regions : [];
+  const statisticsDataHeading =
+    isStatisticsObject && typeof statistics.dataHeading === "string"
+      ? statistics.dataHeading
+      : "";
 
   const renderContactInfoText = (content) => {
     if (typeof content === "string") return content;
@@ -244,9 +340,44 @@ const formatTelephoneNumber = (value) => {
     );
   };
 
+  const renderOverviewRichText = (content) => {
+    if (typeof content === "string") return content;
+    if (!Array.isArray(content)) return null;
+
+    return content.map((fragment, index) => {
+      if (!fragment || typeof fragment !== "object") return null;
+
+      if (fragment.href) {
+        return (
+          <a key={`${fragment.href}-${index}`} href={fragment.href}>
+            {fragment.text}
+          </a>
+        );
+      }
+
+      return <React.Fragment key={`${fragment.text || "fragment"}-${index}`}>{fragment.text}</React.Fragment>;
+    });
+  };
+
+  const handleLanguageToggle = () => {
+    const targetLanguage = i18n.language === "en" ? "fr" : "en";
+    const targetPath = getLocalizedPath(pageType, targetLanguage);
+
+    if (typeof window !== "undefined" && window.location.pathname !== targetPath) {
+      window.history.pushState({}, "", targetPath);
+    }
+
+    setIsNavOpen(false);
+    i18n.changeLanguage(targetLanguage);
+  };
+
   // Load application configuration from backend at runtime
   useEffect(() => {
     const loadAppConfig = async () => {
+      if (process.env.NODE_ENV === 'test') {
+        return;
+      }
+
       try {
         const recaptchaResponse = await fetch('/api/app/recaptcha-config');
 
@@ -273,6 +404,8 @@ useEffect(() => {
 
   document.title = isFaqPage
     ? `CEBA ${t("form.nav-label2")}`
+    : isStatisticsPage
+      ? `CEBA ${statisticsTitle}`
     : isOverviewPage
       ? `CEBA ${t("form.nav-label1")}`
       : isContactInfoPage
@@ -475,7 +608,7 @@ useEffect(() => {
       <button
       className="lang-toggle"
       aria-label={i18n.language === "en" ? "Français" : "English"}
-      onClick={() => i18n.changeLanguage(i18n.language === "en" ? "fr" : "en")}
+      onClick={handleLanguageToggle}
       >
       <span className="lang-toggle-label-full" aria-hidden="true">
         {i18n.language === "en" ? "Français" : "English"}
@@ -506,7 +639,7 @@ useEffect(() => {
           >
             <a
               href={t("form.nav-link1")}
-              className={`nav-link ${isOverviewPage ? "active" : ""}`}
+              className={`nav-link ${isOverviewNavActive ? "active" : ""}`}
               onClick={() => setIsNavOpen(false)}
             >
               {t("form.nav-label1")}
@@ -580,7 +713,7 @@ useEffect(() => {
         </div>
         </>
         )}
-        {isBlankShellPage && blankPageHeadingKey && (
+        {isOverviewPage && (
         <>
         <div className="overview-page">
           <div className="page-topbar">
@@ -599,13 +732,203 @@ useEffect(() => {
               {faqPortalCtaLabel}
             </a>
           </div>
-          <gcds-heading tag="h1" level="1" character-limit="false">{t(blankPageHeadingKey)}</gcds-heading>
-          <div className="overview-notice">
-            <gcds-notice type="warning" notice-title-tag="h2" notice-title={t("form.notice-title")}>
-              <gcds-text character-limit="false">{t("form.notice-message1")}</gcds-text>
-              <gcds-text character-limit="false">{t("form.notice-message2")}</gcds-text>
-            </gcds-notice>
+          <gcds-heading tag="h1" level="1" character-limit="false">
+            {t("form.overview-title")}
+          </gcds-heading>
+          {overviewServiceNotice && (
+            <p className="overview-service-notice">{overviewServiceNotice}</p>
+          )}
+          <section className="overview-warning" aria-label={overviewWarning.title || t("form.notice-title")}>
+            <div className="overview-warning-rail" aria-hidden="true">
+              <svg
+                className="overview-warning-icon"
+                viewBox="0 0 24 24"
+                focusable="false"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 3.25 21.1 20.75H2.9L12 3.25Z"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.25"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M12 8.5v6.25"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.25"
+                  strokeLinecap="round"
+                />
+                <circle cx="12" cy="17.6" r="1.2" fill="currentColor" />
+              </svg>
+            </div>
+            <div className="overview-warning-body">
+              <h2>{overviewWarning.title || t("form.notice-title")}</h2>
+              {Array.isArray(overviewWarning.paragraphs) &&
+                overviewWarning.paragraphs.map((paragraph, index) => (
+                  <p key={`overview-warning-${index}`}>{paragraph}</p>
+                ))}
+            </div>
+          </section>
+          <section className="overview-portal-card">
+            <h2 className="overview-portal-card-title">{overviewPortalCard.title}</h2>
+            <div className="overview-portal-card-body">
+              <p className="overview-rich-paragraph">{overviewPortalCard.description}</p>
+              <a href={overviewPortalCard.ctaHref} className="overview-portal-cta">
+                {overviewPortalCard.ctaLabel}
+              </a>
+              <a href={overviewPortalCard.guideHref} className="overview-portal-guide">
+                {overviewPortalCard.guideLabel}
+              </a>
+              <p className="overview-rich-paragraph">{overviewPortalCard.faqText}</p>
+            </div>
+          </section>
+          {overviewSections.map((section, sectionIndex) => {
+            const blocks = Array.isArray(section.blocks) ? section.blocks : [];
+
+            return (
+              <section key={`${section.title || "overview-section"}-${sectionIndex}`} className="overview-section">
+                {section.title && <h2 className="overview-section-heading">{section.title}</h2>}
+                {blocks.map((block, blockIndex) => {
+                  const paragraphs = Array.isArray(block.paragraphs) ? block.paragraphs : [];
+                  const bullets = Array.isArray(block.bullets) ? block.bullets : [];
+
+                  return (
+                    <div
+                      key={`${section.title || "overview-section"}-${block.heading || blockIndex}`}
+                      className="overview-subsection"
+                    >
+                      {block.heading && (
+                        <h3 className="overview-subsection-heading">{block.heading}</h3>
+                      )}
+                      {paragraphs.map((paragraph, paragraphIndex) => (
+                        <p
+                          key={`${section.title || "overview-section"}-${block.heading || blockIndex}-${paragraphIndex}`}
+                          className="overview-rich-paragraph"
+                        >
+                          {renderOverviewRichText(paragraph)}
+                        </p>
+                      ))}
+                      {bullets.length > 0 && (
+                        <ul className="overview-bullet-list">
+                          {bullets.map((bullet, bulletIndex) => (
+                            <li key={`${block.heading || "overview-bullet"}-${bullet.label || bulletIndex}`}>
+                              {bullet.label && (
+                                <strong className="overview-bullet-label">{bullet.label}</strong>
+                              )}{" "}
+                              {bullet.text}
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  );
+                })}
+              </section>
+            );
+          })}
+          <section className="overview-stats">
+            <h2 className="overview-section-heading">{overviewStats.title}</h2>
+            <div className="overview-stats-grid">
+              {Array.isArray(overviewStats.cards) &&
+                overviewStats.cards.map((card, index) => (
+                  <article
+                    key={`${card.label || "overview-stat"}-${index}`}
+                    className="overview-stat-card"
+                  >
+                    <div className={`overview-stat-icon overview-stat-icon-${card.icon || "businesses"}`}>
+                      <span aria-hidden="true">
+                        {card.icon === "funds" ? "$" : card.icon === "expansions" ? "E" : "B"}
+                      </span>
+                    </div>
+                    <div className="overview-stat-label">{card.label}</div>
+                    <div className="overview-stat-value">{card.value}</div>
+                  </article>
+                ))}
+            </div>
+            <div className="overview-stat-footnotes">
+              {Array.isArray(overviewStats.footnotes) &&
+                overviewStats.footnotes.map((note, index) => (
+                  <p key={`overview-footnote-${index}`}>{note}</p>
+                ))}
+              {overviewStats.regionalLink?.href && overviewStats.regionalLink?.label && (
+                <a href={overviewStats.regionalLink.href}>
+                  {overviewStats.regionalLink.label}
+                </a>
+              )}
+            </div>
+            {overviewStats.summary && (
+              <div className="overview-summary-line">{overviewStats.summary}</div>
+            )}
+          </section>
+          {overviewDateModified && (
+            <div className="overview-date-modified">{overviewDateModified}</div>
+          )}
+        </div>
+        </>
+        )}
+        {isStatisticsPage && (
+        <>
+        <div className="statistics-page">
+          <div className="page-topbar">
+            <div className="page-breadcrumbs">
+              <nav aria-label="Breadcrumb" className="gc-breadcrumbs">
+                <ol>
+                  {blankPageBreadcrumbItems.map((item) => (
+                    <li key={`${item.href}-${item.label}`}>
+                      <a href={item.href}>{item.label}</a>
+                    </li>
+                  ))}
+                </ol>
+              </nav>
+            </div>
+            <a href={faqPortalUrl} className="page-sign-in-link">
+              {faqPortalCtaLabel}
+            </a>
           </div>
+          <div className="statistics-page-heading-wrap">
+            <h1 className="statistics-page-title">{statisticsTitle}</h1>
+            <span className="statistics-page-accent" aria-hidden="true"></span>
+          </div>
+          {statisticsIntro && (
+            <h2 className="statistics-page-intro">
+              {statisticsIntro}
+              <sup>1</sup>
+            </h2>
+          )}
+          <figure className="statistics-figure">
+            {statisticsImage.src && (
+              <img
+                className="statistics-map-image"
+                src={statisticsImage.src}
+                alt={statisticsImage.alt || ""}
+              />
+            )}
+            <figcaption className="statistics-figure-caption">
+              {statisticsSummary && <p>{statisticsSummary}</p>}
+              {statisticsFootnote && (
+                <p>
+                  <sup>1</sup> {statisticsFootnote}
+                </p>
+              )}
+            </figcaption>
+          </figure>
+          {statisticsRegions.length > 0 && (
+            <div className="sr-only">
+              {statisticsDataHeading && <h2>{statisticsDataHeading}</h2>}
+              <ul>
+                {statisticsRegions.map((region) => (
+                  <li key={`${region.code}-${region.value}`}>
+                    {region.label}: {region.value}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {statisticsDateModified && (
+            <div className="statistics-date-modified">{statisticsDateModified}</div>
+          )}
         </div>
         </>
         )}
@@ -692,7 +1015,7 @@ useEffect(() => {
         </div>
         </>
         )}
-        {!isBlankShellPage && !isFaqPage && !isContactInfoPage && (
+        {!isOverviewPage && !isFaqPage && !isStatisticsPage && !isContactInfoPage && (
         <>
         <div className="breadcrumbs-wrap">
           <nav aria-label="Breadcrumb" className="gc-breadcrumbs">

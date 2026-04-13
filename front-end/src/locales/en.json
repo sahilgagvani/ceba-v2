@@ -137,6 +137,198 @@
 				}
 			}
 		},
+		"overview": {
+			"warning": {
+				"title": "Important Information for Loan Holders on Repayment",
+				"paragraphs": [
+					"If you are unable to repay your CEBA Loan when due, your financial institution will contact you to request a lump sum repayment of the outstanding debt. If, at that point, you do not fully repay your CEBA Loan to your financial institution, your financial institution will likely be required to assign your loan to the government’s CEBA Program for collection efforts.",
+					"Please be advised, if your CEBA Loan is assigned to the CEBA Program for collection, the Canada Revenue Agency (CRA) may review your circumstances on a case-by-case basis and work with you to establish a payment arrangement or repayment plan tailored to your ability to repay. Unpaid balances may be deducted from your tax refunds and federal benefits and applied to a CEBA loan balance."
+				]
+			},
+			"portalCard": {
+				"title": "Sign-in (if your loan has been assigned to the CEBA Program)",
+				"description": "If your loan has been assigned to the CEBA Program, you can sign-in or register for a CEBA Portal Account to view your loan balances, transactions, contact information and monthly statements.",
+				"ctaLabel": "Sign in or register for CEBA Portal Account",
+				"ctaHref": "https://account-compte.ceba-cuec.ca/borrower/account-compte/sign-in-identifier",
+				"guideLabel": "How to register for a CEBA Portal Account (PDF)",
+				"guideHref": "https://ceba-cuec.ca/img/CEBA-Registration-User-Guide-EN.pdf",
+				"faqText": "To view information about loan assignment, please visit the FAQ page."
+			},
+			"sections": [
+				{
+					"title": "Program Overview",
+					"blocks": [
+						{
+							"heading": "Background",
+							"paragraphs": [
+								"On March 27, 2020, the Government of Canada announced the creation of the Canada Emergency Business Account (CEBA) Program.",
+								"Through the CEBA Program, eligible small businesses and not-for-profits were provided up to $60,000 in emergency funding, in the form of loans that were initially interest-free and partially forgivable, to help cover a variety of expenses that could not be deferred during a period of shutdown, such as payroll, rent, insurance and utilities.",
+								"The CEBA Program was open for applications from April 9, 2020, to June 30, 2021, and provided more than $49 billion to approximately 898,000 businesses in partnership with 230+ participating financial institutions. There were two eligibility streams available to qualify for the CEBA Program:",
+								"More details about CEBA eligibility are available on the Frequently Asked Questions (FAQ) page.",
+								"Eligible CEBA Loan Holders in good standing were able to qualify for partial loan forgiveness if the non-forgivable principal of their CEBA Loan was repaid on or before January 18, 2024 or on or before March 28, 2024, for those that applied for refinancing with the financial institution that provided their CEBA Loan on or before January 18, 2024. The forgivable amount was up to $20,000 calculated as 25 percent of the first $40,000 borrowed plus 50 percent on amounts borrowed above $40,000 and up to $60,000.",
+								"Certain Loan Holders that did not qualify for the loan they received were not eligible for forgiveness and were required to repay the outstanding amount of their CEBA Loan(s), in full, by December 31, 2023."
+							],
+							"bullets": [
+								{
+									"label": "Payroll Stream:",
+									"text": "for businesses with employment income paid in the 2019 calendar year greater than Cdn.$20,000 and less than Cdn.$1,500,000."
+								},
+								{
+									"label": "Non-Deferrable Expenses Stream:",
+									"text": "for businesses with Cdn.$20,000 or less in total employment income paid in the 2019 calendar year and that had Eligible Non-Deferrable Expenses greater than Cdn.$40,000 and less than Cdn.$1,500,000."
+								}
+							]
+						},
+						{
+							"heading": "Notable Loan Terms",
+							"paragraphs": [
+								"For CEBA Loans that remained outstanding as of January 19, 2024, and for which the Loan Holder is eligible and in good standing, notable CEBA Loan terms now include:"
+							],
+							"bullets": [
+								{
+									"label": "Interest:",
+									"text": "at a rate of 5% per annum with an interest payment frequency determined by your financial institution."
+								},
+								{
+									"label": "Term Loan Maturity Date:",
+									"text": "non-amortizing, with the full principal amount due on December 31, 2026."
+								}
+							]
+						},
+						{
+							"heading": "Collection of CEBA Loans in Default",
+							"paragraphs": [
+								"Loan Holders that do not repay their loan when due will initially be contacted by their financial institution to request a lump sum repayment of the outstanding debt. If, at that point, they do not fully repay their CEBA Loan to their financial institution, their financial institution will likely be required to assign their loan to the CEBA Program for further collections. The Canada Revenue Agency (CRA) is assisting with the collection of CEBA Loans in default that are assigned to the CEBA Program.",
+								[
+									{
+										"text": "For questions regarding your CEBA Loan, consult our "
+									},
+									{
+										"text": "Frequently Asked Questions (FAQ)",
+										"href": "/en/faq.html"
+									},
+									{
+										"text": " page. Should you need further assistance, please refer to the Contact Information page, which indicates the appropriate support channel for different questions."
+									}
+								]
+							],
+							"bullets": []
+						}
+					]
+				}
+			],
+			"stats": {
+				"title": "Final Program Statistics:",
+				"cards": [
+					{
+						"icon": "businesses",
+						"label": "Number of businesses approved for CEBA Loans1",
+						"value": "898,271"
+					},
+					{
+						"icon": "expansions",
+						"label": "Number of businesses approved for CEBA expansions2",
+						"value": "571,851"
+					},
+					{
+						"icon": "funds",
+						"label": "Total funds approved for CEBA Loans1 and expansions2",
+						"value": "$49.2 Billion"
+					}
+				],
+				"footnotes": [
+					"1 \"CEBA Loans\" refer to $40,000 and $60,000 loans",
+					"2 \"CEBA expansions\" refer to $20,000 expansions"
+				],
+				"regionalLink": {
+					"label": "Click here for regional statistics",
+					"href": "/en/statistics.html"
+				},
+				"summary": "CEBA summary data as of January 26, 2022"
+			},
+			"dateModified": "Date modified: 2026-02-17"
+		},
+		"statistics": {
+			"title": "CEBA Regional Statistics",
+			"breadcrumbLabel": "CEBA Regional Statistics",
+			"breadcrumbHref": "/en/statistics.html",
+			"intro": "Funds Approved by Province or Territory (%) for CEBA Loans and Expansions",
+			"image": {
+				"src": "/img/statistics-map-en.svg",
+				"alt": "Map of Canada showing the share of CEBA funds approved by province or territory."
+			},
+			"summary": "CEBA summary data as of January 26, 2022",
+			"footnote": "\"CEBA loans\" refer to $40,000 and $60,000 loans; \"CEBA expansions\" refer to $20,000 expansions provided to businesses with an existing CEBA loan",
+			"dataHeading": "Regional statistics data",
+			"regions": [
+				{
+					"code": "YT",
+					"label": "Yukon",
+					"value": "0.10%"
+				},
+				{
+					"code": "NT",
+					"label": "Northwest Territories",
+					"value": "0.06%"
+				},
+				{
+					"code": "NU",
+					"label": "Nunavut",
+					"value": "0.01%"
+				},
+				{
+					"code": "BC",
+					"label": "British Columbia",
+					"value": "13.73%"
+				},
+				{
+					"code": "AB",
+					"label": "Alberta",
+					"value": "14.13%"
+				},
+				{
+					"code": "SK",
+					"label": "Saskatchewan",
+					"value": "3.31%"
+				},
+				{
+					"code": "MB",
+					"label": "Manitoba",
+					"value": "2.63%"
+				},
+				{
+					"code": "ON",
+					"label": "Ontario",
+					"value": "40.76%"
+				},
+				{
+					"code": "QC",
+					"label": "Quebec",
+					"value": "20.78%"
+				},
+				{
+					"code": "NL",
+					"label": "Newfoundland and Labrador",
+					"value": "0.97%"
+				},
+				{
+					"code": "PE",
+					"label": "Prince Edward Island",
+					"value": "0.42%"
+				},
+				{
+					"code": "NS",
+					"label": "Nova Scotia",
+					"value": "1.77%"
+				},
+				{
+					"code": "NB",
+					"label": "New Brunswick",
+					"value": "1.34%"
+				}
+			],
+			"dateModified": "Date modified: 2026-03-13"
+		},
 		"contact-info-title": "Contact Information",
 		"contactInfo": {
 			"introParagraphs": [
