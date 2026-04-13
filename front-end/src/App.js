@@ -22,6 +22,19 @@ const getPageType = (path) => {
   }
 
   if (
+    path === "/statistics.html" ||
+    path.endsWith("/statistics.html") ||
+    path === "/statistics" ||
+    path.endsWith("/statistics") ||
+    path === "/statistiques.html" ||
+    path.endsWith("/statistiques.html") ||
+    path === "/statistiques" ||
+    path.endsWith("/statistiques")
+  ) {
+    return "statistics";
+  }
+
+  if (
     path === "/overview.html" ||
     path.endsWith("/overview.html") ||
     path === "/overview" ||
@@ -74,6 +87,16 @@ const getBlankPageBreadcrumbItems = (pageType, t) => {
     ];
   }
 
+  if (pageType === "statistics") {
+    return [
+      overviewItem,
+      {
+        href: t("form.statistics.breadcrumbHref"),
+        label: t("form.statistics.breadcrumbLabel"),
+      },
+    ];
+  }
+
   if (pageType === "contact-info") {
     return [
       overviewItem,
@@ -95,6 +118,10 @@ const LOCALIZED_PATHS = {
   faq: {
     en: "/en/faq.html",
     fr: "/fr/faq.html",
+  },
+  statistics: {
+    en: "/en/statistics.html",
+    fr: "/fr/statistiques.html",
   },
   "contact-info": {
     en: "/en/contact.html",
@@ -208,8 +235,10 @@ const formatTelephoneNumber = (value) => {
   const currentPath = getCurrentPath();
   const pageType = getPageType(currentPath);
   const isFaqPage = pageType === "faq";
+  const isStatisticsPage = pageType === "statistics";
   const isOverviewPage = pageType === "overview";
   const isContactInfoPage = pageType === "contact-info";
+  const isOverviewNavActive = isOverviewPage || isStatisticsPage;
   const isContactNavActive = pageType === "contact-form" || isContactInfoPage;
   const blankPageHeadingKey = getBlankPageHeadingKey(pageType);
   const blankPageBreadcrumbItems = getBlankPageBreadcrumbItems(pageType, t);
@@ -264,6 +293,31 @@ const formatTelephoneNumber = (value) => {
   const overviewDateModified =
     isOverviewObject && typeof overview.dateModified === "string"
       ? overview.dateModified
+      : "";
+  const statistics = t("form.statistics", { returnObjects: true });
+  const isStatisticsObject =
+    statistics && typeof statistics === "object" && !Array.isArray(statistics);
+  const statisticsTitle =
+    isStatisticsObject && typeof statistics.title === "string" ? statistics.title : "";
+  const statisticsIntro =
+    isStatisticsObject && typeof statistics.intro === "string" ? statistics.intro : "";
+  const statisticsSummary =
+    isStatisticsObject && typeof statistics.summary === "string" ? statistics.summary : "";
+  const statisticsFootnote =
+    isStatisticsObject && typeof statistics.footnote === "string" ? statistics.footnote : "";
+  const statisticsDateModified =
+    isStatisticsObject && typeof statistics.dateModified === "string"
+      ? statistics.dateModified
+      : "";
+  const statisticsImage =
+    isStatisticsObject && statistics.image && typeof statistics.image === "object"
+      ? statistics.image
+      : {};
+  const statisticsRegions =
+    isStatisticsObject && Array.isArray(statistics.regions) ? statistics.regions : [];
+  const statisticsDataHeading =
+    isStatisticsObject && typeof statistics.dataHeading === "string"
+      ? statistics.dataHeading
       : "";
 
   const renderContactInfoText = (content) => {
@@ -350,6 +404,8 @@ useEffect(() => {
 
   document.title = isFaqPage
     ? `CEBA ${t("form.nav-label2")}`
+    : isStatisticsPage
+      ? `CEBA ${statisticsTitle}`
     : isOverviewPage
       ? `CEBA ${t("form.nav-label1")}`
       : isContactInfoPage
@@ -583,7 +639,7 @@ useEffect(() => {
           >
             <a
               href={t("form.nav-link1")}
-              className={`nav-link ${isOverviewPage ? "active" : ""}`}
+              className={`nav-link ${isOverviewNavActive ? "active" : ""}`}
               onClick={() => setIsNavOpen(false)}
             >
               {t("form.nav-label1")}
@@ -812,6 +868,70 @@ useEffect(() => {
         </div>
         </>
         )}
+        {isStatisticsPage && (
+        <>
+        <div className="statistics-page">
+          <div className="page-topbar">
+            <div className="page-breadcrumbs">
+              <nav aria-label="Breadcrumb" className="gc-breadcrumbs">
+                <ol>
+                  {blankPageBreadcrumbItems.map((item) => (
+                    <li key={`${item.href}-${item.label}`}>
+                      <a href={item.href}>{item.label}</a>
+                    </li>
+                  ))}
+                </ol>
+              </nav>
+            </div>
+            <a href={faqPortalUrl} className="page-sign-in-link">
+              {faqPortalCtaLabel}
+            </a>
+          </div>
+          <div className="statistics-page-heading-wrap">
+            <h1 className="statistics-page-title">{statisticsTitle}</h1>
+            <span className="statistics-page-accent" aria-hidden="true"></span>
+          </div>
+          {statisticsIntro && (
+            <h2 className="statistics-page-intro">
+              {statisticsIntro}
+              <sup>1</sup>
+            </h2>
+          )}
+          <figure className="statistics-figure">
+            {statisticsImage.src && (
+              <img
+                className="statistics-map-image"
+                src={statisticsImage.src}
+                alt={statisticsImage.alt || ""}
+              />
+            )}
+            <figcaption className="statistics-figure-caption">
+              {statisticsSummary && <p>{statisticsSummary}</p>}
+              {statisticsFootnote && (
+                <p>
+                  <sup>1</sup> {statisticsFootnote}
+                </p>
+              )}
+            </figcaption>
+          </figure>
+          {statisticsRegions.length > 0 && (
+            <div className="sr-only">
+              {statisticsDataHeading && <h2>{statisticsDataHeading}</h2>}
+              <ul>
+                {statisticsRegions.map((region) => (
+                  <li key={`${region.code}-${region.value}`}>
+                    {region.label}: {region.value}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {statisticsDateModified && (
+            <div className="statistics-date-modified">{statisticsDateModified}</div>
+          )}
+        </div>
+        </>
+        )}
         {isContactInfoPage && (
         <>
         <div className="contact-info-page">
@@ -895,7 +1015,7 @@ useEffect(() => {
         </div>
         </>
         )}
-        {!isOverviewPage && !isFaqPage && !isContactInfoPage && (
+        {!isOverviewPage && !isFaqPage && !isStatisticsPage && !isContactInfoPage && (
         <>
         <div className="breadcrumbs-wrap">
           <nav aria-label="Breadcrumb" className="gc-breadcrumbs">
