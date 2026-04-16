@@ -12,6 +12,11 @@ const getCurrentPath = () => {
 };
 
 const getPageType = (path) => {
+  // Root paths should show the overview page
+  if (path === "/" || path === "/en" || path === "/fr") {
+    return "overview";
+  }
+
   if (
     path === "/faq.html" ||
     path.endsWith("/faq.html") ||
