@@ -49,6 +49,13 @@ const FAQ_DETAIL_ROUTE_ENTRIES = [
     en: "/en/faq/statements-of-account.html",
     fr: "/fr/faq/releves-de-compte.html",
   },
+  {
+    key: "financial-institution-loan-repayment",
+    section: "unassigned",
+    localeKey: "financial-institution-loan-repayment",
+    en: "/en/faq/financial-institution-loan-repayment.html",
+    fr: "/fr/faq/remboursement-du-pret-institution-financiere.html",
+  },
 ];
 
 const FAQ_DETAIL_ROUTES = FAQ_DETAIL_ROUTE_ENTRIES.reduce((acc, route) => {
@@ -354,23 +361,33 @@ const formatTelephoneNumber = (value) => {
       links: isSectionObject && Array.isArray(section.links) ? section.links : [],
     };
   });
-  const faqDetailAssigned = t("form.faqDetail.assigned", { returnObjects: true });
-  const isFaqDetailAssignedObject =
-    faqDetailAssigned && typeof faqDetailAssigned === "object" && !Array.isArray(faqDetailAssigned);
+  const currentFaqDetailRoute =
+    faqDetailKey &&
+    FAQ_DETAIL_ROUTES[faqDetailKey] &&
+    typeof FAQ_DETAIL_ROUTES[faqDetailKey] === "object"
+      ? FAQ_DETAIL_ROUTES[faqDetailKey]
+      : null;
+  const faqDetailSectionKey =
+    currentFaqDetailRoute && typeof currentFaqDetailRoute.section === "string"
+      ? currentFaqDetailRoute.section
+      : "assigned";
+  const faqDetailSection = t(`form.faqDetail.${faqDetailSectionKey}`, { returnObjects: true });
+  const isFaqDetailSectionObject =
+    faqDetailSection && typeof faqDetailSection === "object" && !Array.isArray(faqDetailSection);
   const faqDetailPages =
-    isFaqDetailAssignedObject &&
-    faqDetailAssigned.pages &&
-    typeof faqDetailAssigned.pages === "object" &&
-    !Array.isArray(faqDetailAssigned.pages)
-      ? faqDetailAssigned.pages
+    isFaqDetailSectionObject &&
+    faqDetailSection.pages &&
+    typeof faqDetailSection.pages === "object" &&
+    !Array.isArray(faqDetailSection.pages)
+      ? faqDetailSection.pages
       : {};
   const faqDetailSectionTitle =
-    isFaqDetailAssignedObject && typeof faqDetailAssigned.sectionTitle === "string"
-      ? faqDetailAssigned.sectionTitle
+    isFaqDetailSectionObject && typeof faqDetailSection.sectionTitle === "string"
+      ? faqDetailSection.sectionTitle
       : "";
   const faqDetailPortalCtaLabel =
-    isFaqDetailAssignedObject && typeof faqDetailAssigned.portalCtaLabel === "string"
-      ? faqDetailAssigned.portalCtaLabel
+    isFaqDetailSectionObject && typeof faqDetailSection.portalCtaLabel === "string"
+      ? faqDetailSection.portalCtaLabel
       : faqPortalCtaLabel;
   const faqDetailPage =
     isFaqDetailPage &&
@@ -406,7 +423,9 @@ const formatTelephoneNumber = (value) => {
       : "";
   const faqDetailSections =
     faqDetailPage && Array.isArray(faqDetailPage.sections) ? faqDetailPage.sections : [];
-  const faqDetailTabs = FAQ_DETAIL_ROUTE_ENTRIES.map((route) => {
+  const faqDetailTabs = FAQ_DETAIL_ROUTE_ENTRIES.filter(
+    (route) => route.section === faqDetailSectionKey
+  ).map((route) => {
     const localizedPage =
       faqDetailPages[route.localeKey] &&
       typeof faqDetailPages[route.localeKey] === "object" &&
@@ -939,22 +958,24 @@ useEffect(() => {
                   {faqDetailPageTitle}
                 </gcds-heading>
               </div>
-              <div className="faq-detail-nav-grid">
-                {faqDetailTabs.map((tab) => (
-                  <div
-                    key={tab.key}
-                    className="faq-detail-nav-col"
-                  >
-                    <a
-                      href={tab.href}
-                      className={`faq-detail-tab ${tab.current ? "faq-detail-tab-active" : ""}`}
-                      aria-current={tab.current ? "page" : undefined}
+              {faqDetailTabs.length > 1 && (
+                <div className="faq-detail-nav-grid">
+                  {faqDetailTabs.map((tab) => (
+                    <div
+                      key={tab.key}
+                      className="faq-detail-nav-col"
                     >
-                      {tab.label}
-                    </a>
-                  </div>
-                ))}
-              </div>
+                      <a
+                        href={tab.href}
+                        className={`faq-detail-tab ${tab.current ? "faq-detail-tab-active" : ""}`}
+                        aria-current={tab.current ? "page" : undefined}
+                      >
+                        {tab.label}
+                      </a>
+                    </div>
+                  ))}
+                </div>
+              )}
               <div className="faq-detail-content">
                 {faqDetailSections.map((section, sectionIndex) => {
                   const blocks =
