@@ -88,27 +88,27 @@
           "links": [
             {
               "label": "Cession de prêt",
-              "href": "#"
+              "href": "/fr/faq/cession-de-pret-cuec.html"
             },
             {
               "label": "Remboursement du prêt",
-              "href": "#"
+              "href": "/fr/faq/remboursement-du-pret-cuec.html"
             },
             {
               "label": "Modalités de paiement",
-              "href": "#"
+              "href": "/fr/faq/modalites-de-paiement.html"
             },
             {
               "label": "Changements apportés à mon entreprise",
-              "href": "#"
+              "href": "/fr/faq/changements-apportes-a-mon-entreprise.html"
             },
             {
               "label": "Compte sur le portail du CUEC",
-              "href": "#"
+              "href": "/fr/faq/compte-sur-le-portail-du-cuec.html"
             },
             {
               "label": "Relevés de compte",
-              "href": "#"
+              "href": "/fr/faq/releves-de-compte.html"
             }
           ]
         },
@@ -118,7 +118,7 @@
           "links": [
             {
               "label": "Remboursement du prêt",
-              "href": "#"
+              "href": "/fr/faq/remboursement-du-pret-institution-financiere.html"
             }
           ]
         },
@@ -128,13 +128,865 @@
           "links": [
             {
               "label": "Refinancement et remise de prêt",
-              "href": "#"
+              "href": "/fr/faq/refinancement-et-remise-de-pret.html"
             },
             {
               "label": "Admissibilité (fermé)",
-              "href": "#"
+              "href": "/fr/faq/admissibilite.html"
             }
           ]
+        }
+      }
+    },
+    "faqDetail": {
+      "assigned": {
+        "sectionTitle": "Prêt cédé au programme du CUEC",
+        "portalCtaLabel": "Se connecter",
+        "pages": {
+          "loan-assignment": {
+            "tabLabel": "Cession de prêt",
+            "breadcrumbLabel": "Cession de prêt du CUEC",
+            "titleSuffix": "Cession de prêt",
+            "dateModified": "Date de modification : 2026-01-21",
+            "sections": [
+              {
+                "id": "loan-assignment-what-is",
+                "heading": "Qu’entend-on par « cession de prêt » ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "La cession de prêt est un processus qui entraîne le transfert de votre prêt du CUEC, de l’institution financière qui s’en est initialement occupée pour son établissement et son administration, au programme du CUEC pour le recouvrement des soldes impayés."
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": "Avant que votre prêt du CUEC ne soit cédé, votre institution financière vous enverra une lettre de mise en demeure indiquant que votre prêt du CUEC est en défaut et qu’il sera probablement cédé au programme du CUEC s’il n’est pas remboursé. Si votre prêt du CUEC est ensuite cédé, le programme du CUEC vous enverra un avis écrit de cession de prêt par la poste pour vous informer de la cession de prêt."
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": "L’avis de cession de prêt contiendra également des renseignements importants sur la façon d’effectuer des paiements et de gérer votre prêt du CUEC à l’avenir."
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": "Si votre prêt du CUEC est cédé au programme du CUEC, veuillez continuer à consulter cette section de la FAQ et adresser vos questions supplémentaires au Centre d’appels du CUEC au 1-888-324-4201."
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": "L’Agence du revenu du Canada (ARC) aide à recouvrer les prêts du CUEC qui sont cédés au programme du CUEC. Veuillez consulter la section « Quel est le rôle de l’ARC dans le cadre du CUEC ? » de la FAQ pour en savoir plus sur la façon dont l’ARC participe également au recouvrement des prêts du CUEC."
+                  }
+                ]
+              },
+              {
+                "id": "loan-assignment-why",
+                "heading": "Pourquoi mon prêt a-t-il été cédé au programme du CUEC ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "Votre prêt du CUEC peut être cédé au programme du CUEC s’il est en défaut. Un prêt du CUEC peut être en défaut de paiement pour diverses raisons, y compris, mais sans s’y limiter :"
+                  },
+                  {
+                    "type": "unordered-list",
+                    "items": [
+                      "si vous ne remboursez pas le capital ou les intérêts à l’échéance ; ou",
+                      "si vous êtes devenu insolvable ; ou",
+                      "si vous n’avez pas respecté d’autres conditions applicables à votre prêt du CUEC."
+                    ]
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": "Si votre prêt du CUEC est cédé au programme du CUEC, veuillez continuer à consulter cette section de la FAQ et communiquer avec le Centre d’appels du CUEC au 1-888-324-4201 pour toute question supplémentaire. Veuillez contacter votre institution financière si vous souhaitez obtenir plus d’information sur la raison pour laquelle votre prêt a été cédé."
+                  }
+                ]
+              },
+              {
+                "id": "loan-assignment-what-happens",
+                "heading": "Que se passe-t-il une fois que mon prêt du CUEC est cédé au programme du CUEC ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "Si votre prêt du CUEC est cédé au programme du CUEC, vous recevrez un avis écrit de cession de prêt par la poste pour vous informer de la cession de prêt. L’avis de cession de prêt contiendra également des renseignements importants sur la façon d’effectuer des paiements et de gérer votre prêt du CUEC à l’avenir, ainsi que sur la façon d’établir une entente de paiement avec l’Agence du revenu du Canada (ARC). Un numéro d’identification à 12 chiffres du CUEC sera fourni dans l’avis de cession de prêt, dont vous aurez besoin pour créer un compte sur le portail du CUEC."
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      "Après la cession de votre prêt du CUEC, vous ne pouvez plus accéder à votre prêt du CUEC par l’intermédiaire de votre institution financière. Vous devrez ouvrir un compte sur le portail du CUEC afin d’accéder aux détails de votre prêt, comme les relevés de prêt, et vous permettre de gérer votre prêt. Si vous recevez un avis de cession de prêt, veuillez vous rendre sur ",
+                      {"href": "https://account-compte.ceba-cuec.ca", "text": "account-compte.ceba-cuec.ca"},
+                      " pour ouvrir un compte sur le portail du CUEC à l’aide de votre numéro d’identification à 12 chiffres du CUEC."
+                    ]
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": "Si vous êtes incapables de rembourser votre prêt du CUEC et qu’il est cédé au programme du CUEC, l’ARC pourrait examiner au cas par cas votre situation et travailler avec vous afin d’établir une entente de paiement/plan de remboursement en fonction de votre capacité de remboursement."
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": "Si votre prêt du CUEC est cédé au programme du CUEC, veuillez effectuer tous vos paiements directement au programme du CUEC et continuer à consulter cette section de la FAQ. Si vous avez des questions restées sans réponse, veuillez communiquer avec le Centre d’appels du CUEC au 1-888-324-4201. Veuillez consulter la section « Quel est le rôle de l’Agence du revenu du Canada (ARC) dans le cadre du CUEC ? » de la FAQ pour en savoir plus sur la façon dont l’ARC participe au recouvrement des prêts du CUEC."
+                  }
+                ]
+              },
+              {
+                "id": "loan-assignment-id-number",
+                "heading": "Qu’est-ce qu’un numéro d’identification du CUEC et à quoi sert-il ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "Un numéro d’identification du CUEC est un identifiant unique à 12 chiffres attribué à chaque prêt du CUEC cédé, dont les trois premiers chiffres seront toujours « 967 ». Vous recevrez un numéro d’identification du CUEC seulement si votre prêt du CUEC a été cédé au programme du CUEC par votre institution financière. Le numéro d’identification du CUEC sera inclus dans l’avis de cession de prêt provenant du programme du CUEC."
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": "Votre numéro d’identification du CUEC peut être utilisé pour faire ce qui suit :"
+                  },
+                  {
+                    "type": "unordered-list",
+                    "items": [
+                      "s’inscrire à un compte sur le portail du CUEC ;",
+                      "effectuer des paiements en vue de votre prêt du CUEC ; et/ou",
+                      "récupérer un nom d’utilisateur et/ou un mot de passe perdus ou oubliés pour votre compte sur le portail du CUEC."
+                    ]
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": "Votre numéro d’identification du CUEC est unique et ne peut pas être modifié, car il vous est attribué par le programme du CUEC lors de la cession du prêt. Si vous perdez votre numéro d’identification du CUEC, veuillez communiquer avec le Centre d’appels du CUEC au 1-888-324-4201."
+                  }
+                ]
+              },
+              {
+                "id": "loan-assignment-notice",
+                "heading": "Qu’est-ce qu’un avis de cession de prêt ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "Si votre prêt du CUEC est cédé au programme du CUEC, un avis écrit de cession de prêt vous sera envoyé par la poste pour vous informer de la cession de prêt. Cet avis contient des renseignements importants sur la façon de gérer votre prêt du CUEC une fois qu’il a été cédé et comprend votre numéro d’identification unique à 12 chiffres du CUEC. Votre numéro d’identification du CUEC est nécessaire pour vous inscrire à un compte sur le portail du CUEC, où vous pourrez gérer votre prêt du CUEC et effectuer des paiements à l’avenir."
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": "Après la cession du prêt au programme du CUEC, veuillez continuer à consulter cette section de la FAQ et à adresser les questions restées sans réponse au Centre d’appels du CUEC au 1-888-324-4201."
+                  }
+                ]
+              },
+              {
+                "id": "loan-assignment-arc-role",
+                "heading": "Quel est le rôle de l’Agence du revenu du Canada (ARC) dans le recouvrement des prêts du CUEC ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "L’Agence du revenu du Canada (ARC) aide à recouvrer les prêts en défaut du CUEC qui ont été cédés au programme du CUEC. À ce titre, l’ARC peut communiquer avec vous au sujet de votre prêt du CUEC, y compris pour organiser le remboursement. S’il n’est pas possible de rembourser immédiatement la totalité de votre prêt du CUEC, l’ARC peut (mais n’est pas tenue de le faire) établir avec vous une entente de paiement ou un plan de remboursement, qui exigera tout de même le remboursement intégral de toutes les sommes dues de votre prêt du CUEC. Vous pouvez également communiquer avec le Centre d’appels du CUEC de l’ARC pour discuter des options de remboursement disponibles. Vous pouvez téléphoner au Centre d’appels du CUEC de l’ARC au 1-800-361-2808."
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": "Après l’affectation au programme du CUEC, veuillez continuer à consulter cette section de la FAQ et à adresser les questions restées sans réponse au Centre d’appels du CUEC au 1-888-324-4201."
+                  }
+                ]
+              },
+              {
+                "id": "loan-assignment-proactive",
+                "heading": "Mon prêt du CUEC a été cédé, dois-je attendre un appel de l’Agence du revenu du Canada (ARC) ou dois-je communiquer de manière proactive ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "Si votre prêt du CUEC a été cédé au programme du CUEC, nous vous encourageons à communiquer directement avec le Centre d’appels du CUEC de l’ARC au sujet de votre prêt du CUEC et à discuter de l’établissement d’une entente de paiement. Vous pouvez téléphoner au Centre d’appels du CUEC de l’ARC au 1-800-361-2808."
+                  }
+                ]
+              }
+            ]
+          },
+          "loan-repayment": {
+            "tabLabel": "Remboursement du prêt",
+            "breadcrumbLabel": "Remboursement du prêt du CUEC",
+            "titleSuffix": "Remboursement du prêt",
+            "pageTitle": "Prêt avec le programme du CUEC — Remboursement du prêt",
+            "dateModified": "Date de modification : 2026-01-21",
+            "sections": [
+              {
+                "id": "loan-repayment-methods",
+                "heading": "Comment puis-je rembourser mon prêt ? Quels sont les modes de paiement ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "Si votre prêt a été cédé au programme du CUEC, vous êtes invité à effectuer tous les paiements directement au programme du CUEC au moyen de l'une des trois options de paiement acceptées décrites ci-dessous. Vous devrez inclure le numéro d'identification du CUEC fourni dans votre avis de cession de prêt."
+                  },
+                  {
+                    "type": "ordered-list",
+                    "items": [
+                      [
+                        {
+                          "strong": true,
+                          "text": "Paiement de factures"
+                        },
+                        " — Pour effectuer des paiements de factures par l'intermédiaire de votre institution financière, utilisez « ExportationdeveloppementCanadaCUEC » (français) ou « Export Development Canada - CEBA » (anglais) comme bénéficiaire et fournissez votre numéro d'identification du CUEC à 12 chiffres dans le champ du numéro de compte. Veuillez noter que le traitement des paiements envoyés au programme du CUEC par l'entremise du paiement de factures peut prendre plusieurs jours ouvrables et ne sera pas crédité à votre prêt du CUEC tant qu'il n'aura pas été reçu et traité par le programme du CUEC. Veuillez tenir compte du délai de traitement lors de l'envoi de votre paiement, car le programme du CUEC n'est pas responsable des paiements reçus en retard en raison du délai de traitement."
+                      ],
+                      [
+                        {
+                          "strong": true,
+                          "text": "Chèques"
+                        },
+                        " — Libellez les chèques à l'ordre de « Exportation et développement Canada » (français) ou « Export Development Canada » (anglais). Inscrivez votre numéro d'identification du CUEC à 12 chiffres dans la section « pour » du chèque et joignez à votre chèque un bordereau de paiement dûment rempli pour vous assurer que votre paiement peut être traité rapidement et avec exactitude. Le bordereau de paiement se trouve sur vos relevés de compte dans le portail du CUEC. Veuillez couper ou déchirer le bordereau de paiement uniquement le long de la ligne de coupe indiquée. Postez le chèque et le bordereau de paiement dans la même enveloppe à l'adresse ci-dessous. N'incluez qu'un seul bordereau de paiement par enveloppe. N'envoyez pas d'argent comptant, de mandats, de traites bancaires ou de chèques certifiés. Seuls les chèques provenant d'institutions financières canadiennes seront acceptés."
+                      ]
+                    ]
+                  },
+                  {
+                    "type": "address",
+                    "lines": [
+                      "Exportation et développement Canada",
+                      "Boîte postale 4530, succursale A",
+                      "Toronto (Ontario) M5W 0N2"
+                    ]
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": "Prévoyez un délai de livraison postale lors de l'envoi de votre paiement. Le programme du CUEC n'est pas responsable des paiements reçus en retard en raison de délais de traitement."
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": "Si vous choisissez d'envoyer plusieurs chèques postdatés ensemble, n'incluez qu'un seul bordereau de versement et tous les chèques dans la même enveloppe. Le champ Montant payé sur le bordereau de paiement doit correspondre au total de tous les chèques dans l'enveloppe. Si vous souhaitez poster chaque chèque de paiement séparément, assurez-vous que chaque enveloppe comprend un bordereau de paiement dûment rempli. Le ou les paiements ne seront pas traités ou reflétés sur les relevés et sur le portail du CUEC avant la date inscrite sur chaque chèque. Veuillez noter que les chèques postdatés de plus de 18 mois seront rejetés."
+                  },
+                  {
+                    "type": "ordered-list",
+                    "start": 3,
+                    "items": [
+                      [
+                        {
+                          "strong": true,
+                          "text": "Virement télégraphique"
+                        },
+                        " — Pour obtenir des renseignements sur les virements télégraphiques, veuillez communiquer avec le Centre d'appels du CUEC au 1-888-324-4201."
+                      ]
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "loan-repayment-application-order",
+                "heading": "Comment les paiements sont-ils appliqués à mon prêt qui a été cédé au programme du CUEC ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "Lorsque vous effectuez un paiement à l'égard de votre prêt du CUEC qui a été cédé, le paiement est appliqué aux soldes dans l'ordre suivant :"
+                  },
+                  {
+                    "type": "ordered-list",
+                    "items": [
+                      "Frais impayés",
+                      "Intérêts impayés",
+                      "Capital restant dû",
+                      "Intérêts courus"
+                    ]
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": "Veuillez noter que les paiements reçus la fin de semaine ou les jours fériés ne seront pas traités avant le jour ouvrable suivant. Selon le type de paiement, le traitement par la banque destinataire et le programme du CUEC peut prendre jusqu'à cinq jours ouvrables. Les chèques peuvent prendre plus de temps selon le processus de compensation des chèques."
+                  }
+                ]
+              },
+              {
+                "id": "loan-repayment-amount",
+                "heading": "Quel montant de mon prêt du CUEC dois-je rembourser ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "Une fois que votre prêt est cédé au programme du CUEC, vous devez rembourser le solde impayé de votre prêt du CUEC ainsi que tous les frais et intérêts applicables, en totalité, directement au programme du CUEC. Les intérêts sur les soldes impayés ont commencé le 19 janvier 2024 à un taux d'intérêt de 5 % par année."
+                  }
+                ]
+              },
+              {
+                "id": "loan-repayment-disputes",
+                "heading": "Puis-je contester mes conditions de remboursement ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "Toutes les décisions relatives à l'admissibilité au programme, les résultats des demandes et les dates limites de remboursement sont maintenant définitifs et ne peuvent pas être modifiés. Aucun organisme participant à l'administration du CUEC n'a le pouvoir d'accorder des exceptions aux critères d'admissibilité du CUEC, y compris votre institution financière."
+                  }
+                ]
+              },
+              {
+                "id": "loan-repayment-overpayment",
+                "heading": "J'ai payé mon prêt en trop. Que dois-je faire pour obtenir le remboursement de mon trop-payé ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "Pour toute question relative au remboursement d'un trop payé sur un prêt du CUEC cédé, veuillez communiquer avec le Centre d'appels du CUEC au 1-888-324-4201."
+                  }
+                ]
+              },
+              {
+                "id": "loan-repayment-notifications",
+                "heading": "Vais-je recevoir des notifications à propos de paiements à venir ou en défaut ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      "Si une adresse courriel figure dans votre dossier auprès du programme CUEC, vous recevrez un ",
+                      {
+                        "strong": true,
+                        "text": "rappel de paiement à venir"
+                      },
+                      " 7 jours civils avant la date à laquelle votre prochain paiement est dû selon votre entente de paiement."
+                    ]
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      "Si vous manquez un paiement, vous recevrez un ",
+                      {
+                        "strong": true,
+                        "text": "rappel de paiement en défaut"
+                      },
+                      " par courriel si un paiement n'est pas effectué dans les 8 jours suivant la date d'échéance du paiement."
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "payment-arrangements": {
+            "tabLabel": "Modalités de paiement",
+            "breadcrumbLabel": "Modalités de paiement",
+            "titleSuffix": "Modalités de paiement",
+            "dateModified": "Date de modification : 2026-01-21",
+            "sections": [
+              {
+                "id": "payment-arrangements-what-is",
+                "heading": "Qu'est-ce qu'une entente de paiement ? Comment puis-je établir une entente de paiement avec l'Agence du revenu du Canada (ARC) après la cession de mon prêt ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "Une entente de paiement au titre du CUEC est un plan ou un échéancier convenu qui indique les paiements qui seront effectués pour rembourser vos obligations en vertu du CUEC. Si vous n'avez pas d'entente de paiement ou si vous n'êtes pas en mesure d'effectuer des paiements conformément à l'entente, veuillez communiquer directement avec l'Agence du revenu du Canada (ARC) pour discuter des options de paiement ou pour établir une nouvelle entente de paiement. Vous pouvez téléphoner au Centre d'appels du CUEC de l'ARC au 1-800-361-2808."
+                  }
+                ]
+              },
+              {
+                "id": "payment-arrangements-missed",
+                "heading": "Que se passe-t-il si je manque un paiement ou si je ne peux pas respecter les modalités de mon entente de paiement établie avec l'Agence du revenu du Canada (ARC) ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "Si vous manquez un paiement prévu dans le cadre de l'entente de paiement convenue, veuillez effectuer le paiement dès que possible. Si vous n'êtes pas en mesure d'effectuer les paiements prévus dans votre entente de paiement, vous devrez communiquer avec l'Agence du revenu du Canada (ARC) pour discuter de votre entente de paiement. Vous pouvez téléphoner au Centre d'appels du CUEC de l'ARC au 1-800-361-2808."
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": "Veuillez effectuer tous les paiements de votre prêt du CUEC directement au programme du CUEC au moyen de l'une des trois options de paiement acceptées : paiement de factures, chèque ou virement bancaire."
+                  }
+                ]
+              },
+              {
+                "id": "payment-arrangements-third-party",
+                "heading": "Un tiers autorisé sera-t-il en mesure d'effectuer des paiements en mon nom ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "Oui, vos tiers autorisés sont en mesure d'effectuer des paiements en votre nom. Les tiers autorisés peuvent demander des renseignements sur votre prêt par l'entremise du Centre d'appels du CUEC, mais ils ne peuvent pas accéder à votre prêt ni ouvrir une session dans votre compte sur le portail du CUEC."
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": "L'Agence du revenu du Canada (ARC) est responsable de l'autorisation, de l'ajout, de la modification et de la suppression de tiers autorisés, comme un membre de votre famille, un comptable ou un avocat, pour gérer votre prêt du CUEC."
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      "Veuillez noter que, conformément à l'",
+                      {"strong": true, "text": "Entente de l'utilisateur final du portail du CUEC"},
+                      ", qui comprend les modalités de votre compte du portail du CUEC, vous n'êtes pas autorisé à partager vos identifiants du portail du CUEC avec d'autres parties, y compris vos tiers autorisés par l'ARC."
+                    ]
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": "Veuillez également noter que si le titulaire du prêt était insolvable au moment de la cession, l'ARC ne sera pas en mesure de soutenir la gestion des tiers autorisés."
+                  }
+                ]
+              },
+              {
+                "id": "payment-arrangements-interest",
+                "heading": "Quel est le montant des intérêts que je paierai sur mon prêt du CUEC ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "Les intérêts à un taux de 5 % par année sur les soldes impayés du CUEC ont commencé à courir à compter du 19 janvier 2024 et se poursuivent jusqu'à ce que votre prêt du CUEC soit remboursé en totalité."
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": "Les intérêts sur les prêts du CUEC cédés sont courus quotidiennement sur le capital impayé."
+                  }
+                ]
+              },
+              {
+                "id": "payment-arrangements-balloon",
+                "heading": "Qu'est-ce qu'un paiement forfaitaire ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "Un paiement forfaitaire est un paiement unique qui est égal au solde résiduel dû à la fin d'une entente de paiement. Cela ne s'applique qu'aux prêts pour lesquels une entente de paiement a été établie et comprend un paiement forfaitaire. Lors de l'établissement d'une entente de paiement pendant l'établissement du CUEC, l'Agence du revenu du Canada (ARC) peut autoriser un paiement forfaitaire afin de réduire le montant des paiements récurrents requis en vertu de votre entente de paiement."
+                  }
+                ]
+              },
+              {
+                "id": "payment-arrangements-residual",
+                "heading": "J'ai effectué les paiements prévus dans mon entente de paiement pour la durée prévue, pourquoi est-ce que je vois toujours un solde sur le portail du CUEC et sur mon relevé ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "Votre entente de paiement est établie de manière à couvrir la totalité du solde au moment où vous établissez une entente de paiement avec l'Agence du revenu du Canada (ARC), et elle comprend le capital impayé, les intérêts impayés, les frais impayés en plus des intérêts courus au moment où l'entente est conclue. Toutefois, l'entente de paiement n'inclut pas les intérêts qui s'accumulent pendant la durée du prêt, ce qui fait en sorte qu'il reste un solde résiduel à rembourser. Pour obtenir de plus amples renseignements, vous pouvez contacter le Centre d'appels du CUEC de l'ARC au 1-800-361-2808 si vous avez d'autres questions."
+                  }
+                ]
+              }
+            ]
+          },
+          "changes-to-my-business": {
+            "tabLabel": "Changements apportés à mon entreprise",
+            "breadcrumbLabel": "Changements apportés à mon entreprise",
+            "titleSuffix": "Changements apportés à mon entreprise",
+            "dateModified": "Date de modification : 2026-01-21",
+            "sections": [
+              {
+                "id": "changes-closing-business",
+                "heading": "Si je suis sur le point de fermer mon entreprise, dois-je quand même rembourser mon prêt du CUEC ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "Oui, vous êtes tenus de rembourser votre prêt en totalité, même si votre entreprise n’opère plus."
+                  }
+                ]
+              },
+              {
+                "id": "changes-change-of-ownership",
+                "heading": "Comment puis-je rembourser mon prêt du CUEC si mon entreprise a changé de propriétaire ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "L’impact d’un changement de propriétaire du titulaire de prêt sur les modalités de remboursement dépend de la structure juridique de l’entreprise du titulaire de prêt (c’est-à-dire si l’entreprise est une entreprise individuelle ou une société) et du type de changement de propriétaire."
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": "Si votre prêt a déjà été cédé au programme du CUEC aux fins de recouvrement, veuillez communiquer avec le Centre d’appels du CUEC au 1-888-324-4201."
+                  }
+                ]
+              },
+              {
+                "id": "changes-insolvency",
+                "heading": "Mon entreprise est devenue insolvable et j’ai des questions au sujet de mon prêt du CUEC. À qui dois-je m’adresser ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "Pour toute question relative aux prêts en cours du CUEC, veuillez communiquer avec le Centre d’appels du CUEC au 1-888-324-4201. Veuillez noter que le programme du CUEC n’est pas en mesure de fournir des conseils en matière d’insolvabilité. Vous voudrez peut-être demander conseil à un syndic autorisé en insolvabilité si vous envisagez l’insolvabilité ou si votre entreprise est devenue insolvable."
+                  }
+                ]
+              },
+              {
+                "id": "changes-bankruptcy",
+                "heading": "Mon entreprise a déclaré faillite, a fait une proposition de consommateur ou est sous séquestre, que dois-je faire en ce qui concerne mon prêt du CUEC ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "Une fois qu’un syndic autorisé en insolvabilité qualifié pour vous aider dans les procédures d’insolvabilité vous a été assigné, veuillez demander à votre syndic autorisé désigné de communiquer avec le Centre d’appels du CUEC au 1-888-324-4201 s’il ne l’a pas déjà fait."
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": "Veuillez noter que le processus d’établir une entente de paiement avec l’ARC ne s’applique pas aux détenteurs de prêts du CUEC insolvables."
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      "Pour en savoir plus sur les propositions de consommateur, la faillite et la façon de trouver un syndic autorisé en insolvabilité, vous pouvez consulter le site Web du gouvernement du Canada à l’adresse suivante : ",
+                      {"href": "https://canada.ca/fr/services/finance/faillite.html", "text": "canada.ca/fr/services/finance/faillite.html"}
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "changes-authorized-third-party",
+                "heading": "Si j’ai déjà autorisé un tiers avec l’Agence du revenu du Canada (ARC) pour gérer mon prêt du CUEC, peut-il discuter de mon prêt par l’entremise du Centre d’appels du CUEC ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "Si vous avez déjà ajouté un tiers autorisé auprès de l’Agence du revenu du Canada (ARC) pour gérer votre prêt du CUEC et que ses coordonnées sont affichées dans votre compte du portail du CUEC, il peut appeler le Centre d’appels du CUEC au 1-888-324-4201 et s’authentifier pour discuter des détails de votre prêt."
+                  }
+                ]
+              },
+              {
+                "id": "changes-authorize-representative",
+                "heading": "Comment puis-je autoriser un représentant à communiquer avec le programme du CUEC ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "L’Agence du revenu du Canada (ARC) est responsable de l’autorisation, de l’ajout, de la modification et de la suppression de tiers autorisés, comme un membre de votre famille, un comptable ou un avocat, pour gérer votre prêt du CUEC."
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": "Si votre entreprise n’est pas insolvable, veuillez communiquer directement avec l’ARC pour amorcer le processus d’autorisation de tiers en utilisant le numéro de téléphone fourni dans votre avis de cession de prêt. Une fois que l’ARC informe le programme du CUEC qu’elle a reçu l’autorisation, votre tiers autorisé peut demander des renseignements sur votre prêt par l’intermédiaire du Centre d’appels du CUEC, mais il ne pourra pas se connecter au portail du CUEC ni y avoir accès. Si votre entreprise a entamé une procédure d’insolvabilité avant que votre prêt ne soit cédé au programme du CUEC, il n’est pas possible d’autoriser des tiers à accéder à votre compte de prêt."
+                  }
+                ]
+              },
+              {
+                "id": "changes-estate-executor",
+                "heading": "Je suis exécuteur testamentaire d’un propriétaire unique décédé, que dois-je faire ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "Afin d’avoir accès aux ressources liées au programme du CUEC et de gérer le prêt au nom du défunt, le programme du CUEC exige que l’exécuteur testamentaire suive le processus de validation de l’exécuteur testamentaire, qui comprend la présentation d’un certificat de décès et d’un testament au programme du CUEC. Veuillez communiquer avec le Centre d’appels du CUEC au 1-888-324-4201 pour amorcer le processus."
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": "Une fois que les documents ont été validés et que les renseignements sur l’exécuteur testamentaire ont été confirmés, l’Agence du revenu du Canada (ARC) communiquera avec l’exécuteur testamentaire pour discuter des options d’entente de paiement. Vous pouvez également prendre l’initiative de contacter le Centre d’appels du CUEC de l’ARC une fois que vous aurez terminé le processus de validation de l’exécuteur testamentaire. Vous pouvez joindre le Centre d’appels du CUEC de l’ARC au 1-800-361-2808."
+                  }
+                ]
+              },
+              {
+                "id": "changes-secure-document",
+                "heading": "J’ai besoin d’envoyer un document sécurisé au programme du CUEC, comment puis-je le faire ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "Le programme du CUEC utilise Cisco Secure Email afin d’expédier et recevoir des courriels de façon sécuritaire. Le service Cisco Secure Email est seulement utilisé dans les circonstances où le programme du CUEC doit échanger de l’information sensible avec des détenteurs de prêts. Le Centre d’appels du CUEC peut initier cette démarche et confirmera l’adresse courriel au dossier avant de débuter. Dans l’éventualité où le programme du CUEC vous a demandé d’utiliser Cisco Secure Email, vous recevrez un courriel d’une boîte aux lettres électronique sécurisée contenant des instructions pour vous enregistrer. Une fois enregistré, l’utilisateur pourra visionner et répondre aux courriels via le portail de Cisco Secure Email. Afin de répondre à un courriel, cliquez sur le bouton de réponse."
+                  }
+                ]
+              }
+            ]
+          },
+          "ceba-portal-account": {
+            "tabLabel": "Compte sur le portail du CUEC",
+            "breadcrumbLabel": "Compte sur le portail du CUEC",
+            "titleSuffix": "Compte sur le portail du CUEC",
+            "dateModified": "Date de modification : 2026-01-21",
+            "sections": [
+              {
+                "id": "portal-register",
+                "heading": "Comment puis-je m’inscrire pour obtenir un compte sur le portail du CUEC ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      "Vous n’êtes pas tenu de vous inscrire à un compte sur le portail du CUEC que si votre prêt a été cédé au programme du CUEC. Si votre prêt a été cédé, vous pouvez vous inscrire en visitant ",
+                      {"href": "https://account-compte.ceba-cuec.ca", "text": "account-compte.ceba-cuec.ca"},
+                      ". Pour vous inscrire à un compte sur le portail du CUEC, vous aurez besoin de votre numéro d’identification unique à 12 chiffres du CUEC qui figure dans votre avis de cession de prêt et du numéro de téléphone d’affaires le plus récent que votre institution financière avait dans ses dossiers avant que votre prêt ne soit attribué au programme du CUEC. Des instructions détaillées sur la façon de s’inscrire se trouvent sur la page Aperçu du programme du CUEC."
+                    ]
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": "Si votre prêt n’a pas été cédé au programme du CUEC, veuillez continuer à gérer votre prêt par l’intermédiaire de votre institution financière."
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": "Pour toute autre question concernant le compte du portail du CUEC, veuillez communiquer avec le Centre d’appels du CUEC au 1-888-324-4201."
+                  }
+                ]
+              },
+              {
+                "id": "portal-what-info",
+                "heading": "Quels renseignements puis-je consulter dans le portail du CUEC une fois que mon prêt a été transféré de mon institution financière ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "Le portail du CUEC fournit une vue des détails de votre prêt (y compris le solde impayé), de votre entente de paiement, si elle a été établie avec l’Agence du revenu du Canada (ARC), de l’historique des paiements, de l’historique des frais, des relevés mensuels et de vos coordonnées. L’historique des paiements et l’historique des frais ne couvrent que la période commençant au moment de la cession de votre prêt au programme du CUEC."
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": "Les ententes de paiement sont établies avec l’ARC et permettent aux détenteurs de prêts de rembourser entièrement leurs prêts au fil du temps, à une fréquence et à un montant qui dépendent de leur capacité de remboursement. Vous pouvez téléphoner au Centre d’appels du CUEC de l’ARC au 1-800-361-2808. Pour toute autre question relative à la cession de prêts, vous pouvez communiquer avec le Centre d’appels du CUEC au 1-888-324-4201."
+                  }
+                ]
+              },
+              {
+                "id": "portal-third-party-access",
+                "heading": "Des tiers peuvent-ils accéder à mon compte sur le portail du CUEC pour gérer mon prêt en mon nom ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "Conformément aux modalités énoncées dans l’entente relative au compte d’utilisateur final du portail du CUEC, vous n’êtes pas autorisé à partager les informations d’identification de votre compte du portail du CUEC avec d’autres parties. Toutefois, les tiers qui ont été autorisés auprès de l’Agence du revenu du Canada (ARC) peuvent continuer de gérer et d’accéder à l’information concernant votre prêt par l’entremise du Centre d’appels du CUEC au 1-888-324-4201. Veuillez noter que pour autoriser de nouveaux tiers ou gérer des tiers existants, vous devez communiquer avec le Centre d’appels du CUEC de l’ARC. Vous pouvez téléphoner au Centre d’appels du CUEC de l’ARC au 1-800-361-2808."
+                  }
+                ]
+              },
+              {
+                "id": "portal-payment-arrangement-not-showing",
+                "heading": "J’ai établi une entente de paiement avec l’Agence du revenu du Canada (ARC), pourquoi ne puis-je pas la voir dans le portail du CUEC ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "Une fois que vous avez établi une entente de paiement avec l’Agence du revenu du Canada (ARC), il peut s’écouler jusqu’à cinq jours ouvrables avant qu’elle ne soit affichée dans le portail du CUEC sous l’onglet « Détails du prêt ». Si l’entente de paiement a été établie il y a plus de cinq jours ouvrables et qu’elle n’a pas été affichée dans le portail du CUEC, veuillez communiquer avec le Centre d’appels du CUEC au 1-888-324-4201. Si vous avez manqué un paiement et que vous avez des questions au sujet de votre entente de paiement précédente, veuillez communiquer avec le Centre d’appels du CUEC de l’ARC. Vous pouvez téléphoner au Centre d’appels du CUEC de l’ARC au 1-800-361-2808."
+                  }
+                ]
+              },
+              {
+                "id": "portal-why-register",
+                "heading": "Pourquoi dois-je m’inscrire à un compte sur le portail du CUEC après la cession de mon prêt au titre du CUEC ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "Si votre prêt a été cédé au programme du CUEC, vous devrez vous inscrire à un compte sur le portail du CUEC pour consulter les détails de votre prêt et accéder à vos relevés de compte. Si vous avez d’autres questions, veuillez communiquer avec le Centre d’appels du CUEC au 1-888-324-4201."
+                  }
+                ]
+              },
+              {
+                "id": "portal-loan-balance",
+                "heading": "Comment puis-je déterminer le solde de mon prêt ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "Si votre prêt a été cédé au programme du CUEC, vous pouvez consulter le solde de votre prêt dans votre compte du portail du CUEC. Si vous avez d’autres questions au sujet du solde de votre prêt, veuillez communiquer avec le Centre d’appels du CUEC au 1-888-324-4201."
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": "Si votre prêt n’a pas été cédé au programme du CUEC, veuillez communiquer avec votre institution financière pour obtenir des détails sur le solde de votre prêt du CUEC."
+                  }
+                ]
+              },
+              {
+                "id": "portal-payment-not-showing",
+                "heading": "J’ai effectué un paiement, pourquoi ne s’affiche-t-il pas dans le portail du CUEC ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "Le traitement et l’examen de votre compte sur le portail du CUEC peuvent prendre jusqu’à cinq jours ouvrables pour que les paiements de factures et les virements télégraphiques soient comptabilisés dans votre compte du portail du CUEC, et les chèques peuvent prendre plus de temps selon le processus de compensation des chèques. Pour toute autre question, veuillez communiquer avec le Centre d’appels du CUEC au 1-888-324-4201."
+                  }
+                ]
+              },
+              {
+                "id": "portal-end-user-agreement",
+                "heading": "Où puis-je trouver la dernière version de l’entente de l’utilisateur final et des modalités du portail du CUEC ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      "Vous pouvez trouver la version la plus récente de l’entente de l’utilisateur final et des modalités du portail du CUEC en accédant au pied de page de l’écran du portail du CUEC et en cliquant sur l’hyperlien « ",
+                      {"strong": true, "text": "Conditions générales de mon compte"},
+                      " ». Cela ouvrira un nouvel onglet dans lequel l’accord pourra être consulté."
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "statements-of-account": {
+            "tabLabel": "Relevés de compte",
+            "breadcrumbLabel": "Relevés de compte",
+            "titleSuffix": "Relevés de compte",
+            "dateModified": "Date de modification : 2026-01-21",
+            "sections": [
+              {
+                "id": "statements-access",
+                "heading": "Comment puis-je accéder à mes relevés et changer la langue de mes relevés ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "Les relevés sont produits chaque mois et peuvent être consultés et téléchargés par l’entremise de votre compte sur le portail du CUEC, sous l’onglet « Documents ». Vous pouvez naviguer dans le coin supérieur droit du portail du CUEC et sélectionner la langue de votre choix, qui s’appliquera à la fois au portail et à votre relevé."
+                  }
+                ]
+              },
+              {
+                "id": "statements-subscribe",
+                "heading": "Comment puis-je m’abonner ou me désabonner des avis mensuels par courriel au sujet des relevés ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "Pour vous abonner ou vous désabonner des avis mensuels par courriel concernant vos relevés, veuillez communiquer avec le Centre d’appels du CUEC au 1-888-324-4201."
+                  }
+                ]
+              },
+              {
+                "id": "statements-update-contact",
+                "heading": "Mes coordonnées figurant sur mon relevé sont incorrectes. Comment puis-je mettre à jour mes coordonnées ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "Veuillez appeler le Centre d’appels du CUEC au 1-888-324-4201 pour mettre à jour vos coordonnées."
+                  }
+                ]
+              },
+              {
+                "id": "statements-missing-payment",
+                "heading": "Il manque un paiement sur mon relevé, pourquoi ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "Les relevés sont générés le premier jour de chaque mois. Le traitement des paiements de factures et de virements bancaires peut prendre jusqu’à cinq jours ouvrables, les chèques pouvant prendre plus de temps en raison des processus de compensation des chèques. Il est possible que le paiement n’ait pas été traité au cours de la période indiquée sur un relevé donné, auquel cas il apparaîtra sur votre prochain relevé."
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": "Un paiement apparaîtra dans le portail du CUEC lorsqu’il aura été traité avec succès."
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": "Si vous croyez qu’un paiement n’a pas été inscrit dans votre relevé et que plus de cinq jours ouvrables se sont écoulés entre la date du paiement et la date du relevé, veuillez communiquer avec le Centre d’appels du CUEC au 1-888-324-4201."
+                  }
+                ]
+              },
+              {
+                "id": "statements-glossary",
+                "heading": "Que signifient les différents termes de mon relevé ?",
+                "blocks": [
+                  {"type": "paragraph", "content": [{"strong": true, "text": "Période de relevé"}]},
+                  {"type": "paragraph", "compact": true, "content": "La durée capturée dans les détails du relevé. Il s’agit toujours du mois précédant la date du relevé."},
+                  {"type": "paragraph", "content": [{"strong": true, "text": "Date du relevé"}]},
+                  {"type": "paragraph", "compact": true, "content": "La date à laquelle le relevé a été généré."},
+                  {"type": "paragraph", "content": [{"strong": true, "text": "Numéro d’identification du CUEC"}]},
+                  {"type": "paragraph", "compact": true, "content": "Un identifiant unique à 12 chiffres pour chaque prêt cédé. Les trois premiers chiffres de chaque numéro d’identification du CUEC sont « 967 »."},
+                  {"type": "paragraph", "content": [{"strong": true, "text": "Date(s) d’échéance(s) de l’entente de paiement"}]},
+                  {"type": "paragraph", "compact": true, "content": "La ou les dates auxquelles le montant du paiement convenu ou le montant du paiement forfaitaire est exigible, conformément à l’entente de paiement du titulaire de prêt établie avec l’Agence du revenu du Canada (ARC)."},
+                  {"type": "paragraph", "content": [{"strong": true, "text": "Montant du paiement convenu"}]},
+                  {"type": "paragraph", "compact": true, "content": "Le montant du paiement qui est régulièrement exigible à la ou aux dates d’échéance de l’entente de paiement convenue, conformément à l’entente de paiement du titulaire de prêt établie avec l’ARC."},
+                  {"type": "paragraph", "content": [{"strong": true, "text": "Fréquence des paiements"}]},
+                  {"type": "paragraph", "compact": true, "content": "La fréquence des paiements, selon l’entente de paiement du titulaire de prêt établie avec l’ARC."},
+                  {"type": "paragraph", "content": [{"strong": true, "text": "Entente de paiement"}]},
+                  {"type": "paragraph", "compact": true, "content": "Un plan ou un échéancier convenu avec l’ARC qui indique à quel moment les paiements du CUEC seront effectués pour s’acquitter des obligations financières impayées."},
+                  {"type": "paragraph", "content": [{"strong": true, "text": "Paiement forfaitaire"}]},
+                  {"type": "paragraph", "compact": true, "content": "Un paiement unique qui est dû à la fin d’une entente de paiement ou d’une durée de prêt. Lors de l’établissement d’une entente de paiement avec l’ARC, celle-ci peut autoriser un paiement forfaitaire."},
+                  {"type": "paragraph", "content": [{"strong": true, "text": "Bordereau de versement"}]},
+                  {"type": "paragraph", "compact": true, "content": "Un document qui doit être inclus dans l’enveloppe avec tout paiement par chèque. Les bordereaux de versement se trouvent sur vos relevés de compte dans le portail du CUEC."},
+                  {"type": "paragraph", "content": [{"strong": true, "text": "Détails du relevé"}]},
+                  {"type": "paragraph", "compact": true, "content": "Une section du relevé de compte qui affiche les soldes d’ouverture et de clôture, ainsi qu’un sommaire des opérations qui ont eu lieu au cours de la période couverte par le relevé, comme les paiements et les frais d’intérêt."},
+                  {"type": "paragraph", "content": [{"strong": true, "text": "Date de publication"}]},
+                  {"type": "paragraph", "compact": true, "content": "Date à laquelle la transaction est considérée comme ayant eu lieu."},
+                  {"type": "paragraph", "content": [{"strong": true, "text": "Principal"}]},
+                  {"type": "paragraph", "compact": true, "content": "Le solde du capital impayé à un moment donné est le montant du capital initial du prêt qui n’a pas encore été remboursé. Tous les frais ou intérêts s’ajoutent à ce montant."},
+                  {"type": "paragraph", "content": [{"strong": true, "text": "Intérêt"}]},
+                  {"type": "paragraph", "compact": true, "content": "Le coût d’emprunt de l’argent. Le solde d’intérêts à un moment donné est le montant des intérêts facturés qui n’ont pas encore été payés. Tous les frais ou le capital s’ajoutent à ce montant."},
+                  {"type": "paragraph", "compact": true, "content": "Le taux d’intérêt applicable aux soldes impayés du CUEC est de 5 % par année."},
+                  {"type": "paragraph", "content": [{"strong": true, "text": "Honoraires"}]},
+                  {"type": "paragraph", "compact": true, "content": "Frais supplémentaires sur le solde d’un prêt. Des frais peuvent être imputés à un prêt au cas par cas, comme le recouvrement des frais d’exécution judiciaire, le cas échéant."},
+                  {"type": "paragraph", "content": [{"strong": true, "text": "Intérêts courus"}]},
+                  {"type": "paragraph", "compact": true, "content": "Le montant des intérêts intramensuels qui s’accumulent quotidiennement avant d’être imputés au solde impayé du prêt à la date de votre relevé."},
+                  {"type": "paragraph", "content": [{"strong": true, "text": "Solde d’ouverture"}]},
+                  {"type": "paragraph", "compact": true, "content": "Le solde du prêt au début de la période couverte par le relevé."},
+                  {"type": "paragraph", "content": [{"strong": true, "text": "Solde de clôture"}]},
+                  {"type": "paragraph", "compact": true, "content": "Le solde du prêt à la fin de la période couverte par le relevé."},
+                  {"type": "paragraph", "content": [{"strong": true, "text": "Paiement"}]},
+                  {"type": "paragraph", "compact": true, "content": "Un paiement reçu du Titulaire du Prêt."},
+                  {"type": "paragraph", "content": [{"strong": true, "text": "Contrepassation – Paiement"}]},
+                  {"type": "paragraph", "compact": true, "content": "Un paiement qui a été annulé. Par exemple, une annulation peut se produire dans le cas d’un chèque sans provision."},
+                  {"type": "paragraph", "content": [{"strong": true, "text": "Intérêts courus à ce jour"}]},
+                  {"type": "paragraph", "compact": true, "content": "Le montant des intérêts courus au cours du mois qui a été touché par une transaction afin d’afficher plus clairement comment le solde de clôture est calculé."},
+                  {"type": "paragraph", "content": [{"strong": true, "text": "Remboursement"}]},
+                  {"type": "paragraph", "compact": true, "content": "Une transaction qui rapporte au Titulaire du prêt un trop-perçu du solde total du prêt."}
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "unassigned": {
+        "sectionTitle": "Le prêt est avec l’institution financière",
+        "portalCtaLabel": "Se connecter",
+        "pages": {
+          "financial-institution-loan-repayment": {
+            "tabLabel": "Remboursement du prêt",
+            "breadcrumbLabel": "Remboursement du prêt à une institution financière",
+            "titleSuffix": "Remboursement du prêt",
+            "pageTitle": "Le prêt est avec l'institution financière - Remboursement du prêt",
+            "dateModified": "Date de modification : 2026-01-21",
+            "sections": [
+              {
+                "id": "financial-institution-loan-repayment-interest",
+                "heading": "Quel est le montant des intérêts que je paierai sur mon prêt du CUEC ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "Les prêts du CUEC éligibles qui demeurent impayés sont maintenant des prêts à terme non amortissables dont le montant total du capital est dû le 31 décembre 2026."
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": "Si votre prêt du CUEC est demeuré impayé après le 18 janvier 2024, des intérêts au taux de 5 % par année s'appliqueront à votre prêt depuis le 19 janvier 2024."
+                  }
+                ]
+              },
+              {
+                "id": "financial-institution-loan-repayment-dispute",
+                "heading": "Puis-je contester mes conditions de remboursement ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "Toutes les décisions relatives à l'admissibilité au programme, les résultats des demandes et les dates limites de remboursement sont maintenant définitifs et ne peuvent pas être modifiés. Aucun organisme participant à l'administration du CUEC n'a le pouvoir d'accorder des exceptions aux critères d'admissibilité du CUEC, y compris votre institution financière."
+                  }
+                ]
+              },
+              {
+                "id": "financial-institution-loan-repayment-business-closure",
+                "heading": "Si je suis sur le point de fermer mon entreprise, dois-je quand même rembourser mon prêt du CUEC ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "Oui, vous êtes tenus de rembourser votre prêt du CUEC en totalité, même si votre entreprise n'opère plus."
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": "Pour toute question concernant les détails de votre prêt (c'est-à-dire le solde du prêt, le processus de remboursement ou d'autres détails du compte de prêt), veuillez communiquer avec votre institution financière."
+                  }
+                ]
+              },
+              {
+                "id": "financial-institution-loan-repayment-specific-questions",
+                "heading": "J'ai des questions spécifiques sur mon prêt, à qui dois-je m'adresser ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "Étant donné que votre prêt n'a pas été cédé au programme du CUEC, veuillez communiquer avec votre institution financière si vous avez des questions particulières. Vous trouverez ci-dessous une liste non exhaustive des sujets sur lesquels votre institution financière peut vous aider en ce qui concerne votre prêt du CUEC :"
+                  },
+                  {
+                    "type": "unordered-list",
+                    "items": [
+                      "Détails du prêt et solde(s)",
+                      "Effectuer des paiements et des méthodes de paiement",
+                      "Comment les paiements sont appliqués",
+                      "Modifications apportées à vos coordonnées",
+                      "Autres changements apportés à votre entreprise"
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "financial-institution-loan-repayment-default",
+                "heading": "Que se passe-t-il si je ne peux pas rembourser mon prêt dans les délais prévus dans mon entente de paiement ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "Si vous n'êtes pas en mesure de rembourser votre prêt du CUEC à l'échéance (que vous soyez admissible ou non au prêt que vous avez reçu), votre institution financière communiquera avec vous pour vous demander un remboursement forfaitaire de la dette impayée. Si, à ce moment-là, vous ne remboursez pas entièrement votre prêt du CUEC à votre institution financière, celle-ci sera probablement tenue de céder votre prêt au programme du CUEC aux fins de recouvrement."
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": "Le programme du CUEC gérera le recouvrement des prêts en souffrance cédés au titre du CUEC, auquel cas vous serez contacté directement. Si vous n'êtes pas en mesure de rembourser dans le délai imparti, l'Agence du revenu du Canada (ARC), qui aide au recouvrement des prêts en défaut du CUEC, peut examiner votre situation au cas par cas et travailler avec vous pour établir une entente de paiement ou un plan de remboursement adapté à votre capacité de remboursement."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "archive": {
+        "sectionTitle": "FAQ Archive",
+        "portalCtaLabel": "Se connecter",
+        "pages": {
+          "refinancing-and-forgiveness": {
+            "tabLabel": "Refinancement et remise de prêt",
+            "breadcrumbLabel": "Refinancement et remise de prêt",
+            "titleSuffix": "Refinancement et remise de prêt",
+            "pageTitle": "FAQ Archive — Refinancement et remise de prêt",
+            "dateModified": "Date de modification : 2026-01-21",
+            "sections": [
+              {"id":"archive-refinancing-requirements","heading":"Quelles étaient les conditions à remplir pour qu’une demande de refinancement présentée au plus tard le 18 janvier 2024 puisse bénéficier de la prolongation du délai de remise partielle du prêt ?","blocks":[{"type":"paragraph","content":"La date limite pour déposer un refinancement afin de bénéficier de la prolongation du délai de remise partielle du prêt est maintenant dépassée."},{"type":"paragraph","content":"Si vous étiez un titulaire de prêt éligible en règle et que vous avez demandé le refinancement de votre prêt du CUEC auprès de la même institution financière qui vous a initialement accordé le prêt du CUEC au plus tard le 18 janvier 2024, vous auriez pu bénéficier d’une remise partielle du prêt à condition que le capital restant dû de votre CUEC, autre que le montant pouvant être remis, était remboursé avant ou au 28 mars 2024. Cela ne vous empêchait pas d’effectuer des remboursements auprès d’autres prêteurs — tant que vous avez déposé une demande de refinancement auprès de l’institution financière qui a initialement accordé votre CUEC et que votre CUEC était remboursé avant le 28 mars 2024, vous pouviez bénéficier de la prolongation du délai de remise."},{"type":"paragraph","content":"Afin de vous permettre de trouver la solution de refinancement la plus adaptée à votre situation, le programme du CUEC ne limitait pas le type de prêt ou les modalités applicables à une demande de refinancement. Par conséquent, votre institution financière peut avoir proposé toute une série de solutions de refinancement potentielles, y compris la demande d’un nouveau crédit ou la modification d’une facilité de crédit existante dans le but de rembourser votre prêt du CUEC. Les produits de refinancement fournis par les institutions financières étaient des prêts conventionnels entre vous et votre institution financière. Ils étaient souscrits selon les pratiques de prêt habituelles de votre institution financière et ne sont pas affiliés au programme du CUEC ou au gouvernement du Canada."},{"type":"paragraph","content":"Veuillez noter que si votre prêt du CUEC est resté en cours le 19 janvier 2024, les intérêts au taux de 5 % par année ont commencé à courir, et ce, même si vous aviez demandé le refinancement avant ou le 18 janvier 2024 et attendiez que votre demande de refinancement soit examinée ou que le produit d’un prêt de refinancement approuvé soit financé ou appliqué au solde de votre prêt du CUEC."}]},
+              {"id":"archive-refinancing-dispute","heading":"Puis-je contester mes modalités de remboursement afin de faire modifier celles-ci ?","blocks":[{"type":"paragraph","content":"Non. Le programme du CUEC ne permet plus de présenter un recours, une révision ou une réévaluation du statut d’admissibilité d’un titulaire de prêt, d’un résultat final ou des modalités de remboursement. Étant donné que les périodes de demande et de financement du programme du CUEC sont fermées, il n’est plus possible de présenter un règlement et les demandes ne seront pas réexaminées dans le cadre du programme du CUEC."}]},
+              {"id":"archive-refinancing-extension","heading":"J’ai entendu dire qu’une prolongation d’un an du délai de remboursement du CUEC avait été annoncée. Quel délai a-t-il été prolongé ?","blocks":[{"type":"paragraph","content":"Le 14 septembre 2023, le gouvernement du Canada a annoncé une prolongation d’un an de la date d’échéance finale du prêt, soit du 31 décembre 2025 au 31 décembre 2026, sous réserve d’un taux d’intérêt de 5 % par an pour les titulaires de prêts CUEC éligibles en règle."},{"type":"paragraph","content":"Les titulaires de prêts qui ont été déterminés comme ne remplissant pas les critères d’éligibilité du CUEC pour le prêt qu’ils ont reçu ont dû rembourser leur prêt en totalité au plus tard le 31 décembre 2023."}]},
+              {"id":"archive-refinancing-repayment-terms","heading":"Quelles étaient les modalités de remboursement des prêts de 40 000 $ et 60 000 $ et de l’extension de 20 000 $ ?","blocks":[{"type":"paragraph","content":"Les titulaires de prêts CUEC éligibles en règle ont les conditions de remboursement suivantes :"},{"type":"paragraph","content":"Intérêts :"},{"type":"unordered-list","items":["0 % d’intérêts par an jusqu’au 18 janvier 2024 ;","5 % d’intérêts par an à partir du 19 janvier 2024 ; la fréquence de paiement des intérêts peut varier selon l’institution financière."]},{"type":"paragraph","content":"Remboursements et Maturité :"},{"type":"unordered-list","items":["Aucun remboursement de capital n’était requis avant le 18 janvier 2024 ; si le prêt est resté en cours le 19 janvier 2024, il est maintenant un prêt à terme non amorti avec un remboursement intégral du capital dû le 31 décembre 2026."]},{"type":"paragraph","content":"Remise de dettes :"},{"type":"unordered-list","items":["Si le capital restant dû, autre que le montant de la remise potentielle de la dette, a été remboursé avant ou le 18 janvier 2024, le montant restant du capital sera remis.","Si vous avez présenté une demande de refinancement à l’institution financière qui vous a accordé votre CUEC au plus tard le 18 janvier 2024, et que vous avez besoin d’un délai de grâce pour finaliser le remboursement de votre prêt du CUEC, vous auriez pu bénéficier d’une remise partielle si le capital restant dû de votre CUEC, autre que le montant de la remise potentielle de la dette, était remboursé avant ou le 28 mars 2024."]}]},
+              {"id":"archive-refinancing-forgiveness-terms","heading":"Quelles étaient les modalités de remise de dette ?","blocks":[{"type":"paragraph","content":"Les modalités de remise suivantes s’appliquaient aux titulaires de prêts au titre du CUEC admissibles qui étaient en règle."},{"type":"paragraph","content":"Si vous avez emprunté 40 000 $ ou moins :"},{"type":"paragraph","content":"Rembourser le solde impayé du prêt (excluant le montant pouvant être remis) à la date limite de remise applicable (le 18 janvier 2024, ou le 28 mars 2024 si vous avez demandé à refinancer votre prêt du CUEC auprès de la même institution financière qui vous a initialement accordé votre CUEC au plus tard le 18 janvier 2024) aurait donné lieu à une remise de prêt de 25 % (jusqu’à 10 000 $)."},{"type":"paragraph","content":"Exemple 1 :"},{"type":"unordered-list","items":["Montant maximal emprunté : 40 000 $","Montant remboursé avant la date limite pour recevoir une remise : 30 000 $","Montant pouvant être radié : 10 000 $"]},{"type":"paragraph","content":"Exemple 2 :"},{"type":"unordered-list","items":["Montant maximal emprunté : 20 000 $","Montant remboursé avant la date limite pour recevoir une remise : 15 000 $","Montant pouvant être radié : 5 000 $"]},{"type":"paragraph","content":"Exemple 3 :"},{"type":"unordered-list","items":["Montant maximal emprunté : 40 000 $","Montant remboursé avant la date limite pour recevoir une remise : 25 000 $","Montant pouvant être radié : 0 $"]},{"type":"paragraph","content":"Si vous avez emprunté plus de 40 000 $ jusqu’à concurrence de 60 000 $ :"},{"type":"paragraph","content":"Si vous avez reçu un prêt de 40 000 $ et avez par la suite reçu la majoration de 20 000 $, les modalités de votre remise ont changé et sont décrites ici."},{"type":"paragraph","content":"Rembourser le solde impayé du prêt (excluant le montant pouvant être remis) à la date limite de remise applicable (le 18 janvier 2024, ou le 28 mars 2024 si vous avez demandé à refinancer votre prêt du CUEC auprès de la même institution financière qui vous a initialement accordé votre CUEC au plus tard le 18 janvier 2024) aurait donné lieu à une remise de prêt unique jusqu’à 20 000 $ selon un taux mixte :"},{"type":"unordered-list","items":["25 % pour les premiers 40 000 $ ; plus","50 % pour les montants supérieurs à 40 000 $ jusqu’à 60 000 $"]},{"type":"paragraph","content":"Pour être clair, la partie de la remise basée sur un taux de 25 % et la partie basée sur un taux de 50 % sont combinées en une seule tranche de remise, qui n’était disponible que si tous les autres montants impayés étaient remboursés avant le 18 janvier 2024, ou avant le 28 mars 2024 si vous aviez demandé à refinancer votre prêt du CUEC auprès de la même institution financière qui vous avait initialement accordé votre CUEC au plus tard le 18 janvier 2024. Par exemple, si 60 000 $ avaient été empruntés, aucune remise n’était disponible à moins que 40 000 $ n’aient été remboursés."},{"type":"paragraph","content":"Note : Certaines institutions financières pourraient inscrire votre prêt de 40 000 $ et la majoration de 20 000 $ comme deux prêts distincts. Aux fins de la remise de prêt, les emprunts et les remboursements des deux prêts ont été regroupés."},{"type":"paragraph","content":"Exemple 4 :"},{"type":"unordered-list","items":["Montant maximal emprunté : 60 000 $","Montant remboursé avant la date limite pour recevoir une remise : 40 000 $","Montant pouvant être radié : 20 000 $ (40 000 $ x 25 % + 20 000 $ x 50 %)"]},{"type":"paragraph","content":"Exemple 5 :"},{"type":"unordered-list","items":["Montant maximal emprunté : 50 000 $","Montant remboursé avant la date limite pour recevoir une remise : 35 000 $","Montant pouvant être radié : 15 000 $ (40 000 $ x 25 % + 10 000 $ x 50 %)"]},{"type":"paragraph","content":"Exemple 6 :"},{"type":"unordered-list","items":["Montant maximal emprunté : 60 000 $","Montant remboursé avant la date limite pour recevoir une remise : 35 000 $","Montant pouvant être radié : 0 $"]},{"type":"paragraph","content":"Si vous avez intégralement remboursé votre prêt initial de 40 000 $, réclamé la remise de dette et obtenu par la suite la majoration de 20 000 $ :"},{"type":"paragraph","content":"Rembourser le solde impayé du prêt (excluant le montant pouvant être remis) à la date limite de remise applicable (le 18 janvier 2024, ou le 28 mars 2024 si vous avez demandé à refinancer votre prêt du CUEC auprès de la même institution financière qui vous a initialement accordé votre CUEC au plus tard le 18 janvier 2024) aurait donné lieu à une remise de prêt de 52 % (jusqu’à 10 000 $)."},{"type":"paragraph","content":"Exemple 7 :"},{"type":"unordered-list","items":["Montant maximal emprunté : 20 000 $","Montant remboursé avant la date limite pour recevoir une remise : 10 000 $","Montant pouvant être radié : 10 000 $"]},{"type":"paragraph","content":"Exemple 8 :"},{"type":"unordered-list","items":["Montant maximal emprunté : 20 000 $","Montant remboursé avant la date limite pour recevoir une remise : 8 000 $","Montant pouvant être radié : 0 $"]}]},
+              {"id":"archive-refinancing-qualify","heading":"Quelles étaient les conditions à remplir pour bénéficier d’une remise partielle du prêt ?","blocks":[{"type":"paragraph","content":"Les détenteurs de prêts en règle qui remplissaient les conditions d’admissibilité étaient éligibles à la date limite de remboursement du 18 janvier 2024 pour bénéficier d’une remise partielle du prêt. Les titulaires de prêts qui étaient éligibles pour bénéficier d’une remise partielle du prêt à la date limite de remboursement du 18 janvier 2024 ont été contactés par leur institution financière pour confirmer leur éligibilité."},{"type":"paragraph","content":"Si vous étiez un titulaire de prêt éligible qui n’avait pas encore remboursé son prêt auprès de l’institution financière qui vous a initialement accordé votre CUEC avant ou le 18 janvier 2024, et que vous aviez besoin d’un délai de grâce pour finaliser le remboursement de votre prêt du CUEC, vous auriez pu bénéficier d’une remise partielle du prêt si le capital restant dû de votre CUEC, autre que le montant de la remise potentielle de la dette, était remboursé avant ou le 28 mars 2024."},{"type":"paragraph","content":"Les validations des critères d’éligibilité du CUEC ont été effectuées pour tous les détenteurs de prêts et les résultats de ces validations sont définitifs. Ces validations ont été menées en partenariat avec l’Agence du revenu du Canada (ARC) et revalidées périodiquement depuis le lancement du CUEC en avril 2020 afin de garantir l’exactitude des informations contenues dans les dossiers de l’ARC."}]},
+              {"id":"archive-refinancing-notice","heading":"J’ai précédemment reçu un avis de mon institution financière indiquant que mon entreprise n’était pas admissible à une remise de prêt et devait rembourser mon prêt dans sa totalité au plus tard le 31 décembre 2023. La prolongation au 18 janvier 2024 s’applique-t-elle à moi ?","blocks":[{"type":"paragraph","content":"Non, la prolongation de la date limite de remboursement pour bénéficier d’une remise le 18 janvier 2024 ne s’appliquait pas aux titulaires de prêts qui n’étaient pas éligibles à la remise. Si votre entreprise a été informée qu’elle n’était pas admissible à la remise et devait rembourser son prêt CUEC dans son intégralité au plus tard le 31 décembre 2023, votre date limite de remboursement n’a pas changé."}]},
+              {"id":"archive-refinancing-tax","heading":"Dois-je ajuster la remise de prêt à ma déclaration de revenus ? Si oui, à quel moment ?","blocks":[{"type":"paragraph","content":"La portion de votre prêt qui vous a été remise fait l’objet d’un impôt sur le revenu. Pour toute autre question de nature fiscale en lien avec votre prêt du CUEC, communiquez avec l’Agence du revenu du Canada (ARC) ou votre comptable pour obtenir plus d’informations."}]}
+            ]
+          },
+          "eligibility-closed": {
+            "tabLabel": "Admissibilité (fermé)",
+            "breadcrumbLabel": "Admissibilité (fermé)",
+            "titleSuffix": "Admissibilité (fermé)",
+            "pageTitle": "FAQ Archive — Admissibilité (fermé)",
+            "dateModified": "Date de modification : 2026-01-21",
+            "sections": [
+              {"id":"archive-eligibility-jan18","heading":"Qui était admissible à la limite de remboursement du 18 janvier 2024 pour bénéficier d’une remise partielle du prêt ?","blocks":[{"type":"paragraph","content":"Les détenteurs de prêts demeurant en règle et répondant aux critères d’admissibilité du CUEC étaient éligibles à la limite de remboursement du 18 janvier 2024 pour bénéficier d’une remise partielle de leur prêt. Les titulaires de prêts qui étaient éligibles pour bénéficier d’une remise partielle de leur prêt à la date limite de remboursement du 18 janvier 2024 ont été contactés par leur institution financière pour confirmer leur éligibilité."},{"type":"paragraph","content":"Les validations des critères d’éligibilité du CUEC ont été effectuées pour tous les détenteurs de prêts et les résultats de ces validations sont définitifs. Ces validations ont été menées en partenariat avec l’Agence du revenu du Canada (ARC) et revalidées périodiquement depuis le lancement du CUEC en avril 2020 afin de garantir l’exactitude des informations contenues dans les dossiers de l’ARC."}]},
+              {"id":"archive-eligibility-requirements","heading":"Quels étaient les critères d’admissibilité du programme du CUEC ?","blocks":[{"type":"paragraph","content":"Le processus de demande au titre du CUEC comportait les deux volets suivants : i) le volet des salaires (demandeurs dont le revenu d’emploi versé pour l’année 2019 s’établissait entre 20 000 $ CA et 1 500 000 $ CA), ou ii) le volet des dépenses non reportables (demandeurs dont le revenu d’emploi total versé pour l’année civile 2019 était de 20 000 $ CA ou moins)."},{"type":"paragraph","content":"Au moment de la demande, chaque demandeur était tenu de répondre aux critères suivants :"},{"type":"unordered-list","items":["Avoir un numéro d’entreprise (NE) actif auprès de l’ARC pour lequel la date d’entrée en vigueur de l’inscription était le 1er mars 2020 ou avant.","Posséder un compte-chèques de type entreprise ou un compte d’opérations de type entreprise qui était actif auprès d’une institution financière participante au moment de la demande au titre du CUEC. Remarque : Si le demandeur ne possédait pas de compte-chèques de type entreprise ou de compte d’opérations de type entreprise actif au moment de la demande, il devait en ouvrir un auprès d’une institution financière participante avant de déposer sa demande au titre du CUEC.","Ne pas avoir précédemment recouru au programme du CUEC et consentir à ne pas demander d’aide au titre du CUEC auprès d’une autre institution financière.","Avoir eu l’intention de poursuivre ou de reprendre ses activités."]},{"type":"paragraph","content":"Si vous avez déposé une demande selon le volet des dépenses non reportables, vous deviez également répondre aux critères suivants :"},{"type":"unordered-list","items":["Avoir des dépenses non reportables admissibles s’établissant entre 40 000 $ CA et 1 500 000 $ CA. Les dépenses non reportables admissibles auraient pu comprendre des charges comme le loyer, les taxes foncières, les services publics et l’assurance. Les dépenses sont soumises à la vérification et à l’audit du gouvernement du Canada.","Avoir produit une déclaration de revenus auprès de l’ARC avec une année d’imposition se terminant en 2019, ou si la déclaration de revenus de 2019 n’avait pas encore été soumise, 2018."]}]},
+              {"id":"archive-eligibility-nde","heading":"Quelles étaient les dépenses non reportables admissibles et quelles en étaient les catégories ?","blocks":[{"type":"paragraph","content":"Les demandeurs avec un revenu d’emploi de 20 000 $ ou moins en 2019 étaient tenus de démontrer qu’ils avaient des dépenses non reportables admissibles entre 40 000 $ CA et 1 500 000 $ CA en 2020. Les dépenses ont été considérées comme des « dépenses non reportables admissibles » si elles avaient déjà été engagées en janvier et/ou en février 2020, ou si elles découlaient d’une obligation légale ou contractuelle au 1er mars 2020 et ne pouvaient pas être évitées ou reportées au-delà de 2020, même en période d’arrêt et de baisse de revenus en raison de la COVID. Des copies électroniques ou papier de Reçus / Factures / Ententes devaient être téléversées pour démontrer les dépenses non reportables admissibles de 2020."},{"type":"paragraph","content":"Le CUEC n’avait pas pour objectif de constituer un soutien au revenu ni une aide pour les frais d’exploitation variables des entreprises. Il cherchait à aider les entreprises en leur offrant du financement pour leurs dépenses qui ne pouvaient pas être évitées ou reportées pendant qu’elles prennent des mesures pour composer avec une période de fermeture, de ralentissement ou de récession afin de préparer une reprise réussie de l’activité du demandeur."},{"type":"paragraph","content":"Les catégories de dépenses non reportables admissibles étaient les suivantes :"},{"type":"unordered-list","items":["les salaires et les autres dépenses liés à l’emploi versés à des tiers indépendants (sans lien de dépendance) ;","les loyers ou les paiements liés à la location de biens immobiliers utilisés à des fins commerciales ;","les loyers ou les paiements liés à la location de biens d’équipement utilisés à des fins commerciales ;","les coûts liés aux assurances ;","l’impôt foncier ;","les frais engagés à des fins commerciales pour des services de téléphonie et des services publics, sous la forme de gaz, de mazout, d’électricité, d’eau et d’internet ;","les paiements aux termes du service de la dette régulier et prévu ;","les frais engagés aux termes de conventions conclues avec des contractants indépendants et les frais exigés pour conserver les licences, les autorisations ou les permissions nécessaires à l’exercice des activités du demandeur ;","les paiements engagés pour les matériaux consommés pour produire un produit généralement offert en vente par le demandeur."]}]},
+              {"id":"archive-eligibility-multiple-business","heading":"Et si j’exploitais plus d’une entreprise ?","blocks":[{"type":"paragraph","content":"Chaque entreprise admissible devait posséder un numéro d’entreprise à 9 chiffres unique de l’Agence du revenu du Canada (ARC) au moment de la demande. Chaque entreprise admissible était limitée à un prêt au titre du CUEC."}]},
+              {"id":"archive-eligibility-bn","heading":"Est-ce qu’un numéro d’entreprise de l’Agence du revenu du Canada (ARC) était nécessaire pour déposer une demande ?","blocks":[{"type":"paragraph","content":"Oui. Un numéro d’entreprise à 9 chiffres de l’ARC était requis pour déposer une demande. Le numéro d’entreprise devait être actif et sa date d’entrée en vigueur ne pouvait pas être ultérieure au 1er mars 2020. Pour les demandeurs du volet des salaires, le numéro à 15 chiffres de compte de revenus sur la liste de paie devait être actif et sa date d’entrée en vigueur ne pouvait pas être ultérieure au 1er mars 2020."}]},
+              {"id":"archive-eligibility-fiscal-year","heading":"Si le premier exercice (et la fin d’année d’imposition indiquée sur la déclaration de revenus de l’entreprise) d’une entreprise prenait fin à compter du 1er janvier 2020 ou après cette date, est-ce que cette entreprise était admissible à un prêt au titre du CUEC ?","blocks":[{"type":"paragraph","content":"Les demandeurs au titre du CUEC devaient attester du fait qu’ils avaient produit une déclaration de revenus auprès de l’Agence du revenu du Canada pour 2019 (c.-à-d. que la fin d’année d’imposition, telle qu’elle est indiquée dans la déclaration de revenus, est l’année civile 2019) (ou si cette déclaration de revenus pour 2019 n’avait pas encore été produite, 2018). Si la première fin d’année d’imposition d’un demandeur au CUEC indiquée sur la déclaration de revenus se situait dans l’année civile 2020, le demandeur n’était donc pas admissible au programme du CUEC."}]},
+              {"id":"archive-eligibility-charities","heading":"Est-ce que les organismes de bienfaisance et les organisations à but non lucratif enregistrés étaient admissibles au CUEC ?","blocks":[{"type":"paragraph","content":"Depuis le lancement du CUEC, le gouvernement du Canada a apporté de nombreuses modifications au programme pour le rendre accessible à davantage d’entreprises canadiennes qui avaient toujours besoin d’aide pendant la pandémie de COVID-19."},{"type":"paragraph","content":"Pour être admissible au programme du CUEC, le demandeur devait être une entreprise active en exploitation et détenant un numéro d’entreprise de l’ARC, tous deux actifs au 1er mars 2020, sous la forme d’une entreprise individuelle, d’une société de personnes ou d’une société privée sous contrôle canadien (« SPCC »). De plus, en ce qui a trait au volet des dépenses non reportables, les demandeurs devaient avoir produit une déclaration de revenus valide sur formulaire T1 ou T2. Les organismes de bienfaisance et les organisations à but non lucratif qui satisfaisaient aux exigences du programme ont réussi à obtenir du financement au titre du CUEC."},{"type":"paragraph","content":"L’admissibilité au CUEC a été déterminée en fonction des critères établis par le gouvernement du Canada. Aucune des organisations qui administrent le programme du CUEC, dont votre institution financière, n’a le pouvoir d’accorder des exceptions."}]},
+              {"id":"archive-eligibility-expansion","heading":"Qui pouvait demander la majoration de 20 000 $ ?","blocks":[{"type":"paragraph","content":"Les titulaires de prêt qui ont reçu un prêt de 40 000 $ avaient la possibilité de demander la majoration de 20 000 $ au titre du CUEC jusqu’au 30 juin 2021."}]},
+              {"id":"archive-eligibility-legal-entities","heading":"Quels types d’entités juridiques pouvaient demander un prêt de 60 000 $ au titre du CUEC ou la majoration de prêt de 20 000 $ au titre du CUEC ?","blocks":[{"type":"paragraph","content":"Pour être éligible pour un prêt de 60 000 $ au titre du CUEC ou la majoration de prêt de 20 000 $ au titre du CUEC, le demandeur devait être une entreprise active en exploitation, soit une exploitation individuelle, d’une société de personnes ou d’une société privée sous contrôle canadien (« SPCC »), et répondre à tous les critères d’admissibilité du CUEC. D’autres types d’entités n’étaient pas admissibles à un prêt du CUEC de 60 000 $ ou à la majoration de prêt de 20 000 $ au titre du CUEC."}]},
+              {"id":"archive-eligibility-indigenous","heading":"Si mon entreprise a reçu du soutien au terme de l’initiative pour les PME autochtones en réponse à la COVID, était-elle également admissible au CUEC ?","blocks":[{"type":"paragraph","content":"L’initiative pour les PME autochtones en réponse à la COVID faisait partie de l’intervention du gouvernement du Canada en réponse à la COVID-19 et visait à soutenir les petites et moyennes entreprises autochtones. Les entreprises qui ont reçu un soutien dans le cadre de l’initiative pour les PME autochtones en réponse à la COVID n’étaient pas admissibles au prêt du CUEC de 60 000 $ ni à la majoration de 20 000 $ au titre du CUEC."}]},
+              {"id":"archive-eligibility-rrrf","heading":"Si mon entreprise a reçu du soutien au terme du Fonds d’aide et de relance régional (FARR), était-elle également admissible au CUEC ?","blocks":[{"type":"paragraph","content":"Le Fonds d’aide et de relance régional (FARR) faisait partie de l’intervention du gouvernement du Canada en réponse à la COVID-19 et visait à soutenir les entreprises qui n’étaient pas admissibles au CUEC. Les entreprises qui ont reçu un soutien au titre du Fonds d’aide et de relance régional (FARR) n’étaient pas admissibles au prêt du CUEC de 60 000 $ ni à la majoration de 20 000 $ au titre du CUEC."}]}
+            ]
+          }
         }
       }
     },

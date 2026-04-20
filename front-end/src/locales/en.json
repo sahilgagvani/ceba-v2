@@ -1,4 +1,4 @@
-﻿{
+{
 	"form": {
 		"title": "Contact Form",
 		"intro01": "Our agents do not have access to more information about your loan or account than you can access online. Before contacting us, you can",
@@ -87,27 +87,27 @@
 					"links": [
 						{
 							"label": "Loan Assignment",
-							"href": "#"
+							"href": "/en/faq/ceba-loan-assignment.html"
 						},
 						{
 							"label": "Loan Repayment",
-							"href": "#"
+							"href": "/en/faq/ceba-loan-repayment.html"
 						},
 						{
 							"label": "Payment Arrangements",
-							"href": "#"
+							"href": "/en/faq/payment-arrangements.html"
 						},
 						{
 							"label": "Changes to My Business",
-							"href": "#"
+							"href": "/en/faq/changes-to-my-business.html"
 						},
 						{
 							"label": "CEBA Portal Account",
-							"href": "#"
+							"href": "/en/faq/ceba-portal-account.html"
 						},
 						{
 							"label": "Statements of Account",
-							"href": "#"
+							"href": "/en/faq/statements-of-account.html"
 						}
 					]
 				},
@@ -117,7 +117,7 @@
 					"links": [
 						{
 							"label": "Loan Repayment",
-							"href": "#"
+							"href": "/en/faq/financial-institution-loan-repayment.html"
 						}
 					]
 				},
@@ -127,13 +127,860 @@
 					"links": [
 						{
 							"label": "Refinancing and Forgiveness",
-							"href": "#"
+							"href": "/en/faq/refinancing-and-forgiveness.html"
 						},
 						{
 							"label": "Eligibility (Closed)",
-							"href": "#"
+							"href": "/en/faq/eligibility-closed.html"
 						}
 					]
+				}
+			}
+		},
+		"faqDetail": {
+			"assigned": {
+				"sectionTitle": "Loan Assigned to CEBA Program",
+				"portalCtaLabel": "Sign in",
+				"pages": {
+					"loan-assignment": {
+						"tabLabel": "Loan Assignment",
+						"breadcrumbLabel": "CEBA Loan Assignment",
+						"titleSuffix": "Loan Assignment",
+						"dateModified": "Date modified: 2026-01-21",
+						"sections": [
+							{
+								"id": "loan-assignment-what-is",
+								"heading": "What does \"loan assignment\" mean?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "Loan assignment is a process which results in the transfer of your CEBA Loan from the financial institution that initially handled its establishment and administration, to the CEBA Program for collection of outstanding balances."
+									},
+									{
+										"type": "paragraph",
+										"content": "Before your CEBA Loan is assigned, your financial institution will send you a Demand Letter indicating that your CEBA Loan is in default and that it will likely be assigned to the CEBA Program if it is not repaid. If your CEBA Loan is then assigned, the CEBA Program will send you a written Loan Assignment Notice through postal mail to inform you of the loan assignment. The Loan Assignment Notice will also contain important information about how to make payments and manage your CEBA Loan going forward."
+									},
+									{
+										"type": "paragraph",
+										"content": "If your CEBA Loan is assigned to the CEBA Program, please continue to reference this FAQ section and direct your unanswered questions to the CEBA Call Centre at 1-888-324-4201."
+									},
+									{
+										"type": "paragraph",
+										"content": "The Canada Revenue Agency (CRA) is assisting with the collection of CEBA Loans that are assigned to the CEBA Program. Please reference the \"What is the CRA's role within the CEBA Program?\" FAQ for more information about how the Canada Revenue Agency (CRA) is also involved in the collection of CEBA Loans."
+									}
+								]
+							},
+							{
+								"id": "loan-assignment-why",
+								"heading": "Why was my loan assigned to the CEBA Program?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "Your CEBA Loan may be assigned to the CEBA Program if it is in default. A CEBA Loan can be in default for various reasons, including but not limited to:"
+									},
+									{
+										"type": "unordered-list",
+										"items": [
+											"if you do not repay any principal or interest when due; or",
+											"if you have become insolvent; or",
+											"if you failed to observe any other terms applicable to your CEBA Loan."
+										]
+									},
+									{
+										"type": "paragraph",
+										"content": "If your CEBA Loan is assigned to the CEBA Program, please continue to reference this FAQ section and direct your unanswered questions to the CEBA Call Centre at 1-888-324-4201. Please contact your financial institution if you would like more information on specifically why your loan was assigned."
+									}
+								]
+							},
+							{
+								"id": "loan-assignment-what-happens",
+								"heading": "What happens after my CEBA Loan is assigned to the CEBA Program?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "If your CEBA Loan is assigned to the CEBA Program, you will receive a written Loan Assignment Notice through postal mail to inform you of the loan assignment. The Loan Assignment Notice will also contain important information about how to make payments and manage your CEBA Loan going forward, as well as how to set up a payment arrangement with the Canada Revenue Agency (CRA). A 12-digit CEBA Identification Number will be provided in the Loan Assignment Notice, which you will need to register for a CEBA Portal Account."
+									},
+									{
+										"type": "paragraph",
+										"content": [
+											"After assignment of your CEBA Loan, you can no longer access your CEBA Loan through your financial institution. You are required to register for a CEBA Portal Account in order to access details about your CEBA Loan, such as loan statements, and manage your CEBA Loan going forward. If you receive a Loan Assignment Notice, please visit ",
+											{"href": "https://account-compte.ceba-cuec.ca", "text": "account-compte.ceba-cuec.ca"},
+											" to register for a CEBA Portal Account using your 12-digit CEBA Identification Number."
+										]
+									},
+									{
+										"type": "paragraph",
+										"content": "If you are unable to repay your CEBA Loan and it is assigned to the CEBA Program, the CRA may review your circumstances on a case-by-case basis and work with you to establish a payment arrangement/repayment plan tailored to your ability to repay."
+									},
+									{
+										"type": "paragraph",
+										"content": "If your CEBA Loan is assigned to the CEBA Program, please make all your payments directly to the CEBA Program and continue to reference this FAQ section. Direct any unanswered questions to the CEBA Call Centre at 1-888-324-4201. Please reference the \"What is the Canada Revenue Agency's (CRA) role within the collection of CEBA Loans?\" FAQ for more information about how the CRA is involved in the collection of CEBA Loans."
+									}
+								]
+							},
+							{
+								"id": "loan-assignment-id-number",
+								"heading": "What is a CEBA Identification Number and what is it used for?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "A CEBA Identification Number is a 12-digit unique identifier allotted to each assigned CEBA Loan, the first three digits of which will always be '967'. You will receive a CEBA Identification Number only if your CEBA Loan has been assigned to the CEBA Program by your financial institution. The CEBA Identification Number will be included in the Loan Assignment Notice from the CEBA Program."
+									},
+									{
+										"type": "paragraph",
+										"content": "Your CEBA Identification Number can be used to do the following:"
+									},
+									{
+										"type": "unordered-list",
+										"items": [
+											"register for a CEBA Portal Account;",
+											"make payments towards your CEBA Loan; and/or",
+											"recover a lost or forgotten username and/or password for your CEBA Portal Account."
+										]
+									},
+									{
+										"type": "paragraph",
+										"content": "Your CEBA Identification Number is unique and cannot be changed as it is assigned to you by the CEBA Program during loan assignment. If you lose or forget your CEBA Identification Number, please contact the CEBA Call Centre at 1-888-324-4201."
+									}
+								]
+							},
+							{
+								"id": "loan-assignment-notice",
+								"heading": "What is a Loan Assignment Notice?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "If your CEBA Loan is assigned to the CEBA Program, you will be sent a written Loan Assignment Notice through postal mail to inform you of the loan assignment. This notice contains important information about how to manage your CEBA Loan after it is assigned and includes your unique 12-digit CEBA Identification Number. Your CEBA Identification number is needed to register for a CEBA Portal Account, where you may manage your CEBA Loan and make payments going forward."
+									},
+									{
+										"type": "paragraph",
+										"content": "After assignment to the CEBA Program, please continue to reference this FAQ section and direct unanswered questions to the CEBA Call Centre at 1-888-324-4201."
+									}
+								]
+							},
+							{
+								"id": "loan-assignment-cra-role",
+								"heading": "What is the Canada Revenue Agency's (CRA) role within the collection of CEBA Loans?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "The Canada Revenue Agency (CRA) is assisting with the collection of CEBA Loans in default that have been assigned to the CEBA Program. As such, the CRA may contact you regarding your CEBA Loan, including to arrange repayment. If full repayment of your CEBA Loan is not immediately possible, the CRA may (but is not required to) establish a payment arrangement or repayment plan with you, which will still require full repayment of all amounts owing under your CEBA Loan. Alternatively, you can reach out to the CRA CEBA Contact Centre to discuss any available repayment options. You can reach the CRA CEBA Contact Centre at 1-800-361-2808."
+									},
+									{
+										"type": "paragraph",
+										"content": "After assignment to the CEBA Program, please continue to reference this FAQ section and direct unanswered questions to the CEBA Call Centre at 1-888-324-4201."
+									}
+								]
+							},
+							{
+								"id": "loan-assignment-proactive",
+								"heading": "My CEBA Loan has been assigned, should I wait for a call from the Canada Revenue Agency (CRA), or should I reach out proactively?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "If your CEBA Loan has been assigned to the CEBA Program, you are encouraged to contact the CRA CEBA Contact Centre directly regarding your CEBA Loan and to discuss setting up a payment arrangement. You can reach the CRA CEBA Contact Centre at 1-800-361-2808."
+									}
+								]
+							}
+						]
+					},
+					"loan-repayment": {
+						"tabLabel": "Loan Repayment",
+						"breadcrumbLabel": "CEBA Loan Repayment",
+						"titleSuffix": "Loan Repayment",
+						"dateModified": "Date modified: 2026-01-21",
+						"sections": [
+							{
+								"id": "loan-repayment-methods",
+								"heading": "How do I repay my loan? What are the payment methods?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "If your loan has been assigned to the CEBA Program, you are directed to make all payments directly to the CEBA Program via one of the three accepted payment options outlined below. You will need to include the CEBA Identification Number provided in your Loan Assignment Notice."
+									},
+									{
+										"type": "ordered-list",
+										"items": [
+											[
+												{
+													"strong": true,
+													"text": "Bill Payment"
+												},
+												" - To make bill payments through your financial institution, use 'Export Development Canada - CEBA' (English) or 'ExportationdeveloppementCanadaCUEC' (French) as the payee and provide your 12-digit CEBA Identification Number in the account number field. Note that payments sent to the CEBA Program through Bill Payment may take several business days to process and will not be credited to your CEBA Loan until received and processed by the CEBA Program. Please consider the processing time when sending your payment, as the CEBA Program is not responsible for payments received late due to processing time."
+											],
+											[
+												{
+													"strong": true,
+													"text": "Cheques"
+												},
+												" - Make cheques payable to 'Export Development Canada' (English) or 'Exportation et developpement Canada' (French). Write your 12-digit CEBA Identification Number in the memo section of the cheque and include a completed remittance slip with your cheque to ensure your payment can be processed quickly and accurately. The remittance slip can be found on your Statements of Account within the CEBA Portal. Please only cut or tear the remittance slip along the indicated cut line. Mail the cheque and the remittance slip in the same envelope to the address below. Include only one remittance slip per envelope. Do not mail cash, money orders, bank drafts or certified cheques. Only cheques from Canadian financial institutions will be accepted."
+											]
+										]
+									},
+									{
+										"type": "address",
+										"lines": [
+											"Export Development Canada",
+											"PO Box 4530 STN A",
+											"Toronto ON M5W 0N2"
+										]
+									},
+									{
+										"type": "paragraph",
+										"content": "Allow for postal delivery time when sending your payment. The CEBA Program is not responsible for payments received late due to postage delays."
+									},
+									{
+										"type": "paragraph",
+										"content": "If you choose to mail multiple, post-dated cheques together, include only one remittance slip and all cheques in the same envelope. The Amount Paid field on the remittance slip should match the total of all cheques in the envelope. If you wish to mail each payment cheque separately, make sure each envelope includes a completed remittance slip. The payment(s) will not be processed or reflected on the Statements and on the CEBA Portal until the date written on each cheque. Please note, cheques that are post-dated more than 18 months will be rejected."
+									},
+									{
+										"type": "ordered-list",
+										"start": 3,
+										"items": [
+											[
+												{
+													"strong": true,
+													"text": "Wire Transfer"
+												},
+												" - For information on wire transfers, please call the CEBA Call Centre at 1-888-324-4201."
+											]
+										]
+									}
+								]
+							},
+							{
+								"id": "loan-repayment-application-order",
+								"heading": "How are payments applied to my assigned CEBA Loan?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "When you make a payment towards your assigned CEBA Loan, the payment gets applied to the balances in this order:"
+									},
+									{
+										"type": "ordered-list",
+										"items": [
+											"Fees outstanding",
+											"Interest outstanding",
+											"Principal outstanding",
+											"Interest accrued"
+										]
+									},
+									{
+										"type": "paragraph",
+										"content": "Please note, payments received on weekends or holidays will not be processed until the next business day. Depending on the payment type, processing by the receiving bank and the CEBA Program may take up to five business days. Cheques might take longer depending on the cheque clearing process."
+									}
+								]
+							},
+							{
+								"id": "loan-repayment-amount",
+								"heading": "How much of my CEBA Loan do I have to repay?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "Once your loan is assigned to the CEBA Program, you are required to repay the outstanding balance on your CEBA Loan plus any applicable fees and interest in full, directly to the CEBA Program. Interest on outstanding balances commenced on January 19, 2024, at an interest rate of 5% per annum."
+									}
+								]
+							},
+							{
+								"id": "loan-repayment-disputes",
+								"heading": "Can I raise a dispute to change my repayment terms?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "All program eligibility determinations, application outcomes and repayment deadlines are now final and cannot be changed. No organization involved in administering the CEBA Program has the authority to grant exceptions to the CEBA eligibility criteria, including your financial institution."
+									}
+								]
+							},
+							{
+								"id": "loan-repayment-overpayment",
+								"heading": "I have overpaid my loan. How do I get the overpayment refunded?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "For any questions related to refunds of overpayment amounts on an assigned CEBA Loan, please contact the CEBA Call Centre at 1-888-324-4201."
+									}
+								]
+							},
+							{
+								"id": "loan-repayment-notifications",
+								"heading": "Will I receive notifications about upcoming or missed payments?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": [
+											"If you have an email on file with the CEBA program, you will receive an ",
+											{
+												"strong": true,
+												"text": "Upcoming Payment Reminder"
+											},
+											" 7 calendar days before your next payment in your payment arrangement is due."
+										]
+									},
+									{
+										"type": "paragraph",
+										"content": [
+											"If you miss a payment, you will receive a ",
+											{
+												"strong": true,
+												"text": "Missed Payment Reminder"
+											},
+											" through email if a payment is not made 8 days after the payment due date."
+										]
+									}
+								]
+							}
+						]
+					},
+					"payment-arrangements": {
+						"tabLabel": "Payment Arrangements",
+						"breadcrumbLabel": "Payment Arrangements",
+						"titleSuffix": "Payment Arrangements",
+						"dateModified": "Date modified: 2026-01-21",
+						"sections": [
+							{
+								"id": "payment-arrangements-what-is",
+								"heading": "What are payment arrangements? How do I set a payment arrangement with the Canada Revenue Agency (CRA) after loan assignment?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "A CEBA payment arrangement is an agreed-upon plan or schedule that outlines when payments will be made to repay your outstanding CEBA obligations. If you don't currently have a payment arrangement or cannot make payments as scheduled under the arrangement, please contact the Canada Revenue Agency (CRA) directly to discuss payment options or to set a new payment arrangement. You can reach the CRA CEBA Contact Centre at 1-800-361-2808."
+									}
+								]
+							},
+							{
+								"id": "payment-arrangements-missed",
+								"heading": "What happens if I miss a payment and/or can't meet the terms of my payment arrangement set with the Canada Revenue Agency (CRA)?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "If you miss a scheduled payment under your agreed payment arrangement, please make the payment as soon as possible. If you are unable to make payments as scheduled in your payment arrangement, you will need to speak with the Canada Revenue Agency (CRA) to discuss your payment arrangement. You can reach the CRA CEBA Contact Centre at 1-800-361-2808."
+									},
+									{
+										"type": "paragraph",
+										"content": "Please make all payments to your CEBA Loan directly to the CEBA Program via one of the three accepted payment options: bill pay, cheque, or wire transfer."
+									}
+								]
+							},
+							{
+								"id": "payment-arrangements-third-party",
+								"heading": "Will an Authorized Third Party be able to make payments on my behalf?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "Yes, your Authorized Third Parties are able to make payments on your behalf. Authorized Third Parties can request information about your loan through the CEBA Call Centre, but they cannot access your loan or sign into your CEBA Portal Account."
+									},
+									{
+										"type": "paragraph",
+										"content": "The Canada Revenue Agency (CRA) is responsible for authorizing, adding, editing and removing Authorized Third Parties, such as a family member, an accountant, or a lawyer, to manage your CEBA Loan."
+									},
+									{
+										"type": "paragraph",
+										"content": [
+											"Please note, in accordance with the ",
+											{"strong": true, "text": "CEBA Portal End User Agreement"},
+											", which includes Terms & Conditions of your CEBA Portal Account, you are not permitted to share your CEBA Portal credentials with other parties including your Third Parties authorized by the CRA."
+										]
+									},
+									{
+										"type": "paragraph",
+										"content": "Please also note that if the Loan Holder was insolvent at the time of assignment, the CRA will not be able to support the management of Authorized Third Parties."
+									}
+								]
+							},
+							{
+								"id": "payment-arrangements-interest",
+								"heading": "How much interest will I be paying on my CEBA Loan?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "Interest at a rate of 5% per annum on outstanding CEBA balances commenced on January 19, 2024, and continues until your CEBA Loan is repaid in full."
+									},
+									{
+										"type": "paragraph",
+										"content": "Interest on assigned CEBA Loans is accrued daily on the principal amount outstanding."
+									}
+								]
+							},
+							{
+								"id": "payment-arrangements-balloon",
+								"heading": "What is a balloon payment?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "A balloon payment refers to a one-time payment that is equal to the residual balance owing at the end of a payment arrangement. It only applies to loans where a payment arrangement has been set that includes a balloon payment. When setting up a payment arrangement, the Canada Revenue Agency (CRA) may allow a balloon payment in order to reduce the amount of the recurring payments required under your payment arrangement."
+									}
+								]
+							},
+							{
+								"id": "payment-arrangements-residual",
+								"heading": "I have made payments as scheduled in my payment arrangement for the duration I expected, why do I still see a balance on the CEBA Portal and on my statement?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "Your payment arrangement is set to cover the entire balance at the time when you set a payment arrangement with the Canada Revenue Agency (CRA), and it includes principal outstanding, interest outstanding, fees outstanding in addition to accrued interest at the time the arrangement is made. However, the payment arrangement does not include the interest that accrues over the lifetime of the loan, resulting in a residual balance that remains to be repaid. You can reach the CRA CEBA Contact Centre at 1-800-361-2808 if you have further questions."
+									}
+								]
+							}
+						]
+					},
+					"changes-to-my-business": {
+						"tabLabel": "Changes to My Business",
+						"breadcrumbLabel": "Changes to My Business",
+						"titleSuffix": "Changes to My Business",
+						"dateModified": "Date modified: 2026-01-21",
+						"sections": [
+							{
+								"id": "changes-closing-business",
+								"heading": "If I am about to close my business, do I still have to repay my CEBA Loan?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "Yes, you are required to repay your CEBA Loan, even if you close your business."
+									}
+								]
+							},
+							{
+								"id": "changes-change-of-ownership",
+								"heading": "How do I repay my CEBA Loan if the ownership of my business has changed?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "The impact of a change in ownership of the Loan Holder on the repayment terms depends on the legal structure of the Loan Holder's business (i.e., whether the business is a sole proprietor or a corporation) and the type of ownership change."
+									},
+									{
+										"type": "paragraph",
+										"content": "If your loan has been already assigned to the CEBA Program for collection, please contact the CEBA Call Centre at 1-888-324-4201."
+									}
+								]
+							},
+							{
+								"id": "changes-insolvency",
+								"heading": "My business has become insolvent, and I have questions about my CEBA Loan. Whom should I contact?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "For any questions related to outstanding CEBA Loans, please contact the CEBA Call Centre at 1-888-324-4201. Please note that the CEBA Program is unable to provide advice related to insolvency; you may wish to seek advice from a licensed insolvency trustee if you are considering insolvency or your business has become insolvent."
+									}
+								]
+							},
+							{
+								"id": "changes-bankruptcy",
+								"heading": "My business has filed for bankruptcy/a consumer proposal/is in receivership, what should I do regarding my CEBA Loan?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "Once you have been appointed a licensed insolvency trustee who is qualified to help you through the insolvency process, please ask your appointed licensed insolvency trustee to contact the CEBA Call Centre at 1-888-324-4201 if they have not done so already."
+									},
+									{
+										"type": "paragraph",
+										"content": "Please note that the process of entering into a payment arrangement with CRA does not apply to insolvent CEBA Loan Holders."
+									},
+									{
+										"type": "paragraph",
+										"content": [
+											"To learn more about consumer proposals, bankruptcy and how to find a Licensed Insolvency Trustee, you may wish to visit the Government of Canada's website at: ",
+											{"href": "https://canada.ca/en/services/finance/bankruptcy.html", "text": "canada.ca/en/services/finance/bankruptcy.html"}
+										]
+									}
+								]
+							},
+							{
+								"id": "changes-authorized-third-party",
+								"heading": "If I previously authorized a Third Party with the Canada Revenue Agency (CRA) to manage my CEBA Loan, can they discuss my loan through the CEBA Call Centre?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "If you have previously added an Authorized Third Party with the Canada Revenue Agency (CRA) to manage your CEBA Loan and their contact details are displayed on your CEBA Portal Account, they can call into the CEBA Call Centre at 1-888-324-4201 and authenticate themselves to discuss the details of your loan."
+									}
+								]
+							},
+							{
+								"id": "changes-authorize-representative",
+								"heading": "How can I authorize a representative to communicate with the CEBA Program?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "The Canada Revenue Agency (CRA) is responsible for authorizing, adding, editing and removing Authorized Third Parties, such as a family member, an accountant, or a lawyer, to manage your CEBA Loan."
+									},
+									{
+										"type": "paragraph",
+										"content": "If your business is not insolvent, please contact the CRA directly to initiate the process to authorize third parties using the phone number provided within your Loan Assignment Notice. Once the CRA informs the CEBA Program that they have received the authorization, your Authorized Third Party can request information about your loan through the CEBA Contact Centre but will not be able to log into the CEBA Portal or have access to it. If your business commenced insolvency proceedings before your loan was assigned to the CEBA Program, then it is not possible to authorize third parties to your loan account."
+									}
+								]
+							},
+							{
+								"id": "changes-estate-executor",
+								"heading": "I am an executor of the estate of a deceased sole proprietor, what do I need to do?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "In order to access CEBA-related resources and manage the loan on the deceased's behalf, the CEBA Program requires the executor to follow the executor validation process which includes submitting a death certificate and a will to the CEBA Program. Please contact the CEBA Call Centre at 1-888-324-4201 to initiate the process."
+									},
+									{
+										"type": "paragraph",
+										"content": "Once the documentation has been validated and the executor information confirmed, the Canada Revenue Agency (CRA) will contact the executor to discuss payment arrangement options. Alternatively, you can proactively reach out to the CRA CEBA Contact Centre once you have completed the executor validation process. You can reach the CRA CEBA Contact Centre at 1-800-361-2808."
+									}
+								]
+							},
+							{
+								"id": "changes-secure-document",
+								"heading": "I need to send a secure document to the CEBA Program, how do I do that?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "The CEBA Program uses Cisco Secure Email to send and receive secure emails. Cisco Secure Email is only used in certain cases in which the CEBA Program needs to exchange sensitive information with Loan Holders. The CEBA Call Centre can initiate this process and will confirm the email address on file before beginning. In cases where you have been asked to use Cisco Secure Email, you will receive an email from a CEBA secure mailbox containing instructions on how to register. Once registered you will be able to view and reply to emails through Cisco's Secure Email Portal. To reply to an email, click on the reply button."
+									}
+								]
+							}
+						]
+					},
+					"ceba-portal-account": {
+						"tabLabel": "CEBA Portal Account",
+						"breadcrumbLabel": "CEBA Portal Account",
+						"titleSuffix": "CEBA Portal Account",
+						"dateModified": "Date modified: 2026-01-21",
+						"sections": [
+							{
+								"id": "portal-register",
+								"heading": "How do I register for a CEBA Portal account?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": [
+											"You are only required to register for a CEBA Portal Account if your loan has been assigned to the CEBA Program. If your loan has been assigned, you can register by visiting ",
+											{"href": "https://account-compte.ceba-cuec.ca", "text": "account-compte.ceba-cuec.ca"},
+											". To register for a CEBA Portal Account, you will need your unique 12-digit CEBA Identification Number included in your Loan Assignment Notice and the most recent business phone number your financial institution had on file prior to your loan being assigned to the CEBA Program. Detailed instructions on how to register can be found on the CEBA-CUEC Program Overview page."
+										]
+									},
+									{
+										"type": "paragraph",
+										"content": "If your loan is not assigned to the CEBA Program, please continue managing your loan through your financial institution."
+									},
+									{
+										"type": "paragraph",
+										"content": "For any further questions relating to the CEBA Portal Account, please contact the CEBA Call Centre at 1-888-324-4201."
+									}
+								]
+							},
+							{
+								"id": "portal-what-info",
+								"heading": "What information can I view in the CEBA Portal once my loan has been transferred from my financial institution?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "The CEBA Portal provides a view of your loan details (including outstanding balance), your payment arrangement, if one has been set with the Canada Revenue Agency (CRA), payment history, charge history, monthly statements, and contact information. Payment history and charge history only cover the period starting at the point of assignment to the CEBA Program."
+									},
+									{
+										"type": "paragraph",
+										"content": "Payment arrangements are set with the CRA and allow Loan Holders to fully pay back their loans over time at a frequency and amount that is based to their ability to repay. You can reach the CRA CEBA Contact Centre at 1-800-361-2808. For all other enquiries relating to loan assignment, you may call the CEBA Call Centre at 1-888-324-4201."
+									}
+								]
+							},
+							{
+								"id": "portal-third-party-access",
+								"heading": "Can Third Parties access my CEBA Portal Account to manage my loan on my behalf?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "In accordance with the Terms & Conditions outlined within the CEBA Portal End User Account Agreement, you are not permitted to share your CEBA Portal Account credentials with other parties. However, Third Parties that have been authorized with the Canada Revenue Agency (CRA) can continue to manage and access information regarding your loan through the CEBA Call Centre at 1-888-324-4201. Please note, to authorize new or manage existing Third Parties, you will be required to contact the CRA CEBA Contact Centre. You can reach the CRA CEBA Contact Centre at 1-800-361-2808."
+									}
+								]
+							},
+							{
+								"id": "portal-payment-arrangement-not-showing",
+								"heading": "I have set a payment arrangement with the Canada Revenue Agency (CRA), why can't I see it in the CEBA Portal?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "Once you have set a payment arrangement with the Canada Revenue Agency (CRA), it could take up to five business days to be reflected in the CEBA Portal under the \"Loan Details\" tab. If the payment arrangement was set more than five business days ago and has not been displayed in the CEBA Portal, please contact the CEBA Call Centre at 1-888-324-4201. If you missed a payment and have a question about your previous payment arrangement, please reach out to the CRA CEBA Contact Centre. You can reach the CRA CEBA Contact Centre at 1-800-361-2808."
+									}
+								]
+							},
+							{
+								"id": "portal-why-register",
+								"heading": "Why do I need to register for a CEBA Portal Account after my CEBA Loan has been assigned?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "If your loan has been assigned to the CEBA Program, you will need to register for a CEBA Portal Account to view your loan details and access your Statements of Account. If you have further questions, please contact the CEBA Call Centre at 1-888-324-4201."
+									}
+								]
+							},
+							{
+								"id": "portal-loan-balance",
+								"heading": "How can I determine the balance of my loan?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "If your loan has been assigned to the CEBA Program, you can view the balance of your loan in your CEBA Portal Account. If you have further questions about your loan balance, please contact the CEBA Call Centre at 1-888-324-4201."
+									},
+									{
+										"type": "paragraph",
+										"content": "If your loan has not been assigned to the CEBA Program, please contact your financial institution for details regarding the balance of your CEBA Loan."
+									}
+								]
+							},
+							{
+								"id": "portal-payment-not-showing",
+								"heading": "I made a payment, why is it not showing up in the CEBA Portal?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "Bill payments and wire transfers can take up to five business days to process and reflect on your CEBA Portal Account, with cheques potentially taking longer depending on the cheque clearing process. For any further questions, please contact the CEBA Call Centre at 1-888-324-4201."
+									}
+								]
+							},
+							{
+								"id": "portal-end-user-agreement",
+								"heading": "Where can I find the latest version of CEBA Portal End User Agreement / Terms and Conditions?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": [
+											"You can find the most up to date version of the CEBA Portal End User Agreement and Terms and Conditions by navigating to the footer of the CEBA Portal screen and clicking on the ",
+											{"strong": true, "text": "Terms and Conditions for My Account"},
+											" hyperlink. This will open a new tab where the Agreement can be viewed."
+										]
+									}
+								]
+							}
+						]
+					},
+					"statements-of-account": {
+						"tabLabel": "Statements of Account",
+						"breadcrumbLabel": "Statements of Account",
+						"titleSuffix": "Statements of Account",
+						"dateModified": "Date modified: 2026-01-21",
+						"sections": [
+							{
+								"id": "statements-access",
+								"heading": "How do I access my Statements and change the language of my Statements?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "Statements are generated every month and can be viewed and downloaded through your CEBA Portal Account under the 'Documents' tab. You can navigate to the top right of the CEBA Portal and select your preferred language, which will apply to both the portal and your Statement."
+									}
+								]
+							},
+							{
+								"id": "statements-subscribe",
+								"heading": "How can I subscribe or unsubscribe from monthly Statement email notifications?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "To subscribe or unsubscribe from monthly email notifications about your Statements, please contact the CEBA Call Centre at 1-888-324-4201."
+									}
+								]
+							},
+							{
+								"id": "statements-update-contact",
+								"heading": "My contact details on the Statement are incorrect. How do I update my contact details?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "Please call the CEBA Call Centre at 1-888-324-4201 to update your contact details."
+									}
+								]
+							},
+							{
+								"id": "statements-missing-payment",
+								"heading": "My Statement is missing a payment. Why?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "Statements are generated on the first day of every month. Bill payment and wire transfer payments can take up to five business days to process, with cheques potentially taking longer due to cheque clearing processes. It is possible that the payment was not processed in the period captured on a given statement, in which case it will appear on your next Statement."
+									},
+									{
+										"type": "paragraph",
+										"content": "A payment will appear within the CEBA Portal when it is successfully processed."
+									},
+									{
+										"type": "paragraph",
+										"content": "If you believe a payment has not been captured in your statement and more than five business days passed between the date of the payment and the statement date, please contact the CEBA Call Centre at 1-888-324-4201."
+									}
+								]
+							},
+							{
+								"id": "statements-glossary",
+								"heading": "What do the various terms in my statement mean?",
+								"blocks": [
+									{"type": "paragraph", "content": [{"strong": true, "text": "Statement Period"}]},
+									{"type": "paragraph", "compact": true, "content": "The length of time captured in the Statement Details. It is always the month prior to the Statement Date."},
+									{"type": "paragraph", "content": [{"strong": true, "text": "Statement Date"}]},
+									{"type": "paragraph", "compact": true, "content": "The date the Statement was generated."},
+									{"type": "paragraph", "content": [{"strong": true, "text": "CEBA Identification Number"}]},
+									{"type": "paragraph", "compact": true, "content": "A 12-digit unique identifier for each assigned loan. The first three digits of every CEBA Identification Number are '967'."},
+									{"type": "paragraph", "content": [{"strong": true, "text": "Arranged Payment Due Date(s)"}]},
+									{"type": "paragraph", "compact": true, "content": "The date(s) on which the Arranged Payment Amount or balloon payment amount is due, according to the Loan Holder's payment arrangement set with the Canada Revenue Agency (CRA)."},
+									{"type": "paragraph", "content": [{"strong": true, "text": "Arranged Payment Amount"}]},
+									{"type": "paragraph", "compact": true, "content": "The payment amount that is regularly due on the Arranged Payment Due Date(s), according to the Loan Holder's payment arrangement set with the CRA."},
+									{"type": "paragraph", "content": [{"strong": true, "text": "Payment Frequency"}]},
+									{"type": "paragraph", "compact": true, "content": "The payment frequency, according to the Loan Holder's payment arrangement set with the CRA."},
+									{"type": "paragraph", "content": [{"strong": true, "text": "Payment Arrangement"}]},
+									{"type": "paragraph", "compact": true, "content": "An agreed-upon plan or schedule with the CRA that outlines when CEBA Loan payments will be made to fulfill outstanding financial obligations."},
+									{"type": "paragraph", "content": [{"strong": true, "text": "Balloon Payment"}]},
+									{"type": "paragraph", "compact": true, "content": "A one-time payment that is due at the end of a payment arrangement or loan term. When setting up a payment arrangement with the CRA, the CRA may allow a balloon payment."},
+									{"type": "paragraph", "content": [{"strong": true, "text": "Remittance Slip"}]},
+									{"type": "paragraph", "compact": true, "content": "A document that must be included in the envelope with any cheque payments. Remittance slips can be found on your Statements of Account within the CEBA Portal."},
+									{"type": "paragraph", "content": [{"strong": true, "text": "Statement Details"}]},
+									{"type": "paragraph", "compact": true, "content": "A section of the Statement of Account that displays the opening and closing balances, and a summary of transactions that occurred in the Statement Period, such as payments and interest charges."},
+									{"type": "paragraph", "content": [{"strong": true, "text": "Date Posted"}]},
+									{"type": "paragraph", "compact": true, "content": "Date that the transaction is considered to have occurred."},
+									{"type": "paragraph", "content": [{"strong": true, "text": "Principal"}]},
+									{"type": "paragraph", "compact": true, "content": "The principal balance outstanding at a given point in time is the amount of the original loan balance that has not yet been repaid. Any fees or interest are in addition to this amount."},
+									{"type": "paragraph", "content": [{"strong": true, "text": "Interest"}]},
+									{"type": "paragraph", "compact": true, "content": "The cost of borrowing money. The interest balance at a given point in time is the amount of charged interest that has not yet been paid. Any fees or principal are in addition to this amount."},
+									{"type": "paragraph", "compact": true, "content": "The interest rate applicable to outstanding CEBA balances is 5% per annum."},
+									{"type": "paragraph", "content": [{"strong": true, "text": "Fees"}]},
+									{"type": "paragraph", "compact": true, "content": "Additional charges on a loan balance. Fees may be charged to a loan on a case-by-case basis, such as the recovery of legal enforcement costs if applicable."},
+									{"type": "paragraph", "content": [{"strong": true, "text": "Accrued Interest"}]},
+									{"type": "paragraph", "compact": true, "content": "The intra-month interest amount that accumulates daily before it is charged to the outstanding loan balance on your statement date."},
+									{"type": "paragraph", "content": [{"strong": true, "text": "Opening Balance"}]},
+									{"type": "paragraph", "compact": true, "content": "The loan balance as at the beginning of the Statement Period."},
+									{"type": "paragraph", "content": [{"strong": true, "text": "Closing Balance"}]},
+									{"type": "paragraph", "compact": true, "content": "The loan balance as at the end of the Statement Period."},
+									{"type": "paragraph", "content": [{"strong": true, "text": "Payment"}]},
+									{"type": "paragraph", "compact": true, "content": "A payment received from the Loan Holder."},
+									{"type": "paragraph", "content": [{"strong": true, "text": "Reversal – Payment"}]},
+									{"type": "paragraph", "compact": true, "content": "A payment that has been reversed. For example, a reversal may occur in case of a non-sufficient funds (NSF) cheque."},
+									{"type": "paragraph", "content": [{"strong": true, "text": "Accrued Interest to-date"}]},
+									{"type": "paragraph", "compact": true, "content": "The amount of interest accrued during the month that was impacted by a transaction to best display how the closing balance is calculated."},
+									{"type": "paragraph", "content": [{"strong": true, "text": "Refund"}]},
+									{"type": "paragraph", "compact": true, "content": "A transaction returning to the Loan Holder an overpayment of the total loan balance."}
+								]
+							}
+						]
+					}
+				}
+			},
+			"unassigned": {
+				"sectionTitle": "Loan Is With Financial Institution",
+				"portalCtaLabel": "Sign in",
+				"pages": {
+					"financial-institution-loan-repayment": {
+						"tabLabel": "Loan Repayment",
+						"breadcrumbLabel": "Loan Repayment to a Financial Institution",
+						"titleSuffix": "Loan Repayment",
+						"pageTitle": "Loan Is With Financial Institution - Loan Repayment",
+						"dateModified": "Date modified: 2026-01-21",
+						"sections": [
+							{
+								"id": "financial-institution-loan-repayment-interest",
+								"heading": "How much interest will I be paying on my CEBA Loan?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "Eligible CEBA Loans that remain outstanding are now non-amortizing term loans with full principal repayment due on December 31, 2026."
+									},
+									{
+										"type": "paragraph",
+										"content": "If your CEBA Loan remained outstanding after January 18, 2024, interest at a rate of 5% per annum applies to your outstanding balance starting January 19, 2024."
+									}
+								]
+							},
+							{
+								"id": "financial-institution-loan-repayment-dispute",
+								"heading": "Can I raise a dispute to change my repayment terms?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "All program eligibility determinations, application outcomes and repayment deadlines are now final and cannot be changed. No organization involved in administering the CEBA Program has the authority to grant exceptions to the CEBA eligibility criteria, including your financial institution."
+									}
+								]
+							},
+							{
+								"id": "financial-institution-loan-repayment-business-closure",
+								"heading": "If I am about to close my business, do I still have to repay my CEBA Loan?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "Yes, you are required to repay your CEBA Loan, even if you close your business."
+									},
+									{
+										"type": "paragraph",
+										"content": "For all questions pertaining to the details of your loan (i.e., the loan balance, process for repayment, or other loan account details), please contact your financial institution."
+									}
+								]
+							},
+							{
+								"id": "financial-institution-loan-repayment-specific-questions",
+								"heading": "I have specific questions about my loan, who should I contact?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "Given your loan has not been assigned to the CEBA Program, please contact your financial institution if you have specific questions. Below is a non-exhaustive list of the topics your financial institution can assist you with regarding your CEBA Loan:"
+									},
+									{
+										"type": "unordered-list",
+										"items": [
+											"Loan details & balance(s)",
+											"Making payments and payment methods",
+											"How payments are applied",
+											"Changes to your contact details",
+											"Other changes to your business"
+										]
+									}
+								]
+							},
+							{
+								"id": "financial-institution-loan-repayment-default",
+								"heading": "What happens if I cannot repay my loan by the deadline provided in my repayment terms?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "If you are unable to repay your CEBA Loan when due (regardless of whether or not you are eligible for the loan you received), your financial institution will contact you to request a lump sum repayment of the outstanding debt. If, at that point, you do not fully repay your CEBA Loan to your financial institution, your financial institution will likely be required to assign your loan to the government's CEBA Program for collection efforts."
+									},
+									{
+										"type": "paragraph",
+										"content": "The CEBA Program will manage the collection of assigned CEBA Loans in default, in which case you will be contacted directly. If you are unable to repay by the provided deadline, the Canada Revenue Agency (CRA), who is assisting with the collection of CEBA Loans in default, may review your circumstances on a case-by-case basis and work with you to establish a payment arrangement/repayment plan tailored to your ability to repay."
+									}
+								]
+							}
+						]
+					}
+				}
+			},
+			"archive": {
+				"sectionTitle": "FAQ Archive",
+				"portalCtaLabel": "Sign in",
+				"pages": {
+					"refinancing-and-forgiveness": {
+						"tabLabel": "Refinancing and Forgiveness",
+						"breadcrumbLabel": "Refinancing and Forgiveness",
+						"titleSuffix": "Refinancing and Forgiveness",
+						"pageTitle": "FAQ Archive \u2014 Refinancing and Forgiveness",
+						"dateModified": "Date modified: 2026-01-21",
+						"sections": [
+							{"id":"archive-refinancing-requirements","heading":"What were the requirements for a refinancing application on or before January 18, 2024, to benefit from the extended forgiveness deadline of March 28, 2024?","blocks":[{"type":"paragraph","content":"The deadline to apply for refinancing in order to qualify for an extended forgiveness deadline has now passed."},{"type":"paragraph","content":"If you were an eligible Loan Holder in good standing and applied to refinance your CEBA Loan at the same financial institution that originally provided your CEBA Loan on or before January 18, 2024, you could have qualified for partial loan forgiveness if the outstanding principal, other than the amount available to be forgiven, was repaid on or before March 28, 2024. This did not prevent you from applying for refinancing with any other lenders\u2014as long as you applied for refinancing at the same financial institution that originally provided your CEBA Loan and your CEBA Loan was repaid by March 28, 2024, you qualified for the extended forgiveness deadline."},{"type":"paragraph","content":"To provide you with flexibility to find the most suitable refinancing solution for your situation, the CEBA Program did not limit the loan type or terms that qualified as a refinancing application. As such, a range of potential refinancing solutions may have been offered by your financial institution, including applying for a new credit or making or requesting changes to an existing credit facility for the purpose of repaying your CEBA Loan. Refinancing products provided by financial institutions were conventional loans between you and your financial institution. They were underwritten using the standard lending practices of your financial institution and are not affiliated with the CEBA Program or the Government of Canada."},{"type":"paragraph","content":"Please note that if your CEBA Loan remained outstanding on January 19, 2024, interest at a rate of 5% per annum commenced, even if you applied for refinancing on or before January 18, 2024 and were waiting for your refinancing application to be reviewed or the proceeds of an approved refinancing loan to be funded or applied to your CEBA Loan balance."}]},
+							{"id":"archive-refinancing-dispute","heading":"Can I raise a dispute to change my repayment terms?","blocks":[{"type":"paragraph","content":"No. The CEBA Program is no longer providing a review, assessment or re-determination of a CEBA Loan Holder's eligibility status, loan outcome, or repayment terms. As the application and funding periods for the CEBA Program have now closed, the opportunity for further resolution has now passed and applications will not be reconsidered by the CEBA Program."}]},
+							{"id":"archive-refinancing-extension","heading":"I heard that a one-year extension of the CEBA Program repayment deadline was announced. Which deadline was extended?","blocks":[{"type":"paragraph","content":"On September 14, 2023, the Government of Canada announced a one-year extension of the final loan maturity date \u2014 from December 31, 2025, to December 31, 2026 \u2014 subject to an interest rate of 5% per annum for eligible CEBA Loan Holders in good standing."},{"type":"paragraph","content":"Loan Holders that were determined to not have met the CEBA eligibility criteria for the loan they received were required to repay their loan in full on or prior to December 31, 2023."}]},
+							{"id":"archive-refinancing-repayment-terms","heading":"What were the repayment terms for the $40,000 and $60,000 loan and the $20,000 expansion?","blocks":[{"type":"paragraph","content":"Eligible CEBA Loan Holders in good standing have the following repayment terms:"},{"type":"paragraph","content":"Interest:"},{"type":"unordered-list","items":["0% interest until January 19, 2024","5% interest per year starting on January 19, 2024; interest payment frequency may vary by financial institution"]},{"type":"paragraph","content":"Repayments and Maturity:"},{"type":"unordered-list","items":["No principal repayment was required before January 18, 2024; if loan remained outstanding on January 19, 2024, it is now a non-amortizing term loan with full principal repayment due on December 31, 2026."]},{"type":"paragraph","content":"Debt Forgiveness:"},{"type":"unordered-list","items":["If the outstanding principal, other than the amount of potential debt forgiveness, was repaid on or before January 18, 2024, the remaining principal amount will be forgiven.","If you submitted a refinancing application to the financial institution that provided your CEBA Loan on or before January 18, 2024, and required a grace period in order to finalize the payout of your CEBA Loan, you could have been eligible for partial forgiveness if the outstanding principal of your CEBA Loan, other than the amount of the potential debt forgiveness, was repaid on or before March 28, 2024."]}]},
+							{"id":"archive-refinancing-forgiveness-terms","heading":"What were the terms of the forgiveness?","blocks":[{"type":"paragraph","content":"Eligible CEBA Loan Holders in good standing had the following terms of forgiveness:"},{"type":"paragraph","content":"If you borrowed $40,000 or less:"},{"type":"paragraph","content":"Repaying the outstanding balance of the loan (other than the amount available to be forgiven) on or before the forgiveness deadline applicable to you (January 18, 2024, or March 28, 2024 if you applied to refinance your CEBA Loan at the same financial institution that originally provided your CEBA Loan on or before January 18, 2024) would have resulted in loan forgiveness of 25 percent (up to $10,000)."},{"type":"paragraph","content":"Example 1:"},{"type":"unordered-list","items":["Maximum Amount Borrowed: $40,000","Amount Repaid By Applicable Forgiveness Deadline: $30,000","Available Forgiveness: $10,000"]},{"type":"paragraph","content":"Example 2:"},{"type":"unordered-list","items":["Maximum Amount Borrowed: $20,000","Amount Repaid By Applicable Forgiveness Deadline: $15,000","Available Forgiveness: $5,000"]},{"type":"paragraph","content":"Example 3:"},{"type":"unordered-list","items":["Maximum Amount Borrowed: $40,000","Amount Repaid By Applicable Forgiveness Deadline: $25,000","Available Forgiveness: $0"]},{"type":"paragraph","content":"If you borrowed more than $40,000 and up to $60,000:"},{"type":"paragraph","content":"If you received a $40,000 loan and subsequently received the $20,000 expansion, the terms of your forgiveness changed and are described here."},{"type":"paragraph","content":"Repaying the outstanding balance of the loan (other than the amount available to be forgiven) on or before the forgiveness deadline applicable to you (January 18, 2024, or March 28, 2024 if you applied to refinance your CEBA Loan at the same financial institution that originally provided your CEBA Loan on or before January 18, 2024) would have resulted in a single tranche of loan forgiveness of up to $20,000 based on a blended rate:"},{"type":"unordered-list","items":["25 percent on the first $40,000; plus","50 percent on amounts above $40,000 and up to $60,000"]},{"type":"paragraph","content":"For clarity, the portion of forgiveness based on a rate of 25% and the portion of forgiveness based on a rate of 50% are combined into a single tranche of forgiveness, which was only available if all other amounts outstanding were repaid by January 18, 2024, or March 28, 2024 if you applied to refinance your CEBA Loan at the same financial institution that originally provided your CEBA Loan on or before January 18, 2024. For example, if $60,000 was borrowed, no forgiveness was available unless $40,000 was repaid."},{"type":"paragraph","content":"Note: Some financial institutions may record your $40,000 loan and $20,000 expansion as two separate loans. For the purposes of loan forgiveness, borrowings and repayments on both loans were aggregated."},{"type":"paragraph","content":"Example 4:"},{"type":"unordered-list","items":["Maximum Amount Borrowed: $60,000","Amount Repaid By Applicable Forgiveness Deadline: $40,000","Available Forgiveness: $20,000 ($40,000 x 25% + $20,000 x 50%)"]},{"type":"paragraph","content":"Example 5:"},{"type":"unordered-list","items":["Maximum Amount Borrowed: $50,000","Amount Repaid By Applicable Forgiveness Deadline: $35,000","Available Forgiveness: $15,000 ($40,000 x 25% + $10,000 x 50%)"]},{"type":"paragraph","content":"Example 6:"},{"type":"unordered-list","items":["Maximum Amount Borrowed: $60,000","Amount Repaid By Applicable Forgiveness Deadline: $35,000","Available Forgiveness: $0"]},{"type":"paragraph","content":"If you fully repaid your original $40,000 loan, claimed forgiveness, and therefore received the $20,000 expansion:"},{"type":"paragraph","content":"Repaying the outstanding balance of the loan (other than the amount available to be forgiven) on or before the forgiveness deadline applicable to you (January 18, 2024, or March 28, 2024 if you applied to refinance your CEBA Loan at the same financial institution that originally provided your CEBA Loan on or before January 18, 2024) would have resulted in loan forgiveness of 52 percent (up to $10,000)."},{"type":"paragraph","content":"Example 7:"},{"type":"unordered-list","items":["Maximum Amount Borrowed: $20,000","Amount Repaid By Applicable Forgiveness Deadline: $10,000","Available Forgiveness: $10,000"]},{"type":"paragraph","content":"Example 8:"},{"type":"unordered-list","items":["Maximum Amount Borrowed: $20,000","Amount Repaid By Applicable Forgiveness Deadline: $8,000","Available Forgiveness: $0"]}]},
+							{"id":"archive-refinancing-qualify","heading":"What were the requirements to qualify for loan forgiveness?","blocks":[{"type":"paragraph","content":"Loan Holders in good standing that met the eligibility requirements were eligible for the January 18, 2024, repayment deadline to qualify for partial loan forgiveness. Loan Holders that were eligible for the January 18, 2024, repayment deadline to qualify for partial loan forgiveness were contacted by their financial institution to confirm their eligibility."},{"type":"paragraph","content":"If you were an eligible Loan Holder that had not yet repaid their loan at their financial institution that originally provided your CEBA Loan on or before January 18, 2024, and required a grace period in order to finalize the payout of your CEBA Loan, you could have qualified for partial loan forgiveness if the outstanding principal of your CEBA Loan, other than the amount of the potential debt forgiveness, was repaid on or before March 28, 2024."},{"type":"paragraph","content":"CEBA eligibility criteria validations have been completed for all Loan Holders and the results of these validations are final. These validations were conducted in partnership with the Canada Revenue Agency (CRA) and revalidated periodically since the launch of CEBA in April 2020 to ensure an accurate reflection of the information in CRA records."}]},
+							{"id":"archive-refinancing-notice","heading":"I previously received a notice from my financial institution indicating that my business is not eligible for loan forgiveness and is required to repay in full by December 31, 2023. Did the January 18, 2024, extension apply to me?","blocks":[{"type":"paragraph","content":"No, the extension of the repayment deadline to qualify for forgiveness on January 18, 2024, did not apply to Loan Holders that were not eligible for forgiveness. If your business was informed that it was not eligible for forgiveness and was required to repay its CEBA Loan in full by December 31, 2023, your repayment deadline did not change."}]},
+							{"id":"archive-refinancing-tax","heading":"Does CEBA Loan forgiveness need to be reported in my income tax filing? If so, when?","blocks":[{"type":"paragraph","content":"The forgiveness portion of your CEBA Loan is taxable. For any other taxation questions relating to your CEBA Loan, please contact the Canada Revenue Agency (CRA) or your accountant for further information."}]}
+						]
+					},
+					"eligibility-closed": {
+						"tabLabel": "Eligibility (Closed)",
+						"breadcrumbLabel": "Eligibility (Closed)",
+						"titleSuffix": "Eligibility (Closed)",
+						"pageTitle": "FAQ Archive \u2014 Eligibility (Closed)",
+						"dateModified": "Date modified: 2026-01-21",
+						"sections": [
+							{"id":"archive-eligibility-jan18","heading":"Who was eligible for the January 18, 2024, repayment deadline to qualify for partial loan forgiveness?","blocks":[{"type":"paragraph","content":"Loan Holders that met CEBA eligibility criteria and remained in good standing were eligible for the January 18, 2024, repayment deadline to qualify for partial loan forgiveness. Loan Holders were contacted by their financial institution to confirm their eligibility for the January 18, 2024, repayment deadline to qualify for partial loan forgiveness."},{"type":"paragraph","content":"CEBA eligibility criteria validations have been completed for all Loan Holders and the results of these validations are final. These validations were conducted in partnership with the Canada Revenue Agency (CRA) and revalidated periodically since the launch of CEBA in April 2020 to ensure an accurate reflection of the information in CRA records."}]},
+							{"id":"archive-eligibility-requirements","heading":"What were the eligibility requirements for CEBA?","blocks":[{"type":"paragraph","content":"The CEBA application process followed one of two streams: (i) the Payroll Stream (applicants with employment income paid in the 2019 calendar year between Cdn.$20,000 and Cdn.$1,500,000) or (ii) the Non-Deferrable Expense Stream (applicants with Cdn.$20,000 or less in total employment income paid in the 2019 calendar year)."},{"type":"paragraph","content":"At the time of application, every applicant was required to meet the following criteria:"},{"type":"unordered-list","items":["Have an active CRA Business Number (BN) with an effective date of registration on or prior to March 1, 2020.","Have an active business chequing/operating account with a participating financial institution at the time of applying for CEBA. Note: If applicant did not have an active business chequing/operating account at the time of the application, the applicant was required to open one at a participating financial institution before applying for CEBA.","Have not previously used the Canada Emergency Business Account Program (the \"Program\") and agree to not apply for support under the Program at any other financial institution.","Intended to continue to operate its business or to resume operations."]},{"type":"paragraph","content":"If you applied in the Non-Deferrable Expenses Stream, you were also required to meet the following criteria:"},{"type":"unordered-list","items":["Have eligible non-deferrable expenses between Cdn. $40,000 and Cdn. $1,500,000. Eligible non-deferrable expenses could have included costs such as rent, property taxes, utilities, and insurance. Expenses are subject to verification and audit by the Government of Canada.","Filed an income tax return with the CRA with a tax year ending in 2019 or, if its tax return for 2019 was not yet submitted, 2018."]}]},
+							{"id":"archive-eligibility-nde","heading":"What were Eligible Non-Deferrable Expenses and what were the Eligible Non-Deferrable Expense categories?","blocks":[{"type":"paragraph","content":"Applicants with $20,000 or less in payroll in 2019 were required to demonstrate having Eligible Non-Deferrable Expenses between Cdn. $40,000 and Cdn. $1,500,000 in 2020. Expenses were considered \"Eligible Non-Deferrable Expenses\" if they were already incurred in January and/or February 2020, or were due to a legal or contractual obligation as at March 1, 2020 and could not have been avoided or deferred beyond 2020 even during a period of shut down and depressed revenues as a result of COVID. Electronic or paper copies of Receipts / Invoices / Agreements were required to be uploaded as evidence of your 2020 Eligible Non-Deferrable Expenses."},{"type":"paragraph","content":"CEBA was not intended to provide income support, or support for variable operating expenses to businesses. CEBA was intended to support businesses by providing financing for their expenses that could not have been avoided or deferred as they take steps to safely navigate a period of shutdown, thereby helping to position businesses for successful relaunch when the economy reopened."},{"type":"paragraph","content":"The Eligible Non-Deferrable Expense categories were the following:"},{"type":"unordered-list","items":["Wages and other employment expenses to independent (arm's length) third parties;","Rent or lease payments for real estate used for business purposes;","Rent or lease payments for capital equipment used for business purposes;","Payments incurred for insurance related costs;","Payments incurred for property taxes;","Payments incurred for business purposes for telephone and utilities in the form of gas, oil, electricity, water and internet;","Payments for regularly scheduled debt service;","Payments incurred under agreements with independent contractors and fees required in order to maintain licenses, authorizations or permissions necessary to conduct business by the applicant;","Payments incurred for materials consumed to produce a product ordinarily offered for sale by the applicant."]}]},
+							{"id":"archive-eligibility-multiple-business","heading":"What if I ran more than one business?","blocks":[{"type":"paragraph","content":"Each qualifying business must have had a unique 9-digit Canada Revenue Agency (CRA) Business Number at the time of application. Each qualifying business was limited to one CEBA Loan."}]},
+							{"id":"archive-eligibility-bn","heading":"Was a Canada Revenue Agency (CRA) Business Number required to apply?","blocks":[{"type":"paragraph","content":"Yes. A 9-digit CRA Business Number was required to apply. The business number was required to be active with an effective date on or prior to March 1, 2020. For Payroll Stream applicants, the 15-digit payroll account under the COVID Indigenous Business Initiative could not be active with an effective date on or prior to March 1, 2020."}]},
+							{"id":"archive-eligibility-fiscal-year","heading":"If the first fiscal year (and tax year-end, as indicated on the businesses' tax return) of a business ended on or after January 1, 2020, was that business eligible for a CEBA Loan?","blocks":[{"type":"paragraph","content":"CEBA applicants were required to attest to the fact that they had filed an income tax return with the Canada Revenue Agency for 2019 (i.e., the tax year-end, as indicated on the tax return, is in the calendar year 2019) (or if this income tax return for 2019 was not yet submitted, 2018). If a CEBA applicant's first tax year-end, as indicated on the tax return, was during the calendar year 2020, they therefore were not eligible in the CEBA Program."}]},
+							{"id":"archive-eligibility-charities","heading":"Were registered charities and not-for-profit organizations eligible for CEBA?","blocks":[{"type":"paragraph","content":"Since the launch of CEBA, the Government of Canada made numerous changes to the program to make it available to more Canadian businesses that continued to need support during the COVID-19 pandemic."},{"type":"paragraph","content":"In order to qualify for the CEBA Program, applicants were required to be an active operating business with a CRA Business Number both effective as of March 1, 2020, in the form of a sole proprietorship, partnership or a Canadian-controlled private corporation (\"CCPC\"). Additionally, for the Non-Deferrable Expense stream, applicants were required to have filed a valid T1 or T2 tax return. Charities and not-for-profit organizations that met the program's requirements have successfully attained CEBA funding."},{"type":"paragraph","content":"CEBA eligibility was determined based on the criteria established by the Government of Canada. No organization involved in administering the CEBA Program has the authority to grant exceptions, including your financial institution."}]},
+							{"id":"archive-eligibility-expansion","heading":"Who could apply for the $20,000 expansion?","blocks":[{"type":"paragraph","content":"Loan Holders who received a $40,000 loan were able to apply for the $20,000 CEBA expansion until June 30, 2021."}]},
+							{"id":"archive-eligibility-legal-entities","heading":"What types of legal entities were eligible applicants for a $60,000 CEBA Loan or $20,000 CEBA expansion loan?","blocks":[{"type":"paragraph","content":"In order to be eligible for a $60,000 CEBA Loan or $20,000 CEBA expansion loan, an applicant was required to be an active operating business that was a sole proprietorship, partnership or a Canadian-controlled private corporation (\"CCPC\") that was in operation in Canada on March 1, 2020, and met all of the CEBA eligibility criteria. Other types of business entities were not eligible for a $60,000 CEBA Loan or $20,000 CEBA expansion loan."}]},
+							{"id":"archive-eligibility-indigenous","heading":"If my business has received support under the COVID Indigenous SMEs Initiative, was my business also eligible for CEBA?","blocks":[{"type":"paragraph","content":"The COVID Indigenous SMEs Initiative was part of the Government of Canada's response to COVID-19 and was intended to support small to medium-sized Indigenous businesses. Businesses that received support under the COVID Indigenous SMEs Initiative were not eligible for a $60,000 CEBA Loan or $20,000 CEBA expansion."}]},
+							{"id":"archive-eligibility-rrrf","heading":"If my business has received support under the Regional Relief and Recovery Fund (RRRF), was my business also eligible for CEBA?","blocks":[{"type":"paragraph","content":"The Regional Relief and Recovery Fund (RRRF) was part of the Government of Canada's response to COVID-19 and was intended to support businesses that were not eligible for CEBA. Businesses that received support under the Regional Relief and Recovery Fund (RRRF) were not eligible for a $60,000 CEBA Loan or $20,000 CEBA expansion."}]}
+						]
+					}
 				}
 			}
 		},
