@@ -989,18 +989,32 @@ useEffect(() => {
             <div className="faq-detail-title">
               <h1>{faqDetailPageTitle}</h1>
             </div>
-            <div className="faq-detail-nav-grid">
+            <gcds-grid
+              class="faq-detail-nav-grid"
+              columns="1"
+              columns-tablet="6"
+              columns-desktop="12"
+              gap="200"
+              tag="div"
+            >
               {faqDetailTabs.map((tab) => (
-                <a
+                <gcds-grid-col
                   key={tab.key}
-                  href={tab.href}
-                  className={`faq-detail-tab ${tab.current ? "faq-detail-tab-active" : ""}`}
-                  aria-current={tab.current ? "page" : undefined}
+                  class="faq-detail-nav-col"
+                  tablet="3"
+                  desktop="4"
+                  tag="div"
                 >
-                  {tab.label}
-                </a>
+                  <a
+                    href={tab.href}
+                    className={`faq-detail-tab ${tab.current ? "faq-detail-tab-active" : ""}`}
+                    aria-current={tab.current ? "page" : undefined}
+                  >
+                    {tab.label}
+                  </a>
+                </gcds-grid-col>
               ))}
-            </div>
+            </gcds-grid>
             <div className="faq-detail-content">
               {faqDetailSections.map((section, sectionIndex) => {
                 const blocks =

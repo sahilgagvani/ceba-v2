@@ -558,16 +558,21 @@ gcds-header {
 }
 
 .faq-detail-nav-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.9rem 1rem;
   margin-bottom: 2.35rem;
+  --gcds-grid-gap: 0.9rem;
+  --gcds-grid-gap-tablet: 0.9rem;
+  --gcds-grid-gap-desktop: 1rem;
+}
+
+.faq-detail-nav-col {
+  display: block;
 }
 
 .faq-detail-tab {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
   min-height: 2.6rem;
   padding: 0.45rem 0.75rem;
   border: 1px solid #c8d0da;
@@ -1302,9 +1307,8 @@ html, body, #root {
   }
 
   .faq-detail-nav-grid {
-    grid-template-columns: 1fr;
-    gap: 0.85rem;
     margin-bottom: 1.75rem;
+    --gcds-grid-gap: 0.85rem;
   }
 
   .faq-detail-section {
@@ -1440,10 +1444,6 @@ html, body, #root {
 
 @media (min-width: 769px) and (max-width: 1080px) {
   .faq-link-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .faq-detail-nav-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
