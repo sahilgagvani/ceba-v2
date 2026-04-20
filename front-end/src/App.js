@@ -68,7 +68,7 @@ const FAQ_DETAIL_ROUTE_ENTRIES = [
     section: "archive",
     localeKey: "eligibility-closed",
     en: "/en/faq/eligibility-closed.html",
-    fr: "/fr/faq/admissibilite-fermee.html",
+    fr: "/fr/faq/admissibilite.html",
   },
 ];
 
