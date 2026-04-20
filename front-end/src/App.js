@@ -910,6 +910,121 @@ useEffect(() => {
           </div>
         </nav>
 
+      {isFaqDetailPage && (
+        <main id="main-content" className="faq-detail-main">
+          <div className="faq-detail-page">
+            <div className="faq-detail-shell">
+              <div className="faq-page-topbar">
+                <div className="faq-detail-breadcrumbs">
+                  <nav aria-label="Breadcrumb" className="gc-breadcrumbs">
+                    <ol>
+                      {blankPageBreadcrumbItems.map((item) => (
+                        <li key={`${item.href}-${item.label}`}>
+                          {item.current ? (
+                            <span aria-current="page">{item.label}</span>
+                          ) : (
+                            <a href={item.href}>{item.label}</a>
+                          )}
+                        </li>
+                      ))}
+                    </ol>
+                  </nav>
+                </div>
+                <a href={faqPortalUrl} className="faq-sign-in-link">
+                  {faqDetailPortalCtaLabel}
+                </a>
+              </div>
+              <div className="faq-detail-title">
+                <gcds-heading tag="h1" level="1" character-limit="false">
+                  {faqDetailPageTitle}
+                </gcds-heading>
+              </div>
+              <gcds-grid
+                class="faq-detail-nav-grid"
+                gap="200"
+                tag="div"
+              >
+                {faqDetailTabs.map((tab) => (
+                  <gcds-grid-col
+                    key={tab.key}
+                    class="faq-detail-nav-col"
+                    tablet="3"
+                    desktop="4"
+                    tag="div"
+                  >
+                    <a
+                      href={tab.href}
+                      className={`faq-detail-tab ${tab.current ? "faq-detail-tab-active" : ""}`}
+                      aria-current={tab.current ? "page" : undefined}
+                    >
+                      {tab.label}
+                    </a>
+                  </gcds-grid-col>
+                ))}
+              </gcds-grid>
+              <div className="faq-detail-content">
+                {faqDetailSections.map((section, sectionIndex) => {
+                  const blocks =
+                    Array.isArray(section.blocks) && section.blocks.length > 0
+                      ? section.blocks
+                      : [
+                          ...(Array.isArray(section.paragraphs)
+                            ? section.paragraphs.map((paragraph) => ({
+                                type: "paragraph",
+                                content: paragraph,
+                              }))
+                            : []),
+                          ...(Array.isArray(section.listItems) && section.listItems.length > 0
+                            ? [
+                                {
+                                  type: "unordered-list",
+                                  items: section.listItems,
+                                },
+                              ]
+                            : []),
+                          ...(Array.isArray(section.links) && section.links.length > 0
+                            ? [
+                                {
+                                  type: "links",
+                                  items: section.links,
+                                },
+                              ]
+                            : []),
+                        ];
+
+                  return (
+                    <section
+                      key={`${section.id || "faq-detail-section"}-${sectionIndex}`}
+                      className="faq-detail-section"
+                    >
+                      {section.heading && (
+                        <div className="faq-detail-section-title">
+                          <gcds-heading tag="h2" level="2" character-limit="false">
+                            {section.heading}
+                          </gcds-heading>
+                        </div>
+                      )}
+                      <div className="faq-detail-section-body">
+                        {blocks.map((block, blockIndex) =>
+                          renderFaqDetailBlock(
+                            block,
+                            section.id || `faq-detail-${sectionIndex}`,
+                            blockIndex
+                          )
+                        )}
+                      </div>
+                    </section>
+                  );
+                })}
+              </div>
+              {faqDetailDateModified && (
+                <div className="faq-detail-date-modified">{faqDetailDateModified}</div>
+              )}
+            </div>
+          </div>
+        </main>
+      )}
+      {!isFaqDetailPage && (
       <gcds-container id="main-content" main-container size="xl"
       centered
       tag="main">
@@ -959,116 +1074,6 @@ useEffect(() => {
             </section>
           ))}
           <div className="faq-date-modified">{faqDateModified}</div>
-        </div>
-        </>
-        )}
-        {isFaqDetailPage && (
-        <>
-        <div className="faq-detail-page">
-          <div className="faq-detail-shell">
-            <div className="faq-page-topbar">
-              <div className="faq-detail-breadcrumbs">
-                <nav aria-label="Breadcrumb" className="gc-breadcrumbs">
-                  <ol>
-                    {blankPageBreadcrumbItems.map((item) => (
-                      <li key={`${item.href}-${item.label}`}>
-                        {item.current ? (
-                          <span aria-current="page">{item.label}</span>
-                        ) : (
-                          <a href={item.href}>{item.label}</a>
-                        )}
-                      </li>
-                    ))}
-                  </ol>
-                </nav>
-              </div>
-              <a href={faqPortalUrl} className="faq-sign-in-link">
-                {faqDetailPortalCtaLabel}
-              </a>
-            </div>
-            <div className="faq-detail-title">
-              <h1>{faqDetailPageTitle}</h1>
-            </div>
-            <gcds-grid
-              class="faq-detail-nav-grid"
-              gap="200"
-              tag="div"
-            >
-              {faqDetailTabs.map((tab) => (
-                <gcds-grid-col
-                  key={tab.key}
-                  class="faq-detail-nav-col"
-                  tablet="3"
-                  desktop="4"
-                  tag="div"
-                >
-                  <a
-                    href={tab.href}
-                    className={`faq-detail-tab ${tab.current ? "faq-detail-tab-active" : ""}`}
-                    aria-current={tab.current ? "page" : undefined}
-                  >
-                    {tab.label}
-                  </a>
-                </gcds-grid-col>
-              ))}
-            </gcds-grid>
-            <div className="faq-detail-content">
-              {faqDetailSections.map((section, sectionIndex) => {
-                const blocks =
-                  Array.isArray(section.blocks) && section.blocks.length > 0
-                    ? section.blocks
-                    : [
-                        ...(Array.isArray(section.paragraphs)
-                          ? section.paragraphs.map((paragraph) => ({
-                              type: "paragraph",
-                              content: paragraph,
-                            }))
-                          : []),
-                        ...(Array.isArray(section.listItems) && section.listItems.length > 0
-                          ? [
-                              {
-                                type: "unordered-list",
-                                items: section.listItems,
-                              },
-                            ]
-                          : []),
-                        ...(Array.isArray(section.links) && section.links.length > 0
-                          ? [
-                              {
-                                type: "links",
-                                items: section.links,
-                              },
-                            ]
-                          : []),
-                      ];
-
-                return (
-                  <section
-                    key={`${section.id || "faq-detail-section"}-${sectionIndex}`}
-                    className="faq-detail-section"
-                  >
-                    {section.heading && (
-                      <div className="faq-detail-section-title">
-                        <h2>{section.heading}</h2>
-                      </div>
-                    )}
-                    <div className="faq-detail-section-body">
-                      {blocks.map((block, blockIndex) =>
-                        renderFaqDetailBlock(
-                          block,
-                          section.id || `faq-detail-${sectionIndex}`,
-                          blockIndex
-                        )
-                      )}
-                    </div>
-                  </section>
-                );
-              })}
-            </div>
-            {faqDetailDateModified && (
-              <div className="faq-detail-date-modified">{faqDetailDateModified}</div>
-            )}
-          </div>
         </div>
         </>
         )}
@@ -1896,7 +1901,8 @@ useEffect(() => {
       <br></br>
       </>
       )}
-    </gcds-container>
+      </gcds-container>
+      )}
     </div>
     <gcds-footer
       class="gcds-mt-2"

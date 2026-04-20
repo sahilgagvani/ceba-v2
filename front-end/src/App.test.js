@@ -75,6 +75,8 @@ describe('App page rendering', () => {
     expect(breadcrumbLinks[0]).toHaveAttribute('href', '/en/overview.html');
     expect(breadcrumbLinks[1]).toHaveTextContent(/^faq$/i);
     expect(breadcrumbLinks[1]).toHaveAttribute('href', '/en/faq.html');
+    expect(container.querySelector('gcds-container#main-content')).toBeInTheDocument();
+    expect(container.querySelector('main.faq-detail-main#main-content')).not.toBeInTheDocument();
     expect(
       container.querySelector('.custom-top-nav .nav-link.active')
     ).toHaveTextContent(/^faq$/i);
@@ -136,18 +138,20 @@ describe('App page rendering', () => {
     const { container } = render(<App />);
     const breadcrumbItems = container.querySelectorAll('.faq-detail-breadcrumbs .gc-breadcrumbs li');
     const detailButtons = container.querySelectorAll('.faq-detail-nav-grid .faq-detail-tab');
-    const detailHeading = container.querySelector('.faq-detail-title h1');
+    const detailHeading = container.querySelector('.faq-detail-title gcds-heading');
 
     expect(screen.queryByText(/^Frequently Asked Questions$/i)).not.toBeInTheDocument();
     expect(detailHeading).toHaveTextContent(
       /^Loan Assigned to CEBA Program — Loan Assignment$/i
     );
-    expect(screen.getByText(/Loan Assignment content is being prepared/i)).toBeInTheDocument();
+    expect(screen.getByText(/What does "loan assignment" mean\?/i)).toBeInTheDocument();
     expect(screen.getByText(/^Date modified: 2026-01-21$/i)).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /^sign in$/i })).toHaveAttribute(
       'href',
       'https://account-compte.ceba-cuec.ca/borrower/account-compte/sign-in-identifier'
     );
+    expect(container.querySelector('main.faq-detail-main#main-content')).toBeInTheDocument();
+    expect(container.querySelector('gcds-container#main-content')).not.toBeInTheDocument();
     expect(breadcrumbItems).toHaveLength(3);
     expect(breadcrumbItems[0]).toHaveTextContent(/ceba program overview/i);
     expect(breadcrumbItems[1]).toHaveTextContent(/^faq$/i);
@@ -167,7 +171,7 @@ describe('App page rendering', () => {
 
     const { container } = render(<App />);
     const detailButtons = container.querySelectorAll('.faq-detail-nav-grid .faq-detail-tab');
-    const detailHeading = container.querySelector('.faq-detail-title h1');
+    const detailHeading = container.querySelector('.faq-detail-title gcds-heading');
 
     expect(detailHeading).toHaveTextContent(
       /^Loan Assigned to CEBA Program — Loan Repayment$/i
@@ -183,6 +187,8 @@ describe('App page rendering', () => {
     expect(screen.getByText(/Upcoming Payment Reminder/i)).toBeInTheDocument();
     expect(screen.getByText(/Missed Payment Reminder/i)).toBeInTheDocument();
     expect(screen.getByText(/^Date modified: 2026-01-21$/i)).toBeInTheDocument();
+    expect(container.querySelector('main.faq-detail-main#main-content')).toBeInTheDocument();
+    expect(container.querySelector('gcds-container#main-content')).not.toBeInTheDocument();
     expect(detailButtons[1]).toHaveClass('faq-detail-tab-active');
     expect(detailButtons[1]).toHaveAttribute('href', '/en/faq/ceba-loan-repayment.html');
   });
@@ -196,7 +202,7 @@ describe('App page rendering', () => {
     const { container } = render(<App />);
     const breadcrumbItems = container.querySelectorAll('.faq-detail-breadcrumbs .gc-breadcrumbs li');
     const detailButtons = container.querySelectorAll('.faq-detail-nav-grid .faq-detail-tab');
-    const detailHeading = container.querySelector('.faq-detail-title h1');
+    const detailHeading = container.querySelector('.faq-detail-title gcds-heading');
 
     expect(detailHeading).toHaveTextContent(
       /^Prêt avec le programme du CUEC — Remboursement du prêt$/i
@@ -212,6 +218,8 @@ describe('App page rendering', () => {
       'href',
       'https://account-compte.ceba-cuec.ca/borrower/account-compte/sign-in-identifier/fr'
     );
+    expect(container.querySelector('main.faq-detail-main#main-content')).toBeInTheDocument();
+    expect(container.querySelector('gcds-container#main-content')).not.toBeInTheDocument();
     expect(breadcrumbItems).toHaveLength(3);
     expect(breadcrumbItems[0]).toHaveTextContent(/survol du programme du cuec/i);
     expect(breadcrumbItems[1]).toHaveTextContent(/foires aux questions/i);
