@@ -56,6 +56,20 @@ const FAQ_DETAIL_ROUTE_ENTRIES = [
     en: "/en/faq/financial-institution-loan-repayment.html",
     fr: "/fr/faq/remboursement-du-pret-institution-financiere.html",
   },
+  {
+    key: "refinancing-and-forgiveness",
+    section: "archive",
+    localeKey: "refinancing-and-forgiveness",
+    en: "/en/faq/refinancing-and-forgiveness.html",
+    fr: "/fr/faq/refinancement-et-remise-de-pret.html",
+  },
+  {
+    key: "eligibility-closed",
+    section: "archive",
+    localeKey: "eligibility-closed",
+    en: "/en/faq/eligibility-closed.html",
+    fr: "/fr/faq/admissibilite-fermee.html",
+  },
 ];
 
 const FAQ_DETAIL_ROUTES = FAQ_DETAIL_ROUTE_ENTRIES.reduce((acc, route) => {
@@ -959,7 +973,7 @@ useEffect(() => {
                 </gcds-heading>
               </div>
               {faqDetailTabs.length > 1 && (
-                <div className="faq-detail-nav-grid">
+                <div className={`faq-detail-nav-grid${faqDetailTabs.length === 2 ? " faq-detail-nav-grid--cols-2" : ""}`}>
                   {faqDetailTabs.map((tab) => (
                     <div
                       key={tab.key}
@@ -1074,7 +1088,7 @@ useEffect(() => {
                 </gcds-heading>
               </div>
               <p className="faq-section-body">{section.body}</p>
-              <div className="faq-link-grid">
+              <div className={`faq-link-grid${section.links.length === 2 ? " faq-link-grid--cols-2" : ""}`}>
                 {section.links.map((link) => (
                   <a
                     key={`${section.id}-${link.label}`}

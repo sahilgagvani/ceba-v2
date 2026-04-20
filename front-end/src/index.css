@@ -546,6 +546,14 @@ gcds-header {
   margin-bottom: 2.35rem;
 }
 
+.faq-detail-nav-grid--cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.faq-link-grid--cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .faq-detail-nav-col {
   display: block;
   min-width: 0;
