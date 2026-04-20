@@ -87,27 +87,27 @@
 					"links": [
 						{
 							"label": "Loan Assignment",
-							"href": "#"
+							"href": "/en/faq/ceba-loan-assignment.html"
 						},
 						{
 							"label": "Loan Repayment",
-							"href": "#"
+							"href": "/en/faq/ceba-loan-repayment.html"
 						},
 						{
 							"label": "Payment Arrangements",
-							"href": "#"
+							"href": "/en/faq/payment-arrangements.html"
 						},
 						{
 							"label": "Changes to My Business",
-							"href": "#"
+							"href": "/en/faq/changes-to-my-business.html"
 						},
 						{
 							"label": "CEBA Portal Account",
-							"href": "#"
+							"href": "/en/faq/ceba-portal-account.html"
 						},
 						{
 							"label": "Statements of Account",
-							"href": "#"
+							"href": "/en/faq/statements-of-account.html"
 						}
 					]
 				},
@@ -134,6 +134,291 @@
 							"href": "#"
 						}
 					]
+				}
+			}
+		},
+		"faqDetail": {
+			"assigned": {
+				"sectionTitle": "Loan Assigned to CEBA Program",
+				"portalCtaLabel": "Sign in",
+				"pages": {
+					"loan-assignment": {
+						"tabLabel": "Loan Assignment",
+						"breadcrumbLabel": "CEBA Loan Assignment",
+						"titleSuffix": "Loan Assignment",
+						"dateModified": "Date modified: 2026-01-21",
+						"sections": [
+							{
+								"id": "loan-assignment-placeholder",
+								"heading": "Loan Assignment content is being prepared",
+								"paragraphs": [
+									"This scaffold is ready for the final CEBA loan assignment content.",
+									"Provide the approved copy for this section and it can be dropped into the existing structure without changing the route or layout."
+								],
+								"listItems": [
+									"Route-level navigation is active for this page.",
+									"Breadcrumbs, title, and metadata are already wired."
+								],
+								"links": [
+									{
+										"text": "Return to the FAQ landing page",
+										"href": "/en/faq.html"
+									}
+								]
+							}
+						]
+					},
+					"loan-repayment": {
+						"tabLabel": "Loan Repayment",
+						"breadcrumbLabel": "CEBA Loan Repayment",
+						"titleSuffix": "Loan Repayment",
+						"dateModified": "Date modified: 2026-01-21",
+						"sections": [
+							{
+								"id": "loan-repayment-methods",
+								"heading": "How do I repay my loan? What are the payment methods?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "If your loan has been assigned to the CEBA Program, you are directed to make all payments directly to the CEBA Program via one of the three accepted payment options outlined below. You will need to include the CEBA Identification Number provided in your Loan Assignment Notice."
+									},
+									{
+										"type": "ordered-list",
+										"items": [
+											[
+												{
+													"strong": true,
+													"text": "Bill Payment"
+												},
+												" - To make bill payments through your financial institution, use 'Export Development Canada - CEBA' (English) or 'ExportationdeveloppementCanadaCUEC' (French) as the payee and provide your 12-digit CEBA Identification Number in the account number field. Note that payments sent to the CEBA Program through Bill Payment may take several business days to process and will not be credited to your CEBA Loan until received and processed by the CEBA Program. Please consider the processing time when sending your payment, as the CEBA Program is not responsible for payments received late due to processing time."
+											],
+											[
+												{
+													"strong": true,
+													"text": "Cheques"
+												},
+												" - Make cheques payable to 'Export Development Canada' (English) or 'Exportation et developpement Canada' (French). Write your 12-digit CEBA Identification Number in the memo section of the cheque and include a completed remittance slip with your cheque to ensure your payment can be processed quickly and accurately. The remittance slip can be found on your Statements of Account within the CEBA Portal. Please only cut or tear the remittance slip along the indicated cut line. Mail the cheque and the remittance slip in the same envelope to the address below. Include only one remittance slip per envelope. Do not mail cash, money orders, bank drafts or certified cheques. Only cheques from Canadian financial institutions will be accepted."
+											]
+										]
+									},
+									{
+										"type": "address",
+										"lines": [
+											"Export Development Canada",
+											"PO Box 4530 STN A",
+											"Toronto ON M5W 0N2"
+										]
+									},
+									{
+										"type": "paragraph",
+										"content": "Allow for postal delivery time when sending your payment. The CEBA Program is not responsible for payments received late due to postage delays."
+									},
+									{
+										"type": "paragraph",
+										"content": "If you choose to mail multiple, post-dated cheques together, include only one remittance slip and all cheques in the same envelope. The Amount Paid field on the remittance slip should match the total of all cheques in the envelope. If you wish to mail each payment cheque separately, make sure each envelope includes a completed remittance slip. The payment(s) will not be processed or reflected on the Statements and on the CEBA Portal until the date written on each cheque. Please note, cheques that are post-dated more than 18 months will be rejected."
+									},
+									{
+										"type": "ordered-list",
+										"start": 3,
+										"items": [
+											[
+												{
+													"strong": true,
+													"text": "Wire Transfer"
+												},
+												" - For information on wire transfers, please call the CEBA Call Centre at 1-888-324-4201."
+											]
+										]
+									}
+								]
+							},
+							{
+								"id": "loan-repayment-application-order",
+								"heading": "How are payments applied to my assigned CEBA Loan?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "When you make a payment towards your assigned CEBA Loan, the payment gets applied to the balances in this order:"
+									},
+									{
+										"type": "ordered-list",
+										"items": [
+											"Fees outstanding",
+											"Interest outstanding",
+											"Principal outstanding",
+											"Interest accrued"
+										]
+									},
+									{
+										"type": "paragraph",
+										"content": "Please note, payments received on weekends or holidays will not be processed until the next business day. Depending on the payment type, processing by the receiving bank and the CEBA Program may take up to five business days. Cheques might take longer depending on the cheque clearing process."
+									}
+								]
+							},
+							{
+								"id": "loan-repayment-amount",
+								"heading": "How much of my CEBA Loan do I have to repay?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "Once your loan is assigned to the CEBA Program, you are required to repay the outstanding balance on your CEBA Loan plus any applicable fees and interest in full, directly to the CEBA Program. Interest on outstanding balances commenced on January 19, 2024, at an interest rate of 5% per annum."
+									}
+								]
+							},
+							{
+								"id": "loan-repayment-disputes",
+								"heading": "Can I raise a dispute to change my repayment terms?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "All program eligibility determinations, application outcomes and repayment deadlines are now final and cannot be changed. No organization involved in administering the CEBA Program has the authority to grant exceptions to the CEBA eligibility criteria, including your financial institution."
+									}
+								]
+							},
+							{
+								"id": "loan-repayment-overpayment",
+								"heading": "I have overpaid my loan. How do I get the overpayment refunded?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "For any questions related to refunds of overpayment amounts on an assigned CEBA Loan, please contact the CEBA Call Centre at 1-888-324-4201."
+									}
+								]
+							},
+							{
+								"id": "loan-repayment-notifications",
+								"heading": "Will I receive notifications about upcoming or missed payments?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": [
+											"If you have an email on file with the CEBA program, you will receive an ",
+											{
+												"strong": true,
+												"text": "Upcoming Payment Reminder"
+											},
+											" 7 calendar days before your next payment in your payment arrangement is due."
+										]
+									},
+									{
+										"type": "paragraph",
+										"content": [
+											"If you miss a payment, you will receive a ",
+											{
+												"strong": true,
+												"text": "Missed Payment Reminder"
+											},
+											" through email if a payment is not made 8 days after the payment due date."
+										]
+									}
+								]
+							}
+						]
+					},
+					"payment-arrangements": {
+						"tabLabel": "Payment Arrangements",
+						"breadcrumbLabel": "Payment Arrangements",
+						"titleSuffix": "Payment Arrangements",
+						"dateModified": "Date modified: 2026-01-21",
+						"sections": [
+							{
+								"id": "payment-arrangements-placeholder",
+								"heading": "Payment Arrangements content is being prepared",
+								"paragraphs": [
+									"This page is reserved for future payment arrangement guidance.",
+									"When the final copy is available, it can replace this placeholder without changing the layout."
+								],
+								"listItems": [
+									"Page-specific metadata is already supported.",
+									"The subnavigation highlights the active page."
+								],
+								"links": [
+									{
+										"text": "Return to the FAQ landing page",
+										"href": "/en/faq.html"
+									}
+								]
+							}
+						]
+					},
+					"changes-to-my-business": {
+						"tabLabel": "Changes to My Business",
+						"breadcrumbLabel": "Changes to My Business",
+						"titleSuffix": "Changes to My Business",
+						"dateModified": "Date modified: 2025-12-15",
+						"sections": [
+							{
+								"id": "changes-to-business-placeholder",
+								"heading": "Changes to My Business content is being prepared",
+								"paragraphs": [
+									"This route is ready for business-change scenarios related to assigned CEBA loans.",
+									"The placeholder confirms that per-page dates and content blocks can vary independently."
+								],
+								"listItems": [
+									"This page intentionally uses a different date modified value.",
+									"The final copy can include paragraphs, lists, and links."
+								],
+								"links": [
+									{
+										"text": "Return to the FAQ landing page",
+										"href": "/en/faq.html"
+									}
+								]
+							}
+						]
+					},
+					"ceba-portal-account": {
+						"tabLabel": "CEBA Portal Account",
+						"breadcrumbLabel": "CEBA Portal Account",
+						"titleSuffix": "CEBA Portal Account",
+						"dateModified": "Date modified: 2026-01-21",
+						"sections": [
+							{
+								"id": "portal-account-placeholder",
+								"heading": "CEBA Portal Account content is being prepared",
+								"paragraphs": [
+									"This page is reserved for portal-account guidance related to assigned loans.",
+									"Account access details, registration instructions, and support links can be supplied later."
+								],
+								"listItems": [
+									"The route is fully localized.",
+									"The page shell matches the assigned-loan detail scaffold."
+								],
+								"links": [
+									{
+										"text": "Sign in to the CEBA portal",
+										"href": "https://account-compte.ceba-cuec.ca/borrower/account-compte/sign-in-identifier"
+									}
+								]
+							}
+						]
+					},
+					"statements-of-account": {
+						"tabLabel": "Statements of Account",
+						"breadcrumbLabel": "Statements of Account",
+						"titleSuffix": "Statements of Account",
+						"dateModified": "Date modified: 2026-01-21",
+						"sections": [
+							{
+								"id": "statements-placeholder",
+								"heading": "Statements of Account content is being prepared",
+								"paragraphs": [
+									"This page is ready for future statements-of-account FAQ copy.",
+									"Use this section for the final explanation of statement access, timing, and related support information."
+								],
+								"listItems": [
+									"Placeholder content verifies the reusable section renderer.",
+									"Final copy can be inserted without altering the routing layer."
+								],
+								"links": [
+									{
+										"text": "Return to the FAQ landing page",
+										"href": "/en/faq.html"
+									}
+								]
+							}
+						]
+					}
 				}
 			}
 		},

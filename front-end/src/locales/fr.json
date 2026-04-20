@@ -88,27 +88,27 @@
           "links": [
             {
               "label": "Cession de prêt",
-              "href": "#"
+              "href": "/fr/faq/cession-de-pret-cuec.html"
             },
             {
               "label": "Remboursement du prêt",
-              "href": "#"
+              "href": "/fr/faq/remboursement-du-pret-cuec.html"
             },
             {
               "label": "Modalités de paiement",
-              "href": "#"
+              "href": "/fr/faq/modalites-de-paiement.html"
             },
             {
               "label": "Changements apportés à mon entreprise",
-              "href": "#"
+              "href": "/fr/faq/changements-apportes-a-mon-entreprise.html"
             },
             {
               "label": "Compte sur le portail du CUEC",
-              "href": "#"
+              "href": "/fr/faq/compte-sur-le-portail-du-cuec.html"
             },
             {
               "label": "Relevés de compte",
-              "href": "#"
+              "href": "/fr/faq/releves-de-compte.html"
             }
           ]
         },
@@ -135,6 +135,292 @@
               "href": "#"
             }
           ]
+        }
+      }
+    },
+    "faqDetail": {
+      "assigned": {
+        "sectionTitle": "Prêt cédé au programme du CUEC",
+        "portalCtaLabel": "Se connecter",
+        "pages": {
+          "loan-assignment": {
+            "tabLabel": "Cession de prêt",
+            "breadcrumbLabel": "Cession de prêt du CUEC",
+            "titleSuffix": "Cession de prêt",
+            "dateModified": "Date de modification : 2026-01-21",
+            "sections": [
+              {
+                "id": "loan-assignment-placeholder",
+                "heading": "Le contenu sur la cession de prêt est en préparation",
+                "paragraphs": [
+                  "Cette structure est prête à recevoir le contenu final sur la cession de prêt du CUEC.",
+                  "Lorsque le texte approuvé sera disponible, il pourra être intégré sans modifier la route ou la mise en page."
+                ],
+                "listItems": [
+                  "La navigation entre les pages de prêt cédé est déjà active.",
+                  "Le fil d’Ariane, le titre et les métadonnées sont déjà reliés."
+                ],
+                "links": [
+                  {
+                    "text": "Retourner à la page FAQ",
+                    "href": "/fr/faq.html"
+                  }
+                ]
+              }
+            ]
+          },
+          "loan-repayment": {
+            "tabLabel": "Remboursement du prêt",
+            "breadcrumbLabel": "Remboursement du prêt du CUEC",
+            "titleSuffix": "Remboursement du prêt",
+            "pageTitle": "Prêt avec le programme du CUEC — Remboursement du prêt",
+            "dateModified": "Date de modification : 2026-01-21",
+            "sections": [
+              {
+                "id": "loan-repayment-methods",
+                "heading": "Comment puis-je rembourser mon prêt ? Quels sont les modes de paiement ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "Si votre prêt a été cédé au programme du CUEC, vous êtes invité à effectuer tous les paiements directement au programme du CUEC au moyen de l'une des trois options de paiement acceptées décrites ci-dessous. Vous devrez inclure le numéro d'identification du CUEC fourni dans votre avis de cession de prêt."
+                  },
+                  {
+                    "type": "ordered-list",
+                    "items": [
+                      [
+                        {
+                          "strong": true,
+                          "text": "Paiement de factures"
+                        },
+                        " — Pour effectuer des paiements de factures par l'intermédiaire de votre institution financière, utilisez « ExportationdeveloppementCanadaCUEC » (français) ou « Export Development Canada - CEBA » (anglais) comme bénéficiaire et fournissez votre numéro d'identification du CUEC à 12 chiffres dans le champ du numéro de compte. Veuillez noter que le traitement des paiements envoyés au programme du CUEC par l'entremise du paiement de factures peut prendre plusieurs jours ouvrables et ne sera pas crédité à votre prêt du CUEC tant qu'il n'aura pas été reçu et traité par le programme du CUEC. Veuillez tenir compte du délai de traitement lors de l'envoi de votre paiement, car le programme du CUEC n'est pas responsable des paiements reçus en retard en raison du délai de traitement."
+                      ],
+                      [
+                        {
+                          "strong": true,
+                          "text": "Chèques"
+                        },
+                        " — Libellez les chèques à l'ordre de « Exportation et développement Canada » (français) ou « Export Development Canada » (anglais). Inscrivez votre numéro d'identification du CUEC à 12 chiffres dans la section « pour » du chèque et joignez à votre chèque un bordereau de paiement dûment rempli pour vous assurer que votre paiement peut être traité rapidement et avec exactitude. Le bordereau de paiement se trouve sur vos relevés de compte dans le portail du CUEC. Veuillez couper ou déchirer le bordereau de paiement uniquement le long de la ligne de coupe indiquée. Postez le chèque et le bordereau de paiement dans la même enveloppe à l'adresse ci-dessous. N'incluez qu'un seul bordereau de paiement par enveloppe. N'envoyez pas d'argent comptant, de mandats, de traites bancaires ou de chèques certifiés. Seuls les chèques provenant d'institutions financières canadiennes seront acceptés."
+                      ]
+                    ]
+                  },
+                  {
+                    "type": "address",
+                    "lines": [
+                      "Exportation et développement Canada",
+                      "Boîte postale 4530, succursale A",
+                      "Toronto (Ontario) M5W 0N2"
+                    ]
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": "Prévoyez un délai de livraison postale lors de l'envoi de votre paiement. Le programme du CUEC n'est pas responsable des paiements reçus en retard en raison de délais de traitement."
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": "Si vous choisissez d'envoyer plusieurs chèques postdatés ensemble, n'incluez qu'un seul bordereau de versement et tous les chèques dans la même enveloppe. Le champ Montant payé sur le bordereau de paiement doit correspondre au total de tous les chèques dans l'enveloppe. Si vous souhaitez poster chaque chèque de paiement séparément, assurez-vous que chaque enveloppe comprend un bordereau de paiement dûment rempli. Le ou les paiements ne seront pas traités ou reflétés sur les relevés et sur le portail du CUEC avant la date inscrite sur chaque chèque. Veuillez noter que les chèques postdatés de plus de 18 mois seront rejetés."
+                  },
+                  {
+                    "type": "ordered-list",
+                    "start": 3,
+                    "items": [
+                      [
+                        {
+                          "strong": true,
+                          "text": "Virement télégraphique"
+                        },
+                        " — Pour obtenir des renseignements sur les virements télégraphiques, veuillez communiquer avec le Centre d'appels du CUEC au 1-888-324-4201."
+                      ]
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "loan-repayment-application-order",
+                "heading": "Comment les paiements sont-ils appliqués à mon prêt qui a été cédé au programme du CUEC ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "Lorsque vous effectuez un paiement à l'égard de votre prêt du CUEC qui a été cédé, le paiement est appliqué aux soldes dans l'ordre suivant :"
+                  },
+                  {
+                    "type": "ordered-list",
+                    "items": [
+                      "Frais impayés",
+                      "Intérêts impayés",
+                      "Capital restant dû",
+                      "Intérêts courus"
+                    ]
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": "Veuillez noter que les paiements reçus la fin de semaine ou les jours fériés ne seront pas traités avant le jour ouvrable suivant. Selon le type de paiement, le traitement par la banque destinataire et le programme du CUEC peut prendre jusqu'à cinq jours ouvrables. Les chèques peuvent prendre plus de temps selon le processus de compensation des chèques."
+                  }
+                ]
+              },
+              {
+                "id": "loan-repayment-amount",
+                "heading": "Quel montant de mon prêt du CUEC dois-je rembourser ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "Une fois que votre prêt est cédé au programme du CUEC, vous devez rembourser le solde impayé de votre prêt du CUEC ainsi que tous les frais et intérêts applicables, en totalité, directement au programme du CUEC. Les intérêts sur les soldes impayés ont commencé le 19 janvier 2024 à un taux d'intérêt de 5 % par année."
+                  }
+                ]
+              },
+              {
+                "id": "loan-repayment-disputes",
+                "heading": "Puis-je contester mes conditions de remboursement ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "Toutes les décisions relatives à l'admissibilité au programme, les résultats des demandes et les dates limites de remboursement sont maintenant définitifs et ne peuvent pas être modifiés. Aucun organisme participant à l'administration du CUEC n'a le pouvoir d'accorder des exceptions aux critères d'admissibilité du CUEC, y compris votre institution financière."
+                  }
+                ]
+              },
+              {
+                "id": "loan-repayment-overpayment",
+                "heading": "J'ai payé mon prêt en trop. Que dois-je faire pour obtenir le remboursement de mon trop-payé ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "Pour toute question relative au remboursement d'un trop payé sur un prêt du CUEC cédé, veuillez communiquer avec le Centre d'appels du CUEC au 1-888-324-4201."
+                  }
+                ]
+              },
+              {
+                "id": "loan-repayment-notifications",
+                "heading": "Vais-je recevoir des notifications à propos de paiements à venir ou en défaut ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      "Si une adresse courriel figure dans votre dossier auprès du programme CUEC, vous recevrez un ",
+                      {
+                        "strong": true,
+                        "text": "rappel de paiement à venir"
+                      },
+                      " 7 jours civils avant la date à laquelle votre prochain paiement est dû selon votre entente de paiement."
+                    ]
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      "Si vous manquez un paiement, vous recevrez un ",
+                      {
+                        "strong": true,
+                        "text": "rappel de paiement en défaut"
+                      },
+                      " par courriel si un paiement n'est pas effectué dans les 8 jours suivant la date d'échéance du paiement."
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "payment-arrangements": {
+            "tabLabel": "Modalités de paiement",
+            "breadcrumbLabel": "Modalités de paiement",
+            "titleSuffix": "Modalités de paiement",
+            "dateModified": "Date de modification : 2026-01-21",
+            "sections": [
+              {
+                "id": "payment-arrangements-placeholder",
+                "heading": "Le contenu sur les modalités de paiement est en préparation",
+                "paragraphs": [
+                  "Cette page est réservée au contenu futur sur les modalités de paiement.",
+                  "Lorsque la version finale sera prête, elle pourra remplacer ce texte sans changer la structure."
+                ],
+                "listItems": [
+                  "Les métadonnées peuvent varier selon la page.",
+                  "La sous-navigation met en évidence la page active."
+                ],
+                "links": [
+                  {
+                    "text": "Retourner à la page FAQ",
+                    "href": "/fr/faq.html"
+                  }
+                ]
+              }
+            ]
+          },
+          "changes-to-my-business": {
+            "tabLabel": "Changements apportés à mon entreprise",
+            "breadcrumbLabel": "Changements apportés à mon entreprise",
+            "titleSuffix": "Changements apportés à mon entreprise",
+            "dateModified": "Date de modification : 2025-12-15",
+            "sections": [
+              {
+                "id": "changes-to-business-placeholder",
+                "heading": "Le contenu sur les changements apportés à mon entreprise est en préparation",
+                "paragraphs": [
+                  "Cette route est prête à recevoir les scénarios liés aux changements d’entreprise pour les prêts du CUEC cédés.",
+                  "Le texte temporaire confirme que les dates et les blocs de contenu peuvent varier d’une page à l’autre."
+                ],
+                "listItems": [
+                  "Cette page utilise volontairement une date de modification différente.",
+                  "Le contenu final pourra comprendre des paragraphes, des listes et des liens."
+                ],
+                "links": [
+                  {
+                    "text": "Retourner à la page FAQ",
+                    "href": "/fr/faq.html"
+                  }
+                ]
+              }
+            ]
+          },
+          "ceba-portal-account": {
+            "tabLabel": "Compte sur le portail du CUEC",
+            "breadcrumbLabel": "Compte sur le portail du CUEC",
+            "titleSuffix": "Compte sur le portail du CUEC",
+            "dateModified": "Date de modification : 2026-01-21",
+            "sections": [
+              {
+                "id": "portal-account-placeholder",
+                "heading": "Le contenu sur le compte du portail du CUEC est en préparation",
+                "paragraphs": [
+                  "Cette page est réservée à l’orientation liée au compte du portail pour les prêts cédés.",
+                  "Les renseignements sur l’accès au compte, l’inscription et les liens de soutien pourront être fournis plus tard."
+                ],
+                "listItems": [
+                  "La route est entièrement localisée.",
+                  "La structure de page correspond au gabarit des pages de détail sur les prêts cédés."
+                ],
+                "links": [
+                  {
+                    "text": "Se connecter au portail du CUEC",
+                    "href": "https://account-compte.ceba-cuec.ca/borrower/account-compte/sign-in-identifier/fr"
+                  }
+                ]
+              }
+            ]
+          },
+          "statements-of-account": {
+            "tabLabel": "Relevés de compte",
+            "breadcrumbLabel": "Relevés de compte",
+            "titleSuffix": "Relevés de compte",
+            "dateModified": "Date de modification : 2026-01-21",
+            "sections": [
+              {
+                "id": "statements-placeholder",
+                "heading": "Le contenu sur les relevés de compte est en préparation",
+                "paragraphs": [
+                  "Cette page est prête à recevoir le contenu FAQ futur sur les relevés de compte.",
+                  "Utilisez cette section pour la version finale expliquant l’accès aux relevés, les délais et l’information d’appui."
+                ],
+                "listItems": [
+                  "Le texte temporaire confirme le fonctionnement du rendu de section réutilisable.",
+                  "Le contenu final pourra être ajouté sans modifier la couche de routage."
+                ],
+                "links": [
+                  {
+                    "text": "Retourner à la page FAQ",
+                    "href": "/fr/faq.html"
+                  }
+                ]
+              }
+            ]
+          }
         }
       }
     },

@@ -500,6 +500,195 @@ gcds-header {
   margin-top: 4rem;
 }
 
+.faq-detail-page {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 1rem 1rem 0;
+  box-sizing: border-box;
+  color: #333;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.faq-detail-shell {
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.faq-detail-breadcrumbs {
+  flex: 1;
+  min-width: 0;
+}
+
+.faq-detail-breadcrumbs .gc-breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0;
+}
+
+.faq-detail-breadcrumbs .gc-breadcrumbs li,
+.faq-detail-breadcrumbs .gc-breadcrumbs a,
+.faq-detail-breadcrumbs .gc-breadcrumbs span {
+  color: #284162;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.faq-detail-title {
+  margin-bottom: 2rem;
+}
+
+.faq-detail-title h1 {
+  margin: 0;
+  color: #333;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.12;
+}
+
+.faq-detail-title::after {
+  content: "";
+  display: block;
+  width: 2.6rem;
+  height: 0.22rem;
+  margin-top: 1rem;
+  background: #a62a2a;
+}
+
+.faq-detail-nav-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem 1rem;
+  margin-bottom: 2.35rem;
+}
+
+.faq-detail-tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.6rem;
+  padding: 0.45rem 0.75rem;
+  border: 1px solid #c8d0da;
+  background: #f3f5f7;
+  color: #284162;
+  font-size: 0.9rem;
+  line-height: 1.35;
+  text-align: center;
+  text-decoration: none;
+}
+
+.faq-detail-tab:hover,
+.faq-detail-tab:focus {
+  border-color: #94a1b2;
+  background: #eef2f5;
+  color: #1f334e;
+}
+
+.faq-detail-tab-active {
+  border-color: #26374a;
+  background: #26374a;
+  color: #fff;
+}
+
+.faq-detail-tab-active:hover,
+.faq-detail-tab-active:focus {
+  background: #1f334e;
+  color: #fff;
+}
+
+.faq-detail-content {
+  margin-top: 0.25rem;
+}
+
+.faq-detail-section {
+  padding: 1.9rem 0;
+  border-top: 1px solid #d9dde3;
+}
+
+.faq-detail-section:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.faq-detail-section-title {
+  margin-bottom: 0.9rem;
+}
+
+.faq-detail-section-title h2 {
+  margin: 0;
+  color: #333;
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.faq-detail-section-body {
+  color: #4a4a4a;
+  font-size: 0.98rem;
+  line-height: 1.62;
+}
+
+.faq-detail-section-body p {
+  margin: 0 0 0.9rem;
+}
+
+.faq-detail-section-body p:last-child {
+  margin-bottom: 0;
+}
+
+.faq-detail-paragraph-compact {
+  margin-bottom: 0.4rem;
+}
+
+.faq-detail-ordered-list,
+.faq-detail-list {
+  margin: 0 0 0.9rem 1.45rem;
+  padding: 0;
+}
+
+.faq-detail-ordered-list li,
+.faq-detail-list li {
+  margin-bottom: 0.6rem;
+}
+
+.faq-detail-ordered-list li::marker {
+  font-weight: 700;
+}
+
+.faq-detail-address {
+  margin: 0 0 0.9rem;
+  color: #4a4a4a;
+  font-size: 0.98rem;
+  font-style: normal;
+  line-height: 1.6;
+}
+
+.faq-detail-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.55rem;
+}
+
+.faq-detail-links a {
+  color: #284162;
+  text-decoration: underline;
+}
+
+.faq-detail-links a:hover,
+.faq-detail-links a:focus {
+  color: #1f334e;
+}
+
+.faq-detail-date-modified {
+  color: #3d3d3d;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-top: 2.75rem;
+}
+
 .overview-page,
 .contact-info-page {
   width: 100%;
@@ -978,6 +1167,14 @@ html, body, #root {
     line-height: 1.55;
   }
 
+  .faq-detail-page {
+    padding: 2rem 1rem 0;
+  }
+
+  .faq-detail-shell {
+    max-width: none;
+  }
+
   .overview-page,
   .contact-info-page,
   .statistics-page {
@@ -1093,6 +1290,38 @@ html, body, #root {
 
   .faq-page-title {
     margin-bottom: 2.5rem;
+  }
+
+  .faq-detail-title {
+    margin-bottom: 1.6rem;
+  }
+
+  .faq-detail-title h1 {
+    font-size: 2.35rem;
+    line-height: 1.12;
+  }
+
+  .faq-detail-nav-grid {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .faq-detail-section {
+    padding: 1.6rem 0;
+  }
+
+  .faq-detail-section-title h2 {
+    font-size: 1.45rem;
+  }
+
+  .faq-detail-section-body {
+    font-size: 0.98rem;
+    line-height: 1.6;
+  }
+
+  .faq-detail-date-modified {
+    margin-top: 2.5rem;
   }
 
   .faq-section {
@@ -1211,6 +1440,10 @@ html, body, #root {
 
 @media (min-width: 769px) and (max-width: 1080px) {
   .faq-link-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .faq-detail-nav-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
