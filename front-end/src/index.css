@@ -1187,6 +1187,9 @@ html, body, #root {
   .page-sign-in-link,
   .faq-sign-in-link {
     min-height: 2.5rem;
+    order: -1;
+    align-self: flex-end;
+    margin-right: 1rem;
   }
 
   .contact-info-page gcds-heading {
