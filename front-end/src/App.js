@@ -991,9 +991,6 @@ useEffect(() => {
             </div>
             <gcds-grid
               class="faq-detail-nav-grid"
-              columns="1"
-              columns-tablet="6"
-              columns-desktop="12"
               gap="200"
               tag="div"
             >
