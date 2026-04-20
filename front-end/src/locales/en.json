@@ -117,7 +117,7 @@
 					"links": [
 						{
 							"label": "Loan Repayment",
-							"href": "#"
+							"href": "/en/faq/financial-institution-loan-repayment.html"
 						}
 					]
 				},
@@ -847,6 +847,93 @@
 									{"type": "paragraph", "compact": true, "content": "The amount of interest accrued during the month that was impacted by a transaction to best display how the closing balance is calculated."},
 									{"type": "paragraph", "content": [{"strong": true, "text": "Refund"}]},
 									{"type": "paragraph", "compact": true, "content": "A transaction returning to the Loan Holder an overpayment of the total loan balance."}
+								]
+							}
+						]
+					}
+				}
+			},
+			"unassigned": {
+				"sectionTitle": "Loan Is With Financial Institution",
+				"portalCtaLabel": "Sign in",
+				"pages": {
+					"financial-institution-loan-repayment": {
+						"tabLabel": "Loan Repayment",
+						"breadcrumbLabel": "Loan Repayment to a Financial Institution",
+						"titleSuffix": "Loan Repayment",
+						"pageTitle": "Loan Is With Financial Institution - Loan Repayment",
+						"dateModified": "Date modified: 2026-01-21",
+						"sections": [
+							{
+								"id": "financial-institution-loan-repayment-interest",
+								"heading": "How much interest will I be paying on my CEBA Loan?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "Eligible CEBA Loans that remain outstanding are now non-amortizing term loans with full principal repayment due on December 31, 2026."
+									},
+									{
+										"type": "paragraph",
+										"content": "If your CEBA Loan remained outstanding after January 18, 2024, interest at a rate of 5% per annum applies to your outstanding balance starting January 19, 2024."
+									}
+								]
+							},
+							{
+								"id": "financial-institution-loan-repayment-dispute",
+								"heading": "Can I raise a dispute to change my repayment terms?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "All program eligibility determinations, application outcomes and repayment deadlines are now final and cannot be changed. No organization involved in administering the CEBA Program has the authority to grant exceptions to the CEBA eligibility criteria, including your financial institution."
+									}
+								]
+							},
+							{
+								"id": "financial-institution-loan-repayment-business-closure",
+								"heading": "If I am about to close my business, do I still have to repay my CEBA Loan?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "Yes, you are required to repay your CEBA Loan, even if you close your business."
+									},
+									{
+										"type": "paragraph",
+										"content": "For all questions pertaining to the details of your loan (i.e., the loan balance, process for repayment, or other loan account details), please contact your financial institution."
+									}
+								]
+							},
+							{
+								"id": "financial-institution-loan-repayment-specific-questions",
+								"heading": "I have specific questions about my loan, who should I contact?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "Given your loan has not been assigned to the CEBA Program, please contact your financial institution if you have specific questions. Below is a non-exhaustive list of the topics your financial institution can assist you with regarding your CEBA Loan:"
+									},
+									{
+										"type": "unordered-list",
+										"items": [
+											"Loan details & balance(s)",
+											"Making payments and payment methods",
+											"How payments are applied",
+											"Changes to your contact details",
+											"Other changes to your business"
+										]
+									}
+								]
+							},
+							{
+								"id": "financial-institution-loan-repayment-default",
+								"heading": "What happens if I cannot repay my loan by the deadline provided in my repayment terms?",
+								"blocks": [
+									{
+										"type": "paragraph",
+										"content": "If you are unable to repay your CEBA Loan when due (regardless of whether or not you are eligible for the loan you received), your financial institution will contact you to request a lump sum repayment of the outstanding debt. If, at that point, you do not fully repay your CEBA Loan to your financial institution, your financial institution will likely be required to assign your loan to the government's CEBA Program for collection efforts."
+									},
+									{
+										"type": "paragraph",
+										"content": "The CEBA Program will manage the collection of assigned CEBA Loans in default, in which case you will be contacted directly. If you are unable to repay by the provided deadline, the Canada Revenue Agency (CRA), who is assisting with the collection of CEBA Loans in default, may review your circumstances on a case-by-case basis and work with you to establish a payment arrangement/repayment plan tailored to your ability to repay."
+									}
 								]
 							}
 						]

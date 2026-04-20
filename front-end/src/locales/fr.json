@@ -118,7 +118,7 @@
           "links": [
             {
               "label": "Remboursement du prêt",
-              "href": "#"
+              "href": "/fr/faq/remboursement-du-pret-institution-financiere.html"
             }
           ]
         },
@@ -853,6 +853,93 @@
                   {"type": "paragraph", "compact": true, "content": "Le montant des intérêts courus au cours du mois qui a été touché par une transaction afin d’afficher plus clairement comment le solde de clôture est calculé."},
                   {"type": "paragraph", "content": [{"strong": true, "text": "Remboursement"}]},
                   {"type": "paragraph", "compact": true, "content": "Une transaction qui rapporte au Titulaire du prêt un trop-perçu du solde total du prêt."}
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "unassigned": {
+        "sectionTitle": "Le prêt est avec l’institution financière",
+        "portalCtaLabel": "Se connecter",
+        "pages": {
+          "financial-institution-loan-repayment": {
+            "tabLabel": "Remboursement du prêt",
+            "breadcrumbLabel": "Remboursement du prêt à une institution financière",
+            "titleSuffix": "Remboursement du prêt",
+            "pageTitle": "Le prêt est avec l'institution financière - Remboursement du prêt",
+            "dateModified": "Date de modification : 2026-01-21",
+            "sections": [
+              {
+                "id": "financial-institution-loan-repayment-interest",
+                "heading": "Quel est le montant des intérêts que je paierai sur mon prêt du CUEC ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "Les prêts du CUEC éligibles qui demeurent impayés sont maintenant des prêts à terme non amortissables dont le montant total du capital est dû le 31 décembre 2026."
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": "Si votre prêt du CUEC est demeuré impayé après le 18 janvier 2024, des intérêts au taux de 5 % par année s'appliqueront à votre prêt depuis le 19 janvier 2024."
+                  }
+                ]
+              },
+              {
+                "id": "financial-institution-loan-repayment-dispute",
+                "heading": "Puis-je contester mes conditions de remboursement ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "Toutes les décisions relatives à l'admissibilité au programme, les résultats des demandes et les dates limites de remboursement sont maintenant définitifs et ne peuvent pas être modifiés. Aucun organisme participant à l'administration du CUEC n'a le pouvoir d'accorder des exceptions aux critères d'admissibilité du CUEC, y compris votre institution financière."
+                  }
+                ]
+              },
+              {
+                "id": "financial-institution-loan-repayment-business-closure",
+                "heading": "Si je suis sur le point de fermer mon entreprise, dois-je quand même rembourser mon prêt du CUEC ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "Oui, vous êtes tenus de rembourser votre prêt du CUEC en totalité, même si votre entreprise n'opère plus."
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": "Pour toute question concernant les détails de votre prêt (c'est-à-dire le solde du prêt, le processus de remboursement ou d'autres détails du compte de prêt), veuillez communiquer avec votre institution financière."
+                  }
+                ]
+              },
+              {
+                "id": "financial-institution-loan-repayment-specific-questions",
+                "heading": "J'ai des questions spécifiques sur mon prêt, à qui dois-je m'adresser ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "Étant donné que votre prêt n'a pas été cédé au programme du CUEC, veuillez communiquer avec votre institution financière si vous avez des questions particulières. Vous trouverez ci-dessous une liste non exhaustive des sujets sur lesquels votre institution financière peut vous aider en ce qui concerne votre prêt du CUEC :"
+                  },
+                  {
+                    "type": "unordered-list",
+                    "items": [
+                      "Détails du prêt et solde(s)",
+                      "Effectuer des paiements et des méthodes de paiement",
+                      "Comment les paiements sont appliqués",
+                      "Modifications apportées à vos coordonnées",
+                      "Autres changements apportés à votre entreprise"
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "financial-institution-loan-repayment-default",
+                "heading": "Que se passe-t-il si je ne peux pas rembourser mon prêt dans les délais prévus dans mon entente de paiement ?",
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "content": "Si vous n'êtes pas en mesure de rembourser votre prêt du CUEC à l'échéance (que vous soyez admissible ou non au prêt que vous avez reçu), votre institution financière communiquera avec vous pour vous demander un remboursement forfaitaire de la dette impayée. Si, à ce moment-là, vous ne remboursez pas entièrement votre prêt du CUEC à votre institution financière, celle-ci sera probablement tenue de céder votre prêt au programme du CUEC aux fins de recouvrement."
+                  },
+                  {
+                    "type": "paragraph",
+                    "content": "Le programme du CUEC gérera le recouvrement des prêts en souffrance cédés au titre du CUEC, auquel cas vous serez contacté directement. Si vous n'êtes pas en mesure de rembourser dans le délai imparti, l'Agence du revenu du Canada (ARC), qui aide au recouvrement des prêts en défaut du CUEC, peut examiner votre situation au cas par cas et travailler avec vous pour établir une entente de paiement ou un plan de remboursement adapté à votre capacité de remboursement."
+                  }
                 ]
               }
             ]
