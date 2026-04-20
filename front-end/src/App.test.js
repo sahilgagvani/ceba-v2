@@ -53,6 +53,18 @@ describe('App page rendering', () => {
     expect(screen.getByText(/Loan Assignment/i)).toBeInTheDocument();
     expect(screen.getAllByText(/Loan Repayment/i)).toHaveLength(2);
     expect(screen.getByText(/Statements of Account/i)).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /^loan assignment$/i })).toHaveAttribute(
+      'href',
+      '/en/faq/ceba-loan-assignment.html'
+    );
+    expect(screen.getAllByRole('link', { name: /^loan repayment$/i })[0]).toHaveAttribute(
+      'href',
+      '/en/faq/ceba-loan-repayment.html'
+    );
+    expect(screen.getAllByRole('link', { name: /^loan repayment$/i })[1]).toHaveAttribute(
+      'href',
+      '/en/faq/financial-institution-loan-repayment.html'
+    );
     expect(screen.getByRole('link', { name: /^sign in$/i })).toHaveAttribute(
       'href',
       'https://account-compte.ceba-cuec.ca/borrower/account-compte/sign-in-identifier'
@@ -67,6 +79,8 @@ describe('App page rendering', () => {
     expect(breadcrumbLinks[0]).toHaveAttribute('href', '/en/overview.html');
     expect(breadcrumbLinks[1]).toHaveTextContent(/^faq$/i);
     expect(breadcrumbLinks[1]).toHaveAttribute('href', '/en/faq.html');
+    expect(container.querySelector('gcds-container#main-content')).toBeInTheDocument();
+    expect(container.querySelector('main.faq-detail-main#main-content')).not.toBeInTheDocument();
     expect(
       container.querySelector('.custom-top-nav .nav-link.active')
     ).toHaveTextContent(/^faq$/i);
@@ -93,6 +107,18 @@ describe('App page rendering', () => {
     expect(screen.getByText(/Cession de prêt/i)).toBeInTheDocument();
     expect(screen.getAllByText(/Remboursement du prêt/i)).toHaveLength(2);
     expect(screen.getByText(/Admissibilité \(fermé\)/i)).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /^cession de prêt$/i })).toHaveAttribute(
+      'href',
+      '/fr/faq/cession-de-pret-cuec.html'
+    );
+    expect(screen.getAllByRole('link', { name: /^remboursement du prêt$/i })[0]).toHaveAttribute(
+      'href',
+      '/fr/faq/remboursement-du-pret-cuec.html'
+    );
+    expect(screen.getAllByRole('link', { name: /^remboursement du prêt$/i })[1]).toHaveAttribute(
+      'href',
+      '/fr/faq/remboursement-du-pret-institution-financiere.html'
+    );
     expect(screen.getByRole('link', { name: /se connecter/i })).toHaveAttribute(
       'href',
       'https://account-compte.ceba-cuec.ca/borrower/account-compte/sign-in-identifier/fr'
@@ -112,6 +138,177 @@ describe('App page rendering', () => {
     expect(
       container.querySelector('.custom-top-nav .nav-link.active')
     ).toHaveTextContent(/foires aux questions/i);
+  });
+
+  test('renders faq detail scaffold at /en/faq/ceba-loan-assignment.html', () => {
+    window.history.pushState({}, '', '/en/faq/ceba-loan-assignment.html');
+
+    const { container } = render(<App />);
+    const breadcrumbItems = container.querySelectorAll('.faq-detail-breadcrumbs .gc-breadcrumbs li');
+    const detailButtons = container.querySelectorAll('.faq-detail-nav-grid .faq-detail-tab');
+    const detailHeading = container.querySelector('.faq-detail-title gcds-heading');
+
+    expect(screen.queryByText(/^Frequently Asked Questions$/i)).not.toBeInTheDocument();
+    expect(detailHeading).toHaveTextContent(
+      /^Loan Assigned to CEBA Program — Loan Assignment$/i
+    );
+    expect(screen.getByText(/What does "loan assignment" mean\?/i)).toBeInTheDocument();
+    expect(screen.getByText(/^Date modified: 2026-01-21$/i)).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /^sign in$/i })).toHaveAttribute(
+      'href',
+      'https://account-compte.ceba-cuec.ca/borrower/account-compte/sign-in-identifier'
+    );
+    expect(container.querySelector('main.faq-detail-main#main-content')).toBeInTheDocument();
+    expect(container.querySelector('gcds-container#main-content')).not.toBeInTheDocument();
+    expect(breadcrumbItems).toHaveLength(3);
+    expect(breadcrumbItems[0]).toHaveTextContent(/ceba program overview/i);
+    expect(breadcrumbItems[1]).toHaveTextContent(/^faq$/i);
+    expect(breadcrumbItems[2]).toHaveTextContent(/ceba loan assignment/i);
+    expect(detailButtons).toHaveLength(6);
+    expect(detailButtons[0]).toHaveClass('faq-detail-tab-active');
+    expect(detailButtons[0]).toHaveAttribute('href', '/en/faq/ceba-loan-assignment.html');
+    expect(detailButtons[1]).not.toHaveClass('faq-detail-tab-active');
+    expect(detailButtons[5]).toHaveAttribute('href', '/en/faq/statements-of-account.html');
+    expect(
+      container.querySelector('.custom-top-nav .nav-link.active')
+    ).toHaveTextContent(/^faq$/i);
+  });
+
+  test('renders english loan repayment faq detail content', () => {
+    window.history.pushState({}, '', '/en/faq/ceba-loan-repayment.html');
+
+    const { container } = render(<App />);
+    const detailButtons = container.querySelectorAll('.faq-detail-nav-grid .faq-detail-tab');
+    const detailHeading = container.querySelector('.faq-detail-title gcds-heading');
+
+    expect(detailHeading).toHaveTextContent(
+      /^Loan Assigned to CEBA Program — Loan Repayment$/i
+    );
+    expect(
+      screen.getByText(/How do I repay my loan\? What are the payment methods\?/i)
+    ).toBeInTheDocument();
+    expect(screen.getByText(/Export Development Canada - CEBA/i)).toBeInTheDocument();
+    expect(screen.getByText(/PO Box 4530 STN A/i)).toBeInTheDocument();
+    expect(
+      screen.getByText(/How are payments applied to my assigned CEBA Loan\?/i)
+    ).toBeInTheDocument();
+    expect(screen.getByText(/Upcoming Payment Reminder/i)).toBeInTheDocument();
+    expect(screen.getByText(/Missed Payment Reminder/i)).toBeInTheDocument();
+    expect(screen.getByText(/^Date modified: 2026-01-21$/i)).toBeInTheDocument();
+    expect(container.querySelector('main.faq-detail-main#main-content')).toBeInTheDocument();
+    expect(container.querySelector('gcds-container#main-content')).not.toBeInTheDocument();
+    expect(detailButtons[1]).toHaveClass('faq-detail-tab-active');
+    expect(detailButtons[1]).toHaveAttribute('href', '/en/faq/ceba-loan-repayment.html');
+  });
+
+  test('renders english financial institution loan repayment faq detail content', () => {
+    window.history.pushState({}, '', '/en/faq/financial-institution-loan-repayment.html');
+
+    const { container } = render(<App />);
+    const breadcrumbItems = container.querySelectorAll('.faq-detail-breadcrumbs .gc-breadcrumbs li');
+    const detailButtons = container.querySelectorAll('.faq-detail-nav-grid .faq-detail-tab');
+    const detailHeading = container.querySelector('.faq-detail-title gcds-heading');
+
+    expect(detailHeading).toHaveTextContent(
+      /^Loan Is With Financial Institution - Loan Repayment$/i
+    );
+    expect(
+      screen.getByText(/How much interest will I be paying on my CEBA Loan\?/i)
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText(/Can I raise a dispute to change my repayment terms\?/i)
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText(/Loan details & balance\(s\)/i)
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText(/What happens if I cannot repay my loan by the deadline provided in my repayment terms\?/i)
+    ).toBeInTheDocument();
+    expect(screen.getByText(/^Date modified: 2026-01-21$/i)).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /^sign in$/i })).toHaveAttribute(
+      'href',
+      'https://account-compte.ceba-cuec.ca/borrower/account-compte/sign-in-identifier'
+    );
+    expect(container.querySelector('main.faq-detail-main#main-content')).toBeInTheDocument();
+    expect(detailButtons).toHaveLength(0);
+    expect(breadcrumbItems).toHaveLength(3);
+    expect(breadcrumbItems[2]).toHaveTextContent(/loan repayment to a financial institution/i);
+  });
+
+  test('renders faq detail scaffold at /fr/faq/remboursement-du-pret-cuec.html', async () => {
+    window.history.pushState({}, '', '/fr/faq/remboursement-du-pret-cuec.html');
+    await act(async () => {
+      await i18n.changeLanguage('fr');
+    });
+
+    const { container } = render(<App />);
+    const breadcrumbItems = container.querySelectorAll('.faq-detail-breadcrumbs .gc-breadcrumbs li');
+    const detailButtons = container.querySelectorAll('.faq-detail-nav-grid .faq-detail-tab');
+    const detailHeading = container.querySelector('.faq-detail-title gcds-heading');
+
+    expect(detailHeading).toHaveTextContent(
+      /^Prêt avec le programme du CUEC — Remboursement du prêt$/i
+    );
+    expect(
+      screen.getByText(/Comment puis-je rembourser mon prêt \? Quels sont les modes de paiement \?/i)
+    ).toBeInTheDocument();
+    expect(screen.getByText(/Boîte postale 4530, succursale A/i)).toBeInTheDocument();
+    expect(screen.getByText(/rappel de paiement à venir/i)).toBeInTheDocument();
+    expect(screen.getByText(/rappel de paiement en défaut/i)).toBeInTheDocument();
+    expect(screen.getByText(/^Date de modification : 2026-01-21$/i)).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /se connecter/i })).toHaveAttribute(
+      'href',
+      'https://account-compte.ceba-cuec.ca/borrower/account-compte/sign-in-identifier/fr'
+    );
+    expect(container.querySelector('main.faq-detail-main#main-content')).toBeInTheDocument();
+    expect(container.querySelector('gcds-container#main-content')).not.toBeInTheDocument();
+    expect(breadcrumbItems).toHaveLength(3);
+    expect(breadcrumbItems[0]).toHaveTextContent(/survol du programme du cuec/i);
+    expect(breadcrumbItems[1]).toHaveTextContent(/foires aux questions/i);
+    expect(breadcrumbItems[2]).toHaveTextContent(/remboursement du prêt du cuec/i);
+    expect(detailButtons).toHaveLength(6);
+    expect(detailButtons[1]).toHaveClass('faq-detail-tab-active');
+    expect(detailButtons[1]).toHaveAttribute('href', '/fr/faq/remboursement-du-pret-cuec.html');
+    expect(
+      container.querySelector('.custom-top-nav .nav-link.active')
+    ).toHaveTextContent(/foires aux questions/i);
+  });
+
+  test('renders french financial institution loan repayment faq detail content', async () => {
+    window.history.pushState({}, '', '/fr/faq/remboursement-du-pret-institution-financiere.html');
+    await act(async () => {
+      await i18n.changeLanguage('fr');
+    });
+
+    const { container } = render(<App />);
+    const breadcrumbItems = container.querySelectorAll('.faq-detail-breadcrumbs .gc-breadcrumbs li');
+    const detailButtons = container.querySelectorAll('.faq-detail-nav-grid .faq-detail-tab');
+    const detailHeading = container.querySelector('.faq-detail-title gcds-heading');
+
+    expect(detailHeading).toHaveTextContent(
+      /^Le prêt est avec l'institution financière - Remboursement du prêt$/i
+    );
+    expect(
+      screen.getByText(/Quel est le montant des intérêts que je paierai sur mon prêt du CUEC \?/i)
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText(/Puis-je contester mes conditions de remboursement \?/i)
+    ).toBeInTheDocument();
+    expect(screen.getByText(/Détails du prêt et solde\(s\)/i)).toBeInTheDocument();
+    expect(
+      screen.getByText(/Que se passe-t-il si je ne peux pas rembourser mon prêt dans les délais prévus dans mon entente de paiement \?/i)
+    ).toBeInTheDocument();
+    expect(screen.getByText(/^Date de modification : 2026-01-21$/i)).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /se connecter/i })).toHaveAttribute(
+      'href',
+      'https://account-compte.ceba-cuec.ca/borrower/account-compte/sign-in-identifier/fr'
+    );
+    expect(container.querySelector('main.faq-detail-main#main-content')).toBeInTheDocument();
+    expect(detailButtons).toHaveLength(0);
+    expect(breadcrumbItems).toHaveLength(3);
+    expect(breadcrumbItems[2]).toHaveTextContent(
+      /remboursement du prêt à une institution financière/i
+    );
   });
 
   test('renders overview content at /en/overview.html', () => {
@@ -242,6 +439,38 @@ describe('App page rendering', () => {
 
     expect(
       screen.getByRole('heading', { level: 1, name: /statistiques régionales sur le cuec/i })
+    ).toBeInTheDocument();
+  });
+
+  test('changes faq detail language toggle path from english to french', async () => {
+    window.history.pushState({}, '', '/en/faq/ceba-loan-assignment.html');
+
+    render(<App />);
+
+    fireEvent.click(screen.getByRole('button', { name: 'Français' }));
+
+    await waitFor(() => {
+      expect(window.location.pathname).toBe('/fr/faq/cession-de-pret-cuec.html');
+    });
+
+    expect(
+      await screen.findByText(/^Prêt cédé au programme du CUEC — Cession de prêt$/i)
+    ).toBeInTheDocument();
+  });
+
+  test('changes financial institution faq detail language toggle path from english to french', async () => {
+    window.history.pushState({}, '', '/en/faq/financial-institution-loan-repayment.html');
+
+    render(<App />);
+
+    fireEvent.click(screen.getByRole('button', { name: 'Français' }));
+
+    await waitFor(() => {
+      expect(window.location.pathname).toBe('/fr/faq/remboursement-du-pret-institution-financiere.html');
+    });
+
+    expect(
+      await screen.findByText(/^Le prêt est avec l'institution financière - Remboursement du prêt$/i)
     ).toBeInTheDocument();
   });
 

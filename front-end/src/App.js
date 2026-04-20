@@ -6,15 +6,95 @@ import { useTranslation } from "react-i18next";
 import ErrorBanner from "./components/ErrorBanner";
 import MailFailBanner from "./components/MailFailBanner";
 
+const FAQ_DETAIL_ROUTE_ENTRIES = [
+  {
+    key: "loan-assignment",
+    section: "assigned",
+    localeKey: "loan-assignment",
+    en: "/en/faq/ceba-loan-assignment.html",
+    fr: "/fr/faq/cession-de-pret-cuec.html",
+  },
+  {
+    key: "loan-repayment",
+    section: "assigned",
+    localeKey: "loan-repayment",
+    en: "/en/faq/ceba-loan-repayment.html",
+    fr: "/fr/faq/remboursement-du-pret-cuec.html",
+  },
+  {
+    key: "payment-arrangements",
+    section: "assigned",
+    localeKey: "payment-arrangements",
+    en: "/en/faq/payment-arrangements.html",
+    fr: "/fr/faq/modalites-de-paiement.html",
+  },
+  {
+    key: "changes-to-my-business",
+    section: "assigned",
+    localeKey: "changes-to-my-business",
+    en: "/en/faq/changes-to-my-business.html",
+    fr: "/fr/faq/changements-apportes-a-mon-entreprise.html",
+  },
+  {
+    key: "ceba-portal-account",
+    section: "assigned",
+    localeKey: "ceba-portal-account",
+    en: "/en/faq/ceba-portal-account.html",
+    fr: "/fr/faq/compte-sur-le-portail-du-cuec.html",
+  },
+  {
+    key: "statements-of-account",
+    section: "assigned",
+    localeKey: "statements-of-account",
+    en: "/en/faq/statements-of-account.html",
+    fr: "/fr/faq/releves-de-compte.html",
+  },
+  {
+    key: "financial-institution-loan-repayment",
+    section: "unassigned",
+    localeKey: "financial-institution-loan-repayment",
+    en: "/en/faq/financial-institution-loan-repayment.html",
+    fr: "/fr/faq/remboursement-du-pret-institution-financiere.html",
+  },
+  {
+    key: "refinancing-and-forgiveness",
+    section: "archive",
+    localeKey: "refinancing-and-forgiveness",
+    en: "/en/faq/refinancing-and-forgiveness.html",
+    fr: "/fr/faq/refinancement-et-remise-de-pret.html",
+  },
+  {
+    key: "eligibility-closed",
+    section: "archive",
+    localeKey: "eligibility-closed",
+    en: "/en/faq/eligibility-closed.html",
+    fr: "/fr/faq/admissibilite.html",
+  },
+];
+
+const FAQ_DETAIL_ROUTES = FAQ_DETAIL_ROUTE_ENTRIES.reduce((acc, route) => {
+  acc[route.key] = route;
+  return acc;
+}, {});
+
+const FAQ_DETAIL_PATHS = FAQ_DETAIL_ROUTE_ENTRIES.reduce((acc, route) => {
+  acc[route.en] = route.key;
+  acc[route.fr] = route.key;
+  return acc;
+}, {});
+
 const getCurrentPath = () => {
   if (typeof window === "undefined") return "/";
   return (window.location?.pathname || "/").toLowerCase();
 };
 
-const getPageType = (path) => {
-  // Root paths should show the overview page
-  if (path === "/" || path === "/en" || path === "/fr") {
-    return "overview";
+const getRouteContext = (path) => {
+  const faqDetailKey = FAQ_DETAIL_PATHS[path];
+  if (faqDetailKey) {
+    return {
+      pageType: "faq-detail",
+      faqDetailKey,
+    };
   }
 
   if (
@@ -23,7 +103,10 @@ const getPageType = (path) => {
     path === "/faq" ||
     path.endsWith("/faq")
   ) {
-    return "faq";
+    return {
+      pageType: "faq",
+      faqDetailKey: null,
+    };
   }
 
   if (
@@ -36,7 +119,10 @@ const getPageType = (path) => {
     path === "/statistiques" ||
     path.endsWith("/statistiques")
   ) {
-    return "statistics";
+    return {
+      pageType: "statistics",
+      faqDetailKey: null,
+    };
   }
 
   if (
@@ -49,7 +135,10 @@ const getPageType = (path) => {
     path === "/survol" ||
     path.endsWith("/survol")
   ) {
-    return "overview";
+    return {
+      pageType: "overview",
+      faqDetailKey: null,
+    };
   }
 
   if (
@@ -62,19 +151,19 @@ const getPageType = (path) => {
     path === "/coordonnees" ||
     path.endsWith("/coordonnees")
   ) {
-    return "contact-info";
+    return {
+      pageType: "contact-info",
+      faqDetailKey: null,
+    };
   }
 
-  return "contact-form";
+  return {
+    pageType: "contact-form",
+    faqDetailKey: null,
+  };
 };
 
-const getBlankPageHeadingKey = (pageType) => {
-  if (pageType === "overview") return "form.overview-title";
-  if (pageType === "contact-info") return "form.contact-info-title";
-  return null;
-};
-
-const getBlankPageBreadcrumbItems = (pageType, t) => {
+const getBlankPageBreadcrumbItems = (pageType, t, currentDetailPage = null, currentDetailPath = "") => {
   const overviewItem = {
     href: t("form.breadcrumb-link1"),
     label: t("form.breadcrumb-label1"),
@@ -88,6 +177,24 @@ const getBlankPageBreadcrumbItems = (pageType, t) => {
       {
         href: t("form.nav-link2"),
         label: t("form.nav-label2"),
+      },
+    ];
+  }
+
+  if (pageType === "faq-detail") {
+    return [
+      overviewItem,
+      {
+        href: t("form.nav-link2"),
+        label: t("form.nav-label2"),
+      },
+      {
+        href: currentDetailPath,
+        label:
+          currentDetailPage?.breadcrumbLabel ||
+          currentDetailPage?.tabLabel ||
+          "",
+        current: true,
       },
     ];
   }
@@ -138,8 +245,13 @@ const LOCALIZED_PATHS = {
   },
 };
 
-const getLocalizedPath = (pageType, language) =>
-  LOCALIZED_PATHS[pageType]?.[language] || `/${language}`;
+const getLocalizedPath = (routeContext, language) => {
+  if (routeContext.pageType === "faq-detail" && routeContext.faqDetailKey) {
+    return FAQ_DETAIL_ROUTES[routeContext.faqDetailKey]?.[language] || `/${language}`;
+  }
+
+  return LOCALIZED_PATHS[routeContext.pageType]?.[language] || `/${language}`;
+};
 
 function App() {
   const [recaptchaConfig, setRecaptchaConfig] = useState({
@@ -238,15 +350,16 @@ const formatTelephoneNumber = (value) => {
 
   const { t, i18n } = useTranslation();
   const currentPath = getCurrentPath();
-  const pageType = getPageType(currentPath);
-  const isFaqPage = pageType === "faq";
+  const routeContext = getRouteContext(currentPath);
+  const { pageType, faqDetailKey } = routeContext;
+  const isFaqLandingPage = pageType === "faq";
+  const isFaqDetailPage = pageType === "faq-detail";
+  const isFaqNavActive = isFaqLandingPage || isFaqDetailPage;
   const isStatisticsPage = pageType === "statistics";
   const isOverviewPage = pageType === "overview";
   const isContactInfoPage = pageType === "contact-info";
   const isOverviewNavActive = isOverviewPage || isStatisticsPage;
   const isContactNavActive = pageType === "contact-form" || isContactInfoPage;
-  const blankPageHeadingKey = getBlankPageHeadingKey(pageType);
-  const blankPageBreadcrumbItems = getBlankPageBreadcrumbItems(pageType, t);
   const faqPageTitle = t("form.faq.pageTitle");
   const faqPortalCtaLabel = t("form.faq.portalCtaLabel");
   const faqPortalUrl = t("form.intro02.link");
@@ -262,6 +375,94 @@ const formatTelephoneNumber = (value) => {
       links: isSectionObject && Array.isArray(section.links) ? section.links : [],
     };
   });
+  const currentFaqDetailRoute =
+    faqDetailKey &&
+    FAQ_DETAIL_ROUTES[faqDetailKey] &&
+    typeof FAQ_DETAIL_ROUTES[faqDetailKey] === "object"
+      ? FAQ_DETAIL_ROUTES[faqDetailKey]
+      : null;
+  const faqDetailSectionKey =
+    currentFaqDetailRoute && typeof currentFaqDetailRoute.section === "string"
+      ? currentFaqDetailRoute.section
+      : "assigned";
+  const faqDetailSection = t(`form.faqDetail.${faqDetailSectionKey}`, { returnObjects: true });
+  const isFaqDetailSectionObject =
+    faqDetailSection && typeof faqDetailSection === "object" && !Array.isArray(faqDetailSection);
+  const faqDetailPages =
+    isFaqDetailSectionObject &&
+    faqDetailSection.pages &&
+    typeof faqDetailSection.pages === "object" &&
+    !Array.isArray(faqDetailSection.pages)
+      ? faqDetailSection.pages
+      : {};
+  const faqDetailSectionTitle =
+    isFaqDetailSectionObject && typeof faqDetailSection.sectionTitle === "string"
+      ? faqDetailSection.sectionTitle
+      : "";
+  const faqDetailPortalCtaLabel =
+    isFaqDetailSectionObject && typeof faqDetailSection.portalCtaLabel === "string"
+      ? faqDetailSection.portalCtaLabel
+      : faqPortalCtaLabel;
+  const faqDetailPage =
+    isFaqDetailPage &&
+    faqDetailKey &&
+    faqDetailPages[faqDetailKey] &&
+    typeof faqDetailPages[faqDetailKey] === "object" &&
+    !Array.isArray(faqDetailPages[faqDetailKey])
+      ? faqDetailPages[faqDetailKey]
+      : null;
+  const faqDetailTitleSuffix =
+    faqDetailPage && typeof faqDetailPage.titleSuffix === "string"
+      ? faqDetailPage.titleSuffix
+      : faqDetailPage && typeof faqDetailPage.tabLabel === "string"
+        ? faqDetailPage.tabLabel
+        : "";
+  const faqDetailPageTitle =
+    faqDetailPage && typeof faqDetailPage.pageTitle === "string"
+      ? faqDetailPage.pageTitle
+      : (faqDetailPage && typeof faqDetailPage.titlePrefix === "string"
+          ? faqDetailPage.titlePrefix
+          : faqDetailSectionTitle) && faqDetailTitleSuffix
+        ? `${
+            faqDetailPage && typeof faqDetailPage.titlePrefix === "string"
+              ? faqDetailPage.titlePrefix
+              : faqDetailSectionTitle
+          } — ${faqDetailTitleSuffix}`
+        : (faqDetailPage && typeof faqDetailPage.titlePrefix === "string"
+            ? faqDetailPage.titlePrefix
+            : faqDetailSectionTitle) || faqDetailTitleSuffix;
+  const faqDetailDateModified =
+    faqDetailPage && typeof faqDetailPage.dateModified === "string"
+      ? faqDetailPage.dateModified
+      : "";
+  const faqDetailSections =
+    faqDetailPage && Array.isArray(faqDetailPage.sections) ? faqDetailPage.sections : [];
+  const faqDetailTabs = FAQ_DETAIL_ROUTE_ENTRIES.filter(
+    (route) => route.section === faqDetailSectionKey
+  ).map((route) => {
+    const localizedPage =
+      faqDetailPages[route.localeKey] &&
+      typeof faqDetailPages[route.localeKey] === "object" &&
+      !Array.isArray(faqDetailPages[route.localeKey])
+        ? faqDetailPages[route.localeKey]
+        : {};
+
+    return {
+      key: route.key,
+      href: route[i18n.language] || route.en,
+      label:
+        typeof localizedPage.tabLabel === "string"
+          ? localizedPage.tabLabel
+          : route.key,
+      current: route.key === faqDetailKey,
+    };
+  });
+  const blankPageBreadcrumbItems = getBlankPageBreadcrumbItems(
+    pageType,
+    t,
+    faqDetailPage,
+    currentPath
+  );
   const contactInfo = t("form.contactInfo", { returnObjects: true });
   const isContactInfoObject =
     contactInfo && typeof contactInfo === "object" && !Array.isArray(contactInfo);
@@ -345,12 +546,20 @@ const formatTelephoneNumber = (value) => {
     );
   };
 
-  const renderOverviewRichText = (content) => {
+  const renderRichText = (content) => {
     if (typeof content === "string") return content;
     if (!Array.isArray(content)) return null;
 
     return content.map((fragment, index) => {
+      if (typeof fragment === "string") {
+        return <React.Fragment key={`fragment-${fragment}-${index}`}>{fragment}</React.Fragment>;
+      }
+
       if (!fragment || typeof fragment !== "object") return null;
+
+      if (fragment.strong) {
+        return <strong key={`${fragment.text || "strong"}-${index}`}>{fragment.text}</strong>;
+      }
 
       if (fragment.href) {
         return (
@@ -360,13 +569,97 @@ const formatTelephoneNumber = (value) => {
         );
       }
 
-      return <React.Fragment key={`${fragment.text || "fragment"}-${index}`}>{fragment.text}</React.Fragment>;
+      return (
+        <React.Fragment key={`${fragment.text || "fragment"}-${index}`}>
+          {fragment.text}
+        </React.Fragment>
+      );
     });
+  };
+
+  const renderOverviewRichText = (content) => renderRichText(content);
+
+  const renderFaqDetailBlock = (block, sectionId, blockIndex) => {
+    if (!block || typeof block !== "object") return null;
+
+    if (block.type === "paragraph") {
+      return (
+        <p
+          key={`${sectionId}-paragraph-block-${blockIndex}`}
+          className={block.compact ? "faq-detail-paragraph-compact" : undefined}
+        >
+          {renderRichText(block.content)}
+        </p>
+      );
+    }
+
+    if (block.type === "ordered-list") {
+      const items = Array.isArray(block.items) ? block.items : [];
+
+      return (
+        <ol
+          key={`${sectionId}-ordered-list-${blockIndex}`}
+          className="faq-detail-ordered-list"
+          start={block.start}
+        >
+          {items.map((item, itemIndex) => (
+            <li key={`${sectionId}-ordered-item-${blockIndex}-${itemIndex}`}>
+              {renderRichText(item)}
+            </li>
+          ))}
+        </ol>
+      );
+    }
+
+    if (block.type === "unordered-list") {
+      const items = Array.isArray(block.items) ? block.items : [];
+
+      return (
+        <ul key={`${sectionId}-unordered-list-${blockIndex}`} className="faq-detail-list">
+          {items.map((item, itemIndex) => (
+            <li key={`${sectionId}-unordered-item-${blockIndex}-${itemIndex}`}>
+              {renderRichText(item)}
+            </li>
+          ))}
+        </ul>
+      );
+    }
+
+    if (block.type === "address") {
+      const lines = Array.isArray(block.lines) ? block.lines : [];
+
+      return (
+        <address key={`${sectionId}-address-${blockIndex}`} className="faq-detail-address">
+          {lines.map((line, lineIndex) => (
+            <div key={`${sectionId}-address-line-${blockIndex}-${lineIndex}`}>{line}</div>
+          ))}
+        </address>
+      );
+    }
+
+    if (block.type === "links") {
+      const links = Array.isArray(block.items) ? block.items : [];
+
+      return (
+        <div key={`${sectionId}-links-${blockIndex}`} className="faq-detail-links">
+          {links.map((link, linkIndex) => (
+            <a
+              key={`${link.href || link.text || "faq-link"}-${blockIndex}-${linkIndex}`}
+              href={link.href}
+            >
+              {link.text}
+            </a>
+          ))}
+        </div>
+      );
+    }
+
+    return null;
   };
 
   const handleLanguageToggle = () => {
     const targetLanguage = i18n.language === "en" ? "fr" : "en";
-    const targetPath = getLocalizedPath(pageType, targetLanguage);
+    const targetPath = getLocalizedPath(routeContext, targetLanguage);
 
     if (typeof window !== "undefined" && window.location.pathname !== targetPath) {
       window.history.pushState({}, "", targetPath);
@@ -407,7 +700,9 @@ const formatTelephoneNumber = (value) => {
 
 useEffect(() => {
 
-  document.title = isFaqPage
+  document.title = isFaqDetailPage
+    ? `CEBA ${faqDetailPageTitle || t("form.nav-label2")}`
+    : isFaqLandingPage
     ? `CEBA ${t("form.nav-label2")}`
     : isStatisticsPage
       ? `CEBA ${statisticsTitle}`
@@ -435,15 +730,19 @@ useEffect(() => {
 
 
   const el = radiosRef.current;
-  if (!el) return;
+  if (!el) {
+    return () => {
+      header.removeEventListener("click", onClick, true);
+    };
+  }
   const handler = (e) => {
     const value = e.detail;
     setContactMethod(value);
   };
   el.addEventListener("gcdsChange", handler);
-  return () => {
-    el.removeEventListener("gcdsChange", handler);
-    header.removeEventListener("click", onClick, true);
+    return () => {
+      el.removeEventListener("gcdsChange", handler);
+      header.removeEventListener("click", onClick, true);
   }
 }); 
 
@@ -468,28 +767,6 @@ useEffect(() => {
     confirmTelephone.trim() &&
     normalizePhone(telephone) !== normalizePhone(confirmTelephone);
 
-  const requiredBasicsFilled =
-    firstName.trim() &&
-    lastName.trim() &&
-    businessName.trim() &&
-    contactMethod &&
-    (contactMethod === "contact-telephone" ? contactTime : true) &&
-    reason &&
-    (
-      (reason === "ceba-id-recovery" || reason === "other")
-        ? businessNumber.trim()
-        : cebaID.trim()
-    ) &&
-    message.trim();
-
-  const channelFieldsFilled =
-    contactMethod === "contact-email"
-      ? email.trim() && confirmEmail.trim()
-      : contactMethod === "contact-telephone"
-        ? telephone.trim() && confirmTelephone.trim()
-        : false;
-
-  const hasEmptyRequiredFields = !(requiredBasicsFilled && channelFieldsFilled);
   const disableEmailButton =
     emailSending || (recaptchaConfig.hasRecaptcha && !captchaVerified);
 
@@ -651,7 +928,7 @@ useEffect(() => {
             </a>
             <a
               href={t("form.nav-link2")}
-              className={`nav-link ${isFaqPage ? "active" : ""}`}
+              className={`nav-link ${isFaqNavActive ? "active" : ""}`}
               onClick={() => setIsNavOpen(false)}
             >
               {t("form.nav-label2")}
@@ -666,10 +943,120 @@ useEffect(() => {
           </div>
         </nav>
 
+      {isFaqDetailPage && (
+        <main id="main-content" className="faq-detail-main">
+          <div className="faq-detail-page">
+            <div className="faq-detail-shell">
+              <div className="faq-page-topbar">
+                <div className="faq-detail-breadcrumbs">
+                  <nav aria-label="Breadcrumb" className="gc-breadcrumbs">
+                    <ol>
+                      {blankPageBreadcrumbItems.map((item) => (
+                        <li key={`${item.href}-${item.label}`}>
+                          {item.current ? (
+                            <span aria-current="page">{item.label}</span>
+                          ) : (
+                            <a href={item.href}>{item.label}</a>
+                          )}
+                        </li>
+                      ))}
+                    </ol>
+                  </nav>
+                </div>
+                <a href={faqPortalUrl} className="faq-sign-in-link">
+                  {faqDetailPortalCtaLabel}
+                </a>
+              </div>
+              <div className="faq-detail-title">
+                <gcds-heading tag="h1" level="1" character-limit="false">
+                  {faqDetailPageTitle}
+                </gcds-heading>
+              </div>
+              {faqDetailTabs.length > 1 && (
+                <div className={`faq-detail-nav-grid${faqDetailTabs.length === 2 ? " faq-detail-nav-grid--cols-2" : ""}`}>
+                  {faqDetailTabs.map((tab) => (
+                    <div
+                      key={tab.key}
+                      className="faq-detail-nav-col"
+                    >
+                      <a
+                        href={tab.href}
+                        className={`faq-detail-tab ${tab.current ? "faq-detail-tab-active" : ""}`}
+                        aria-current={tab.current ? "page" : undefined}
+                      >
+                        {tab.label}
+                      </a>
+                    </div>
+                  ))}
+                </div>
+              )}
+              <div className="faq-detail-content">
+                {faqDetailSections.map((section, sectionIndex) => {
+                  const blocks =
+                    Array.isArray(section.blocks) && section.blocks.length > 0
+                      ? section.blocks
+                      : [
+                          ...(Array.isArray(section.paragraphs)
+                            ? section.paragraphs.map((paragraph) => ({
+                                type: "paragraph",
+                                content: paragraph,
+                              }))
+                            : []),
+                          ...(Array.isArray(section.listItems) && section.listItems.length > 0
+                            ? [
+                                {
+                                  type: "unordered-list",
+                                  items: section.listItems,
+                                },
+                              ]
+                            : []),
+                          ...(Array.isArray(section.links) && section.links.length > 0
+                            ? [
+                                {
+                                  type: "links",
+                                  items: section.links,
+                                },
+                              ]
+                            : []),
+                        ];
+
+                  return (
+                    <section
+                      key={`${section.id || "faq-detail-section"}-${sectionIndex}`}
+                      className="faq-detail-section"
+                    >
+                      {section.heading && (
+                        <div className="faq-detail-section-title">
+                          <gcds-heading tag="h3" level="3" character-limit="false">
+                            {section.heading}
+                          </gcds-heading>
+                        </div>
+                      )}
+                      <div className="faq-detail-section-body">
+                        {blocks.map((block, blockIndex) =>
+                          renderFaqDetailBlock(
+                            block,
+                            section.id || `faq-detail-${sectionIndex}`,
+                            blockIndex
+                          )
+                        )}
+                      </div>
+                    </section>
+                  );
+                })}
+              </div>
+              {faqDetailDateModified && (
+                <div className="faq-detail-date-modified">{faqDetailDateModified}</div>
+              )}
+            </div>
+          </div>
+        </main>
+      )}
+      {!isFaqDetailPage && (
       <gcds-container id="main-content" main-container size="xl"
       centered
       tag="main">
-        {isFaqPage && (
+        {isFaqLandingPage && (
         <>
         <div className="faq-page">
           <div className="faq-page-topbar">
@@ -701,7 +1088,7 @@ useEffect(() => {
                 </gcds-heading>
               </div>
               <p className="faq-section-body">{section.body}</p>
-              <div className="faq-link-grid">
+              <div className={`faq-link-grid${section.links.length === 2 ? " faq-link-grid--cols-2" : ""}`}>
                 {section.links.map((link) => (
                   <a
                     key={`${section.id}-${link.label}`}
@@ -1020,7 +1407,7 @@ useEffect(() => {
         </div>
         </>
         )}
-        {!isOverviewPage && !isFaqPage && !isStatisticsPage && !isContactInfoPage && (
+        {!isOverviewPage && !isFaqNavActive && !isStatisticsPage && !isContactInfoPage && (
         <>
         <div className="breadcrumbs-wrap">
           <nav aria-label="Breadcrumb" className="gc-breadcrumbs">
@@ -1542,7 +1929,8 @@ useEffect(() => {
       <br></br>
       </>
       )}
-    </gcds-container>
+      </gcds-container>
+      )}
     </div>
     <gcds-footer
       class="gcds-mt-2"
