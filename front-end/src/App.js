@@ -939,18 +939,11 @@ useEffect(() => {
                   {faqDetailPageTitle}
                 </gcds-heading>
               </div>
-              <gcds-grid
-                class="faq-detail-nav-grid"
-                gap="200"
-                tag="div"
-              >
+              <div className="faq-detail-nav-grid">
                 {faqDetailTabs.map((tab) => (
-                  <gcds-grid-col
+                  <div
                     key={tab.key}
-                    class="faq-detail-nav-col"
-                    tablet="3"
-                    desktop="4"
-                    tag="div"
+                    className="faq-detail-nav-col"
                   >
                     <a
                       href={tab.href}
@@ -959,9 +952,9 @@ useEffect(() => {
                     >
                       {tab.label}
                     </a>
-                  </gcds-grid-col>
+                  </div>
                 ))}
-              </gcds-grid>
+              </div>
               <div className="faq-detail-content">
                 {faqDetailSections.map((section, sectionIndex) => {
                   const blocks =
