@@ -548,6 +548,9 @@ gcds-header {
 
 .faq-detail-nav-grid--cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 55%;
+  row-gap: 5px;
+  column-gap: 4rem;
 }
 
 .faq-link-grid--cols-2 {
@@ -564,8 +567,8 @@ gcds-header {
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: 2.6rem;
-  padding: 0.45rem 0.75rem;
+  min-height: 1.8rem;
+  padding: 0.45rem 0.25rem;
   border: 1px solid #c8d0da;
   background: #f3f5f7;
   color: #284162;
