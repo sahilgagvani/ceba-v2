@@ -992,7 +992,7 @@ useEffect(() => {
                     >
                       {section.heading && (
                         <div className="faq-detail-section-title">
-                          <gcds-heading tag="h2" level="2" character-limit="false">
+                          <gcds-heading tag="h3" level="3" character-limit="false">
                             {section.heading}
                           </gcds-heading>
                         </div>
