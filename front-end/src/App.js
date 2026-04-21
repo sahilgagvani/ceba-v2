@@ -158,7 +158,7 @@ const getRouteContext = (path) => {
   }
 
   return {
-    pageType: "contact-form",
+    pageType: "overview",
     faqDetailKey: null,
   };
 };
