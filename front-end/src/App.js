@@ -557,6 +557,10 @@ const formatTelephoneNumber = (value) => {
 
       if (!fragment || typeof fragment !== "object") return null;
 
+      if (fragment.sup) {
+        return <sup key={`sup-${fragment.text || index}-${index}`}>{fragment.text}</sup>;
+      }
+
       if (fragment.strong) {
         return <strong key={`${fragment.text || "strong"}-${index}`}>{fragment.text}</strong>;
       }
@@ -1229,30 +1233,36 @@ useEffect(() => {
                     key={`${card.label || "overview-stat"}-${index}`}
                     className="overview-stat-card"
                   >
-                    <div className={`overview-stat-icon overview-stat-icon-${card.icon || "businesses"}`}>
-                      <span aria-hidden="true">
-                        {card.icon === "funds" ? "$" : card.icon === "expansions" ? "E" : "B"}
-                      </span>
-                    </div>
-                    <div className="overview-stat-label">{card.label}</div>
+                    {card.image ? (
+                      <img src={card.image} alt="" aria-hidden="true" className="overview-stat-icon overview-stat-icon-img" />
+                    ) : (
+                      <div className={`overview-stat-icon overview-stat-icon-${card.icon || "businesses"}`}>
+                        <span aria-hidden="true">
+                          {card.icon === "funds" ? "$" : card.icon === "expansions" ? "E" : "B"}
+                        </span>
+                      </div>
+                    )}
+                    <div className="overview-stat-label">{renderOverviewRichText(card.label)}</div>
                     <div className="overview-stat-value">{card.value}</div>
                   </article>
                 ))}
             </div>
             <div className="overview-stat-footnotes">
-              {Array.isArray(overviewStats.footnotes) &&
-                overviewStats.footnotes.map((note, index) => (
-                  <p key={`overview-footnote-${index}`}>{note}</p>
-                ))}
-              {overviewStats.regionalLink?.href && overviewStats.regionalLink?.label && (
-                <a href={overviewStats.regionalLink.href}>
-                  {overviewStats.regionalLink.label}
-                </a>
+              <div className="overview-stat-footnotes-left">
+                {Array.isArray(overviewStats.footnotes) &&
+                  overviewStats.footnotes.map((note, index) => (
+                    <p key={`overview-footnote-${index}`}>{renderOverviewRichText(note)}</p>
+                  ))}
+                {overviewStats.regionalLink?.href && overviewStats.regionalLink?.label && (
+                  <a href={overviewStats.regionalLink.href}>
+                    {overviewStats.regionalLink.label}
+                  </a>
+                )}
+              </div>
+              {overviewStats.summary && (
+                <div className="overview-summary-line">{overviewStats.summary}</div>
               )}
             </div>
-            {overviewStats.summary && (
-              <div className="overview-summary-line">{overviewStats.summary}</div>
-            )}
           </section>
           {overviewDateModified && (
             <div className="overview-date-modified">{overviewDateModified}</div>
