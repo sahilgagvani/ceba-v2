@@ -1000,12 +1000,12 @@
       },
       "portalCard": {
         "title": "Se connecter (si votre prêt a été cédé au programme du CUEC)",
-        "description": "Si votre prêt a été cédé au programme du CUEC, vous pouvez vous connecter ou vous inscrire à un compte du portail du CUEC pour consulter vos soldes de prêt, transactions, coordonnées et relevés mensuels.",
-        "ctaLabel": "Se connecter ou s’inscrire à un compte du portail du CUEC",
+        "description": "Si votre prêt a été cédé au programme du CUEC, vous pouvez ouvrir une session ou un compte au portail du CUEC pour voir les soldes de vos prêts, vos transactions, vos coordonnées et vos relevés mensuels.",
+        "ctaLabel": "Ouvrez une session ou inscrivez-vous pour obtenir un compte du portail du CUEC",
         "ctaHref": "https://account-compte.ceba-cuec.ca/borrower/account-compte/sign-in-identifier/fr",
-        "guideLabel": "Comment s’inscrire à un compte du portail du CUEC (PDF)",
+        "guideLabel": "Guide d’inscription et de connexion au portail du CUEC (PDF)",
         "guideHref": "https://ceba-cuec.ca/img/CEBA-Registration-User-Guide-FR.pdf",
-        "faqText": "Pour obtenir des renseignements sur la cession de prêt, veuillez consulter la page FAQ."
+        "faqText": "Pour voir des informations au sujet de la cession de prêt, veuillez visiter la page de la FAQ."
       },
       "sections": [
         {
