@@ -1010,10 +1010,7 @@
 							"paragraphs": [
 								"On March 27, 2020, the Government of Canada announced the creation of the Canada Emergency Business Account (CEBA) Program.",
 								"Through the CEBA Program, eligible small businesses and not-for-profits were provided up to $60,000 in emergency funding, in the form of loans that were initially interest-free and partially forgivable, to help cover a variety of expenses that could not be deferred during a period of shutdown, such as payroll, rent, insurance and utilities.",
-								"The CEBA Program was open for applications from April 9, 2020, to June 30, 2021, and provided more than $49 billion to approximately 898,000 businesses in partnership with 230+ participating financial institutions. There were two eligibility streams available to qualify for the CEBA Program:",
-								"More details about CEBA eligibility are available on the Frequently Asked Questions (FAQ) page.",
-								"Eligible CEBA Loan Holders in good standing were able to qualify for partial loan forgiveness if the non-forgivable principal of their CEBA Loan was repaid on or before January 18, 2024 or on or before March 28, 2024, for those that applied for refinancing with the financial institution that provided their CEBA Loan on or before January 18, 2024. The forgivable amount was up to $20,000 calculated as 25 percent of the first $40,000 borrowed plus 50 percent on amounts borrowed above $40,000 and up to $60,000.",
-								"Certain Loan Holders that did not qualify for the loan they received were not eligible for forgiveness and were required to repay the outstanding amount of their CEBA Loan(s), in full, by December 31, 2023."
+								"The CEBA Program was open for applications from April 9, 2020, to June 30, 2021, and provided more than $49 billion to approximately 898,000 businesses in partnership with 230+ participating financial institutions. There were two eligibility streams available to qualify for the CEBA Program:"
 							],
 							"bullets": [
 								{
@@ -1024,6 +1021,13 @@
 									"label": "Non-Deferrable Expenses Stream:",
 									"text": "for businesses with Cdn.$20,000 or less in total employment income paid in the 2019 calendar year and that had Eligible Non-Deferrable Expenses greater than Cdn.$40,000 and less than Cdn.$1,500,000."
 								}
+							]
+						},
+						{
+							"paragraphs": [
+								"More details about CEBA eligibility are available on the Frequently Asked Questions (FAQ) page.",
+								"Eligible CEBA Loan Holders in good standing were able to qualify for partial loan forgiveness if the non-forgivable principal of their CEBA Loan was repaid on or before January 18, 2024 or on or before March 28, 2024, for those that applied for refinancing with the financial institution that provided their CEBA Loan on or before January 18, 2024. The forgivable amount was up to $20,000 calculated as 25 percent of the first $40,000 borrowed plus 50 percent on amounts borrowed above $40,000 and up to $60,000.",
+								"Certain Loan Holders that did not qualify for the loan they received were not eligible for forgiveness and were required to repay the outstanding amount of their CEBA Loan(s), in full, by December 31, 2023."
 							]
 						},
 						{
