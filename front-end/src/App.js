@@ -1233,11 +1233,15 @@ useEffect(() => {
                     key={`${card.label || "overview-stat"}-${index}`}
                     className="overview-stat-card"
                   >
-                    <div className={`overview-stat-icon overview-stat-icon-${card.icon || "businesses"}`}>
-                      <span aria-hidden="true">
-                        {card.icon === "funds" ? "$" : card.icon === "expansions" ? "E" : "B"}
-                      </span>
-                    </div>
+                    {card.image ? (
+                      <img src={card.image} alt="" aria-hidden="true" className="overview-stat-icon overview-stat-icon-img" />
+                    ) : (
+                      <div className={`overview-stat-icon overview-stat-icon-${card.icon || "businesses"}`}>
+                        <span aria-hidden="true">
+                          {card.icon === "funds" ? "$" : card.icon === "expansions" ? "E" : "B"}
+                        </span>
+                      </div>
+                    )}
                     <div className="overview-stat-label">{renderOverviewRichText(card.label)}</div>
                     <div className="overview-stat-value">{card.value}</div>
                   </article>

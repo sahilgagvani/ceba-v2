@@ -1073,16 +1073,19 @@
 				"cards": [
 					{
 						"icon": "businesses",
+						"image": "/img/users.png",
 						"label": ["Number of businesses approved for CEBA Loans", {"sup": true, "text": "1"}],
 						"value": "898,271"
 					},
 					{
 						"icon": "expansions",
+						"image": "/img/users.png",
 						"label": ["Number of businesses approved for CEBA expansions", {"sup": true, "text": "2"}],
 						"value": "571,851"
 					},
 					{
 						"icon": "funds",
+						"image": "/img/money.png",
 						"label": ["Total funds approved for CEBA Loans", {"sup": true, "text": "1"}, " and expansions", {"sup": true, "text": "2"}],
 						"value": "$49.2 Billion"
 					}

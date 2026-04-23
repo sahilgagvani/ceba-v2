@@ -981,8 +981,14 @@ gcds-header {
   height: 2.35rem;
   justify-content: center;
   position: absolute;
-  right: 0.85rem;
-  top: -1.2rem;
+  right: -1.175rem;
+  top: -1.175rem;
+  width: 2.35rem;
+}
+
+.overview-stat-icon-img {
+  background: none;
+  height: 2.35rem;
   width: 2.35rem;
 }
 
