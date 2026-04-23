@@ -981,8 +981,14 @@ gcds-header {
   height: 2.35rem;
   justify-content: center;
   position: absolute;
-  right: 0.85rem;
-  top: -1.2rem;
+  right: -1.175rem;
+  top: -1.175rem;
+  width: 2.35rem;
+}
+
+.overview-stat-icon-img {
+  background: none;
+  height: 2.35rem;
   width: 2.35rem;
 }
 
@@ -1002,11 +1008,17 @@ gcds-header {
 }
 
 .overview-stat-footnotes {
+  align-items: flex-start;
   color: #4a4a4a;
-  display: grid;
-  gap: 0.2rem;
-  grid-template-columns: 1fr auto;
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 2.25rem;
+}
+
+.overview-stat-footnotes-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
 }
 
 .overview-stat-footnotes p {
@@ -1248,6 +1260,7 @@ html, body, #root {
   }
 
   .overview-portal-cta {
+    box-sizing: border-box;
     display: flex;
     width: 100%;
   }
@@ -1266,7 +1279,7 @@ html, body, #root {
   }
 
   .overview-stat-footnotes {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     gap: 0.45rem;
   }
 
