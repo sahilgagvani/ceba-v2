@@ -1079,23 +1079,23 @@
         "cards": [
           {
             "icon": "businesses",
-            "label": "Nombre d’entreprises approuvées pour les prêts du CUEC1",
+            "label": ["Nombre d’entreprises approuvées pour les prêts du CUEC", {"sup": true, "text": "1"}],
             "value": "898,271"
           },
           {
             "icon": "expansions",
-            "label": "Nombre d’entreprises approuvées pour les expansions du CUEC2",
+            "label": ["Nombre d’entreprises approuvées pour les expansions du CUEC", {"sup": true, "text": "2"}],
             "value": "571,851"
           },
           {
             "icon": "funds",
-            "label": "Fonds totaux approuvés pour les prêts du CUEC1 et les expansions2",
+            "label": ["Fonds totaux approuvés pour les prêts du CUEC", {"sup": true, "text": "1"}, " et les expansions", {"sup": true, "text": "2"}],
             "value": "49,2 milliards $"
           }
         ],
         "footnotes": [
-          "1 « Prêts du CUEC » renvoie aux prêts de 40 000 $ et de 60 000 $.",
-          "2 « Expansions du CUEC » renvoie aux expansions de 20 000 $."
+          [{"sup": true, "text": "1"}, " « Prêts du CUEC » renvoie aux prêts de 40 000 $ et de 60 000 $."],
+          [{"sup": true, "text": "2"}, " « Expansions du CUEC » renvoie aux expansions de 20 000 $."]
         ],
         "regionalLink": {
           "label": "Cliquez ici pour les statistiques régionales",

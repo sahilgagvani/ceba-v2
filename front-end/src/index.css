@@ -1002,11 +1002,17 @@ gcds-header {
 }
 
 .overview-stat-footnotes {
+  align-items: flex-start;
   color: #4a4a4a;
-  display: grid;
-  gap: 0.2rem;
-  grid-template-columns: 1fr auto;
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 2.25rem;
+}
+
+.overview-stat-footnotes-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
 }
 
 .overview-stat-footnotes p {
@@ -1267,7 +1273,7 @@ html, body, #root {
   }
 
   .overview-stat-footnotes {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     gap: 0.45rem;
   }
 

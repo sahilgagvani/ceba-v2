@@ -1073,23 +1073,23 @@
 				"cards": [
 					{
 						"icon": "businesses",
-						"label": "Number of businesses approved for CEBA Loans1",
+						"label": ["Number of businesses approved for CEBA Loans", {"sup": true, "text": "1"}],
 						"value": "898,271"
 					},
 					{
 						"icon": "expansions",
-						"label": "Number of businesses approved for CEBA expansions2",
+						"label": ["Number of businesses approved for CEBA expansions", {"sup": true, "text": "2"}],
 						"value": "571,851"
 					},
 					{
 						"icon": "funds",
-						"label": "Total funds approved for CEBA Loans1 and expansions2",
+						"label": ["Total funds approved for CEBA Loans", {"sup": true, "text": "1"}, " and expansions", {"sup": true, "text": "2"}],
 						"value": "$49.2 Billion"
 					}
 				],
 				"footnotes": [
-					"1 \"CEBA Loans\" refer to $40,000 and $60,000 loans",
-					"2 \"CEBA expansions\" refer to $20,000 expansions"
+					[{"sup": true, "text": "1"}, " \"CEBA Loans\" refer to $40,000 and $60,000 loans"],
+					[{"sup": true, "text": "2"}, " \"CEBA expansions\" refer to $20,000 expansions"]
 				],
 				"regionalLink": {
 					"label": "Click here for regional statistics",
