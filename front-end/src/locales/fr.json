@@ -483,7 +483,7 @@
                     "type": "paragraph",
                     "content": [
                       "Veuillez noter que, conformément à l'",
-                      {"strong": true, "text": "Entente de l'utilisateur final du portail du CUEC"},
+                      {"href": "https://account-compte.ceba-cuec.ca/borrower/terms-termes", "text": "Entente de l'utilisateur final du portail du CUEC"},
                       ", qui comprend les modalités de votre compte du portail du CUEC, vous n'êtes pas autorisé à partager vos identifiants du portail du CUEC avec d'autres parties, y compris vos tiers autorisés par l'ARC."
                     ]
                   },
@@ -744,7 +744,7 @@
                     "type": "paragraph",
                     "content": [
                       "Vous pouvez trouver la version la plus récente de l’entente de l’utilisateur final et des modalités du portail du CUEC en accédant au pied de page de l’écran du portail du CUEC et en cliquant sur l’hyperlien « ",
-                      {"strong": true, "text": "Conditions générales de mon compte"},
+                      {"href": "https://account-compte.ceba-cuec.ca/borrower/terms-termes", "text": "Conditions générales de mon compte"},
                       " ». Cela ouvrira un nouvel onglet dans lequel l’accord pourra être consulté."
                     ]
                   }

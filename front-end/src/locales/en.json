@@ -477,7 +477,7 @@
 										"type": "paragraph",
 										"content": [
 											"Please note, in accordance with the ",
-											{"strong": true, "text": "CEBA Portal End User Agreement"},
+											{"href": "https://account-compte.ceba-cuec.ca/borrower/terms-termes", "text": "CEBA Portal End User Agreement"},
 											", which includes Terms & Conditions of your CEBA Portal Account, you are not permitted to share your CEBA Portal credentials with other parties including your Third Parties authorized by the CRA."
 										]
 									},
@@ -738,7 +738,7 @@
 										"type": "paragraph",
 										"content": [
 											"You can find the most up to date version of the CEBA Portal End User Agreement and Terms and Conditions by navigating to the footer of the CEBA Portal screen and clicking on the ",
-											{"strong": true, "text": "Terms and Conditions for My Account"},
+											{"href": "https://account-compte.ceba-cuec.ca/borrower/terms-termes", "text": "Terms and Conditions for My Account"},
 											" hyperlink. This will open a new tab where the Agreement can be viewed."
 										]
 									}

@@ -567,7 +567,7 @@ const formatTelephoneNumber = (value) => {
 
       if (fragment.href) {
         return (
-          <a key={`${fragment.href}-${index}`} href={fragment.href}>
+          <a key={`${fragment.href}-${index}`} href={fragment.href} target="_blank" rel="noopener noreferrer">
             {fragment.text}
           </a>
         );
