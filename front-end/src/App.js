@@ -538,7 +538,7 @@ const formatTelephoneNumber = (value) => {
         {hasLink && (
           <>
             {" "}
-            <a href={content.linkHref}>{content.linkLabel}</a>
+            <a href={content.linkHref} target="_blank" rel="noreferrer">{content.linkLabel}</a>
           </>
         )}
         {content.afterLink}
@@ -567,7 +567,7 @@ const formatTelephoneNumber = (value) => {
 
       if (fragment.href) {
         return (
-          <a key={`${fragment.href}-${index}`} href={fragment.href}>
+          <a key={`${fragment.href}-${index}`} href={fragment.href} target="_blank" rel="noopener noreferrer">
             {fragment.text}
           </a>
         );
@@ -967,7 +967,7 @@ useEffect(() => {
                     </ol>
                   </nav>
                 </div>
-                <a href={faqPortalUrl} className="faq-sign-in-link">
+                <a href={faqPortalUrl} className="faq-sign-in-link" target="_blank" rel="noreferrer">
                   {faqDetailPortalCtaLabel}
                 </a>
               </div>
@@ -1075,7 +1075,7 @@ useEffect(() => {
                 </ol>
               </nav>
             </div>
-            <a href={faqPortalUrl} className="faq-sign-in-link">
+            <a href={faqPortalUrl} className="faq-sign-in-link" target="_blank" rel="noreferrer">
               {faqPortalCtaLabel}
             </a>
           </div>
@@ -1124,7 +1124,7 @@ useEffect(() => {
                 </ol>
               </nav>
             </div>
-            <a href={faqPortalUrl} className="page-sign-in-link">
+            <a href={faqPortalUrl} className="page-sign-in-link" target="_blank" rel="noreferrer">
               {faqPortalCtaLabel}
             </a>
           </div>
@@ -1171,10 +1171,10 @@ useEffect(() => {
             <h2 className="overview-portal-card-title">{overviewPortalCard.title}</h2>
             <div className="overview-portal-card-body">
               <p className="overview-rich-paragraph">{overviewPortalCard.description}</p>
-              <a href={overviewPortalCard.ctaHref} className="overview-portal-cta">
+              <a href={overviewPortalCard.ctaHref} className="overview-portal-cta" target="_blank" rel="noreferrer">
                 {overviewPortalCard.ctaLabel}
               </a>
-              <a href={overviewPortalCard.guideHref} className="overview-portal-guide">
+              <a href={overviewPortalCard.guideHref} className="overview-portal-guide" target="_blank" rel="noreferrer">
                 {overviewPortalCard.guideLabel}
               </a>
               <p className="overview-rich-paragraph">{overviewPortalCard.faqText}</p>
@@ -1285,7 +1285,7 @@ useEffect(() => {
                 </ol>
               </nav>
             </div>
-            <a href={faqPortalUrl} className="page-sign-in-link">
+            <a href={faqPortalUrl} className="page-sign-in-link" target="_blank" rel="noreferrer">
               {faqPortalCtaLabel}
             </a>
           </div>
@@ -1349,7 +1349,7 @@ useEffect(() => {
                 </ol>
               </nav>
             </div>
-            <a href={faqPortalUrl} className="page-sign-in-link">
+            <a href={faqPortalUrl} className="page-sign-in-link" target="_blank" rel="noreferrer">
               {faqPortalCtaLabel}
             </a>
           </div>
