@@ -538,7 +538,7 @@ const formatTelephoneNumber = (value) => {
         {hasLink && (
           <>
             {" "}
-            <a href={content.linkHref}>{content.linkLabel}</a>
+            <a href={content.linkHref} target="_blank" rel="noreferrer">{content.linkLabel}</a>
           </>
         )}
         {content.afterLink}
