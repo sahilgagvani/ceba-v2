@@ -1092,8 +1092,8 @@
           {
             "icon": "funds",
             "image": "/img/money.png",
-            "label": ["Total des fonds approuvés pour les prêts et les majorations au titre du CUEC", {"sup": true, "text": "1"}, " et les expansions", {"sup": true, "text": "2"}],
-            "value": "49,2 milliards $"
+            "label": ["Total des fonds approuvés pour les prêts", {"sup": true, "text": "1"}, " et les majorations au titre du CUEC", {"sup": true, "text": "2"}],
+            "value": "49,2 G$"
           }
         ],
         "footnotes": [
