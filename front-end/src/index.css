@@ -553,6 +553,12 @@ gcds-header {
   column-gap: 4rem;
 }
 
+@media (max-width: 767px) {
+  .faq-detail-nav-grid--cols-2 {
+    max-width: 100%;
+  }
+}
+
 .faq-link-grid--cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
