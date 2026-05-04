@@ -602,7 +602,7 @@ gcds-header {
 }
 
 .faq-detail-section {
-  padding: 1.9rem 0;
+  padding: 2.5rem 0;
   border-top: 1px solid #d9dde3;
 }
 
@@ -618,6 +618,19 @@ gcds-header {
 .faq-detail-section-title gcds-heading {
   display: block;
   margin: 0;
+  --gcds-heading-character-limit-h3: none;
+}
+
+.faq-detail-section-heading {
+  font: var(--gcds-heading-h3-desktop);
+  margin: 0;
+  text-wrap: pretty;
+}
+
+@media only screen and (width < 48em) {
+  .faq-detail-section-heading {
+    font: var(--gcds-heading-h3-mobile);
+  }
 }
 
 .faq-detail-section-body {
@@ -1316,7 +1329,7 @@ html, body, #root {
   }
 
   .faq-detail-section {
-    padding: 1.6rem 0;
+    padding: 1rem 0;
   }
 
   .faq-detail-section-body {
