@@ -873,7 +873,8 @@ gcds-header {
 
 .overview-portal-cta {
   align-items: center;
-  background: #2b7f0b;
+  background: #318000;
+  border-color: #458259;
   color: #fff;
   display: flex;
   justify-content: center;
