@@ -704,17 +704,18 @@ const formatTelephoneNumber = (value) => {
 
 useEffect(() => {
 
+  const programName = t("form.overview-title");
   document.title = isFaqDetailPage
-    ? `CEBA ${faqDetailPageTitle || t("form.nav-label2")}`
+    ? `${programName} | ${faqDetailPageTitle || t("form.nav-label2")}`
     : isFaqLandingPage
-    ? `CEBA ${t("form.nav-label2")}`
+    ? `${programName} | ${t("form.nav-label2")}`
     : isStatisticsPage
-      ? `CEBA ${statisticsTitle}`
+      ? `${programName} | ${statisticsTitle}`
     : isOverviewPage
-      ? `CEBA ${t("form.nav-label1")}`
+      ? `${programName} | ${t("form.nav-label1")}`
       : isContactInfoPage
-        ? `CEBA ${t("form.nav-label3")}`
-      : `CEBA ${t("form.breadcrumb-label3")}`;
+        ? `${programName} | ${t("form.nav-label3")}`
+      : `${programName} | ${t("form.breadcrumb-label3")}`;
   const header = document.querySelector("gcds-header");
   if (!header) return;
 
