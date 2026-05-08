@@ -5,6 +5,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 import { useTranslation } from "react-i18next";
 import ErrorBanner from "./components/ErrorBanner";
 import MailFailBanner from "./components/MailFailBanner";
+import Banner from "./components/Banner";
 
 const FAQ_DETAIL_ROUTE_ENTRIES = [
   {
@@ -890,6 +891,7 @@ useEffect(() => {
 
   return (
     <div className="layout">
+    <Banner />
     <div className="content-flex">
     <div style={{ position: "relative" }}>
       <button
