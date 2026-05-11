@@ -891,7 +891,6 @@ useEffect(() => {
 
   return (
     <div className="layout">
-    <Banner />
     <div className="content-flex">
     <div style={{ position: "relative" }}>
       <button
@@ -1137,6 +1136,7 @@ useEffect(() => {
           {overviewServiceNotice && (
             <p className="overview-service-notice">{overviewServiceNotice}</p>
           )}
+          <Banner lang={i18n.language} />
           <section className="overview-warning" aria-label={overviewWarning.title || t("form.notice-title")}>
             <div className="overview-warning-rail" aria-hidden="true">
               <svg
