@@ -10,17 +10,14 @@ public class RoutesConfig implements WebMvcConfigurer {
 
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
-        // entry point 
-        registry.addViewController("/").setViewName("forward:/index.html");
-
         // French paths
-        registry.addViewController("/fr").setViewName("forward:/index.html");
-        registry.addViewController("/fr/").setViewName("forward:/index.html");
-        registry.addViewController("/fr/**").setViewName("forward:/index.html");
+        registry.addViewController("/fr").setViewName("forward:/");
+        registry.addViewController("/fr/").setViewName("forward:/");
+        registry.addViewController("/fr/**").setViewName("forward:/");
 
         // English paths
-        registry.addViewController("/en").setViewName("forward:/index.html");
-        registry.addViewController("/en/").setViewName("forward:/index.html");
-        registry.addViewController("/en/**").setViewName("forward:/index.html");
+        registry.addViewController("/en").setViewName("forward:/");
+        registry.addViewController("/en/").setViewName("forward:/");
+        registry.addViewController("/en/**").setViewName("forward:/");
     }
 }

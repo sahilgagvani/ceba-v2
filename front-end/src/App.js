@@ -5,6 +5,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 import { useTranslation } from "react-i18next";
 import ErrorBanner from "./components/ErrorBanner";
 import MailFailBanner from "./components/MailFailBanner";
+import Banner from "./components/Banner";
 
 const FAQ_DETAIL_ROUTE_ENTRIES = [
   {
@@ -1135,6 +1136,7 @@ useEffect(() => {
           {overviewServiceNotice && (
             <p className="overview-service-notice">{overviewServiceNotice}</p>
           )}
+          <Banner lang={i18n.language} />
           <section className="overview-warning" aria-label={overviewWarning.title || t("form.notice-title")}>
             <div className="overview-warning-rail" aria-hidden="true">
               <svg

@@ -42,6 +42,10 @@
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
@@ -131,6 +135,27 @@
                                     <directory>front-end/build</directory>
                                     <includes>
                                         <include>**/*</include>
+                                    </includes>
+                                    <excludes>
+                                        <exclude>index.html</exclude>
+                                    </excludes>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>copy-frontend-index-to-templates</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.outputDirectory}/templates</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>front-end/build</directory>
+                                    <includes>
+                                        <include>index.html</include>
                                     </includes>
                                 </resource>
                             </resources>

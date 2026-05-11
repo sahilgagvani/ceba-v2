@@ -1,11 +1,23 @@
+>macos: 
 chmod +x mvnw
 ./mvnw clean package spring-boot:repackage -DskipTests
 java -jar target/Demos-1.0.jar
-.
-.
+
+
+>windows: 
 .\mvnw.cmd clean package spring-boot:repackage -DskipTests
 java -jar target\Demos-1.0.jar
-.
-.
-f-e
+
+>only front-end: (in front-end dir)
 npm start
+
+
+>check/update env var: 
+echo %APP_BANNER_MSG_EN%
+set APP_BANNER_MSG_EN=
+set APP_BANNER_MSG_FR=
+
+
+>unified command: (set env vars and run JAR)
+java -DAPP_BANNER_MSG_EN="test123" -DAPP_BANNER_MSG_FR="test123" -jar target\Demos-1.0.jar 
+
