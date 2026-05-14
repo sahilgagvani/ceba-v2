@@ -838,6 +838,10 @@ gcds-header {
   min-height: 4rem;
 }
 
+.overview-warning--banner .overview-warning-rail::after {
+  min-height: 0;
+}
+
 .overview-warning-icon {
   color: var(--overview-warning-accent);
   display: block;

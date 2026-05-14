@@ -648,7 +648,7 @@
 										"type": "paragraph",
 										"content": [
 											"You are only required to register for a CEBA Portal Account if your loan has been assigned to the CEBA Program. If your loan has been assigned, you can register by visiting ",
-											{"href": "https://account-compte.ceba-cuec.ca", "text": "account-compte.ceba-cuec.ca"},
+											{"href": "https://account-compte.ceba-cuec.ca/borrower/account-compte/sign-in-identifier/en", "text": "account-compte.ceba-cuec.ca"},
 											". To register for a CEBA Portal Account, you will need your unique 12-digit CEBA Identification Number included in your Loan Assignment Notice and the most recent business phone number your financial institution had on file prior to your loan being assigned to the CEBA Program. Detailed instructions on how to register can be found on the CEBA-CUEC Program Overview page."
 										]
 									},

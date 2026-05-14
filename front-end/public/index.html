@@ -18,6 +18,12 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-170K5SG5P4"></script>
     <script src="%PUBLIC_URL%/js/google-analytics.js"></script>
+    <script th:inline="javascript">
+        window._env_ = {
+            BANNER_TEXT: [[${bannerText}]],
+            BANNER_TEXT_FR: [[${bannerTextFr}]]
+        };
+    </script>
   </head>
   <body>
     <noscript>JavaScript is required to use this site.</noscript>
