@@ -654,7 +654,7 @@
                     "type": "paragraph",
                     "content": [
                       "Vous n’êtes pas tenu de vous inscrire à un compte sur le portail du CUEC que si votre prêt a été cédé au programme du CUEC. Si votre prêt a été cédé, vous pouvez vous inscrire en visitant ",
-                      {"href": "https://account-compte.ceba-cuec.ca", "text": "account-compte.ceba-cuec.ca"},
+                      {"href": "https://account-compte.ceba-cuec.ca/borrower/account-compte/sign-in-identifier/fr", "text": "account-compte.ceba-cuec.ca"},
                       ". Pour vous inscrire à un compte sur le portail du CUEC, vous aurez besoin de votre numéro d’identification unique à 12 chiffres du CUEC qui figure dans votre avis de cession de prêt et du numéro de téléphone d’affaires le plus récent que votre institution financière avait dans ses dossiers avant que votre prêt ne soit attribué au programme du CUEC. Des instructions détaillées sur la façon de s’inscrire se trouvent sur la page Aperçu du programme du CUEC."
                     ]
                   },
